@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProfileTabsCollectionReusableView" id="U6b-Vx-4bR" customClass="ProfileTabsCollectionReusableView" customModule="Instagram" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhK-nx-ubu">
+                    <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="207" id="B7l-va-OSs"/>
+                        <constraint firstAttribute="height" constant="50" id="Yda-fn-Glf"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="squareshape.split.3x3" catalog="system"/>
+                    <connections>
+                        <action selector="postsButtonTapped:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="8z3-gi-gd0"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWd-G9-nul">
+                    <rect key="frame" x="207" y="0.0" width="207" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="207" id="KC5-cb-UXL"/>
+                        <constraint firstAttribute="height" constant="50" id="eBW-hr-mlj"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="person.crop.rectangle" catalog="system"/>
+                    <connections>
+                        <action selector="taggedButtonTapped:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="c6X-hx-iWd"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="mhK-nx-ubu" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="6gy-cu-aUa"/>
+                <constraint firstItem="QWd-G9-nul" firstAttribute="leading" secondItem="mhK-nx-ubu" secondAttribute="trailing" id="B3Q-h6-Wc9"/>
+                <constraint firstItem="QWd-G9-nul" firstAttribute="leading" secondItem="mhK-nx-ubu" secondAttribute="trailing" id="PKT-eM-En3"/>
+                <constraint firstItem="QWd-G9-nul" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="UTb-8a-ad3"/>
+                <constraint firstItem="mhK-nx-ubu" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="eDU-P9-cPD"/>
+                <constraint firstItem="QWd-G9-nul" firstAttribute="bottom" secondItem="VXr-Tz-HHm" secondAttribute="bottom" id="iSv-aV-efb"/>
+                <constraint firstItem="QWd-G9-nul" firstAttribute="trailing" secondItem="VXr-Tz-HHm" secondAttribute="trailing" id="pCn-us-8wV"/>
+                <constraint firstItem="mhK-nx-ubu" firstAttribute="bottom" secondItem="VXr-Tz-HHm" secondAttribute="bottom" id="xkW-d5-dhz"/>
+            </constraints>
+            <connections>
+                <outlet property="postButton" destination="mhK-nx-ubu" id="g4b-aX-hki"/>
+                <outlet property="taggedButton" destination="QWd-G9-nul" id="iXt-gG-TCw"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="67.633928571428569"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="person.crop.rectangle" catalog="system" width="128" height="93"/>
+        <image name="squareshape.split.3x3" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

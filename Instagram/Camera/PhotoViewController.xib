@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoViewController" customModule="Instagram" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="fNc-JJ-JSy" id="tSY-0n-KdB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJb-Na-eNk">
+                    <rect key="frame" x="349" y="44" width="45" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.down.fill" catalog="system"/>
+                    <connections>
+                        <action selector="saveButton:" destination="-1" eventType="touchUpInside" id="SxN-pz-SWi"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fNc-JJ-JSy">
+                    <rect key="frame" x="0.0" y="83" width="414" height="779"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="HJb-Na-eNk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Hkw-Fi-swU"/>
+                <constraint firstItem="HJb-Na-eNk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="349" id="Uab-Wg-swA"/>
+                <constraint firstItem="fNc-JJ-JSy" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="cmr-Xx-N5g"/>
+                <constraint firstItem="fNc-JJ-JSy" firstAttribute="top" secondItem="HJb-Na-eNk" secondAttribute="bottom" constant="8" symbolic="YES" id="euS-Xt-0Iq"/>
+                <constraint firstItem="fNc-JJ-JSy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="inm-zK-GLC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HJb-Na-eNk" secondAttribute="trailing" constant="20" id="mUi-fj-NX6"/>
+                <constraint firstItem="fNc-JJ-JSy" firstAttribute="top" secondItem="HJb-Na-eNk" secondAttribute="bottom" constant="8" symbolic="YES" id="mbl-2h-iQm"/>
+                <constraint firstItem="fNc-JJ-JSy" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="tTo-fg-aiV"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="10.714285714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
