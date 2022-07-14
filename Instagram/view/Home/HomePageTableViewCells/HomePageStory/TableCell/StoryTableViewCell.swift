@@ -34,6 +34,7 @@ class StoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        // Configure here
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
