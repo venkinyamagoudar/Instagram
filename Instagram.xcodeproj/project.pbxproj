@@ -20,6 +20,16 @@
 		24B9B58A286A5C2A000DA190 /* StoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B9B588286A5C2A000DA190 /* StoryTableViewCell.xib */; };
 		24B9B58D286A5C40000DA190 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B9B58B286A5C40000DA190 /* StoryCollectionViewCell.swift */; };
 		24B9B58E286A5C40000DA190 /* StoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B9B58C286A5C40000DA190 /* StoryCollectionViewCell.xib */; };
+		24C932B22880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C932B02880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.swift */; };
+		24C932B32880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C932B12880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.xib */; };
+		24C932B62880A1F6002A45EF /* OtherProfileTabCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C932B42880A1F6002A45EF /* OtherProfileTabCollectionReusableView.swift */; };
+		24C932B72880A1F6002A45EF /* OtherProfileTabCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C932B52880A1F6002A45EF /* OtherProfileTabCollectionReusableView.xib */; };
+		24C932BA2880A209002A45EF /* OtherProfileStoryCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C932B82880A209002A45EF /* OtherProfileStoryCollectionReusableView.swift */; };
+		24C932BB2880A209002A45EF /* OtherProfileStoryCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C932B92880A209002A45EF /* OtherProfileStoryCollectionReusableView.xib */; };
+		24C932C22880A39A002A45EF /* OtherProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C932C02880A39A002A45EF /* OtherProfileCollectionViewCell.swift */; };
+		24C932C62880B79E002A45EF /* OthersProfileCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C932C42880B79E002A45EF /* OthersProfileCollectionViewController.swift */; };
+		24C932C72880B79E002A45EF /* OthersProfileCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C932C52880B79E002A45EF /* OthersProfileCollectionViewController.xib */; };
+		24C932C92880B9CE002A45EF /* OtherProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C932C82880B9CE002A45EF /* OtherProfileCollectionViewCell.xib */; };
 		24E2AC92286B61C9000834FD /* StoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E2AC90286B61C9000834FD /* StoryDetailViewController.swift */; };
 		24E2AC93286B61C9000834FD /* StoryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E2AC91286B61C9000834FD /* StoryDetailViewController.xib */; };
 		24E2AC9C286CB417000834FD /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E2AC9B286CB417000834FD /* GalleryViewController.swift */; };
@@ -76,6 +86,16 @@
 		24B9B588286A5C2A000DA190 /* StoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryTableViewCell.xib; sourceTree = "<group>"; };
 		24B9B58B286A5C40000DA190 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		24B9B58C286A5C40000DA190 /* StoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		24C932B02880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		24C932B12880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherProfileHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		24C932B42880A1F6002A45EF /* OtherProfileTabCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileTabCollectionReusableView.swift; sourceTree = "<group>"; };
+		24C932B52880A1F6002A45EF /* OtherProfileTabCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherProfileTabCollectionReusableView.xib; sourceTree = "<group>"; };
+		24C932B82880A209002A45EF /* OtherProfileStoryCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileStoryCollectionReusableView.swift; sourceTree = "<group>"; };
+		24C932B92880A209002A45EF /* OtherProfileStoryCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherProfileStoryCollectionReusableView.xib; sourceTree = "<group>"; };
+		24C932C02880A39A002A45EF /* OtherProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		24C932C42880B79E002A45EF /* OthersProfileCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersProfileCollectionViewController.swift; sourceTree = "<group>"; };
+		24C932C52880B79E002A45EF /* OthersProfileCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OthersProfileCollectionViewController.xib; sourceTree = "<group>"; };
+		24C932C82880B9CE002A45EF /* OtherProfileCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherProfileCollectionViewCell.xib; sourceTree = "<group>"; };
 		24E2AC90286B61C9000834FD /* StoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailViewController.swift; sourceTree = "<group>"; };
 		24E2AC91286B61C9000834FD /* StoryDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryDetailViewController.xib; sourceTree = "<group>"; };
 		24E2AC9B286CB417000834FD /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
@@ -156,7 +176,8 @@
 				24E2ACAF286E18FF000834FD /* Search */,
 				24E2ACB1286E193A000834FD /* Reel */,
 				24E2ACB0286E191F000834FD /* Shop */,
-				24E2ACB2286E1962000834FD /* Profile */,
+				24E2ACB2286E1962000834FD /* UserProfile */,
+				24C932AA28806973002A45EF /* OthersProfileView */,
 				24B9B520286343E8000DA190 /* Main.storyboard */,
 				24B9B523286343E9000DA190 /* Assets.xcassets */,
 				24B9B525286343E9000DA190 /* LaunchScreen.storyboard */,
@@ -227,6 +248,63 @@
 			path = HomePagePost;
 			sourceTree = "<group>";
 		};
+		24C932AA28806973002A45EF /* OthersProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				24C932C42880B79E002A45EF /* OthersProfileCollectionViewController.swift */,
+				24C932C52880B79E002A45EF /* OthersProfileCollectionViewController.xib */,
+				24C932AF2880A1A7002A45EF /* Header */,
+				24C932BF2880A355002A45EF /* OtherProfileViewCells */,
+			);
+			path = OthersProfileView;
+			sourceTree = "<group>";
+		};
+		24C932AF2880A1A7002A45EF /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				24C932BC2880A223002A45EF /* ProfileHeader */,
+				24C932BD2880A231002A45EF /* TabHeader */,
+				24C932BE2880A23C002A45EF /* AllStory */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		24C932BC2880A223002A45EF /* ProfileHeader */ = {
+			isa = PBXGroup;
+			children = (
+				24C932B02880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.swift */,
+				24C932B12880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.xib */,
+			);
+			path = ProfileHeader;
+			sourceTree = "<group>";
+		};
+		24C932BD2880A231002A45EF /* TabHeader */ = {
+			isa = PBXGroup;
+			children = (
+				24C932B42880A1F6002A45EF /* OtherProfileTabCollectionReusableView.swift */,
+				24C932B52880A1F6002A45EF /* OtherProfileTabCollectionReusableView.xib */,
+			);
+			path = TabHeader;
+			sourceTree = "<group>";
+		};
+		24C932BE2880A23C002A45EF /* AllStory */ = {
+			isa = PBXGroup;
+			children = (
+				24C932B82880A209002A45EF /* OtherProfileStoryCollectionReusableView.swift */,
+				24C932B92880A209002A45EF /* OtherProfileStoryCollectionReusableView.xib */,
+			);
+			path = AllStory;
+			sourceTree = "<group>";
+		};
+		24C932BF2880A355002A45EF /* OtherProfileViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				24C932C02880A39A002A45EF /* OtherProfileCollectionViewCell.swift */,
+				24C932C82880B9CE002A45EF /* OtherProfileCollectionViewCell.xib */,
+			);
+			path = OtherProfileViewCells;
+			sourceTree = "<group>";
+		};
 		24E2AC82286B380A000834FD /* gallery */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,7 +372,7 @@
 			path = Reel;
 			sourceTree = "<group>";
 		};
-		24E2ACB2286E1962000834FD /* Profile */ = {
+		24E2ACB2286E1962000834FD /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
 				24E2ACBF286E2B37000834FD /* ProfileViewController.swift */,
@@ -303,7 +381,7 @@
 				24F348C42878D35F0017C7AA /* CollectionView Headers */,
 				24F348DF287E578F0017C7AA /* Controllers */,
 			);
-			path = Profile;
+			path = UserProfile;
 			sourceTree = "<group>";
 		};
 		24E2ACC8286F7A4A000834FD /* SearchCollectionCell */ = {
@@ -485,8 +563,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				24E2ACAE286CF6DE000834FD /* PhotoViewController.xib in Resources */,
+				24C932BB2880A209002A45EF /* OtherProfileStoryCollectionReusableView.xib in Resources */,
 				24E2ACD2286F835B000834FD /* ReelsCollectionViewCell.xib in Resources */,
 				24F3491E287F4ABF0017C7AA /* ChatViewController.xib in Resources */,
+				24C932B32880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.xib in Resources */,
+				24C932C92880B9CE002A45EF /* OtherProfileCollectionViewCell.xib in Resources */,
 				24E2ACD628747FCB000834FD /* ShoppingCollectionViewCell.xib in Resources */,
 				24B9B527286343E9000DA190 /* LaunchScreen.storyboard in Resources */,
 				24E2ACC6286E4355000834FD /* SearchCollectionViewCell.xib in Resources */,
@@ -500,10 +581,12 @@
 				24F348F0287F007D0017C7AA /* ListOfFollowersViewController.xib in Resources */,
 				24B9B58A286A5C2A000DA190 /* StoryTableViewCell.xib in Resources */,
 				24F348D8287DF7C20017C7AA /* ProfileInfoHeaderCollectionReusableView.xib in Resources */,
+				24C932C72880B79E002A45EF /* OthersProfileCollectionViewController.xib in Resources */,
 				24F348DC287DF8C80017C7AA /* ProfileTabsCollectionReusableView.xib in Resources */,
 				24B9B58E286A5C40000DA190 /* StoryCollectionViewCell.xib in Resources */,
 				24F348F4287F009D0017C7AA /* ListOfFollowingViewController.xib in Resources */,
 				24B9B582286A4C12000DA190 /* HomePagePostTableViewCell.xib in Resources */,
+				24C932B72880A1F6002A45EF /* OtherProfileTabCollectionReusableView.xib in Resources */,
 				24E2ACFE28762409000834FD /* ShoppongActivityViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,6 +607,7 @@
 				24F348C72878D4D70017C7AA /* ProfileCollectionViewCell.swift in Sources */,
 				24E2AC9C286CB417000834FD /* GalleryViewController.swift in Sources */,
 				24B9B58D286A5C40000DA190 /* StoryCollectionViewCell.swift in Sources */,
+				24C932C22880A39A002A45EF /* OtherProfileCollectionViewCell.swift in Sources */,
 				24E2ACA2286CDB1A000834FD /* MessageTableViewCell.swift in Sources */,
 				24E2ACC1286E2B37000834FD /* ProfileViewController.swift in Sources */,
 				24E2ACAD286CF6DE000834FD /* PhotoViewController.swift in Sources */,
@@ -537,14 +621,18 @@
 				24B9B51B286343E8000DA190 /* AppDelegate.swift in Sources */,
 				24E2ACD528747FCB000834FD /* ShoppingCollectionViewCell.swift in Sources */,
 				24B9B5472865F5F9000DA190 /* MessageTableViewController.swift in Sources */,
+				24C932C62880B79E002A45EF /* OthersProfileCollectionViewController.swift in Sources */,
+				24C932B62880A1F6002A45EF /* OtherProfileTabCollectionReusableView.swift in Sources */,
 				24F348DE287E17810017C7AA /* ProfileData.swift in Sources */,
 				24B9B51D286343E8000DA190 /* SceneDelegate.swift in Sources */,
 				24E2ACB9286E2B0E000834FD /* ShopViewController.swift in Sources */,
+				24C932BA2880A209002A45EF /* OtherProfileStoryCollectionReusableView.swift in Sources */,
 				24F348DB287DF8C80017C7AA /* ProfileTabsCollectionReusableView.swift in Sources */,
 				24B9B589286A5C2A000DA190 /* StoryTableViewCell.swift in Sources */,
 				24F348E6287E58270017C7AA /* EditProfileViewController.swift in Sources */,
 				24F3491D287F4ABF0017C7AA /* ChatViewController.swift in Sources */,
 				24F348EF287F007D0017C7AA /* ListOfFollowersViewController.swift in Sources */,
+				24C932B22880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

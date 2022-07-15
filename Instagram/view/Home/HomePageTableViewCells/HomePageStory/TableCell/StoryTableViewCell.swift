@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol StoryTableViewCellDelegate: AnyObject {
+    func didTapStoryCellTable(with image: UIImage)
+}
+
 class StoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, StoryTappableDelegate {
     
     
@@ -18,6 +22,8 @@ class StoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
 //    }
     
     @IBOutlet var collectionView: UICollectionView!
+    
+    public weak var storyDelegate: StoryTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,11 +40,11 @@ class StoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-        // Configure here
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -50,9 +56,7 @@ class StoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
     // imageview tapp
     func didTapStoryCell(with image: UIImage) {
         print("image tapped")
-        let nextController = StoryDetailViewController(nibName: "StoryDetailViewController", bundle: nil)
-        (self.window?.rootViewController)?.navigationController?.pushViewController(nextController, animated: true)
-        //used .present(nextController, animated: true, completion: nil)
+        storyDelegate?.didTapStoryCellTable(with: image)
     }
     
     

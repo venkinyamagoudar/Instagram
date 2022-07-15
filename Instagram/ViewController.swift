@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, StoryTappableDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -34,15 +34,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : UITableViewCell!
+        
         
 //        guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryTableViewCell", for: indexPath) as? StoryTableViewCell else {return UITableViewCell() }
         if indexPath.row == 0 {
-            cell = tableView.dequeueReusableCell(withIdentifier: "StoryTableViewCell", for: indexPath) as! StoryTableViewCell
+            let storyCell = tableView.dequeueReusableCell(withIdentifier: "StoryTableViewCell", for: indexPath) as! StoryTableViewCell
+            storyCell.storyDelegate = self
+            return storyCell
         } else {
-            cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! HomePagePostTableViewCell
+            let postCell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! HomePagePostTableViewCell
+            postCell.postPageDelegate = self
+            return postCell
         }
-        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -69,17 +72,30 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let messageViewController = self.storyboard!.instantiateViewController(withIdentifier: "MessageTableViewController") as! MessageTableViewController
         self.navigationController!.pushViewController(messageViewController, animated: true)
     }
-    
-    //toolbar bottom buttons
-    func barButtons() {
-        
-    }
+
     
     //tap story
     
-    func didTapStoryCell(with image: UIImage) {
-        print("image tapped")
-        let nextController = StoryDetailViewController(nibName: "StoryDetailViewController", bundle: nil)
-        self.navigationController?.pushViewController(nextController, animated: true)
+//    func didTapStoryCell(with image: UIImage) {
+//        print("image tapped")
+//        let nextController = StoryDetailViewController(nibName: "StoryDetailViewController", bundle: nil)
+//        self.navigationController?.pushViewController(nextController, animated: true)
+//    }
+}
+
+extension ViewController : StoryTableViewCellDelegate {
+    func didTapStoryCellTable(with image: UIImage) {
+        print("image")
+        let vc = StoryDetailViewController()
+        //vc.storyImage.image = image
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+
+extension ViewController : HomePagePostTableViewCellDelegate {
+    func didTapLabelAndProfile() {
+        let vc = OthersProfileCollectionViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

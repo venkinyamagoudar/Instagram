@@ -25,7 +25,7 @@ class StoryCollectionViewCell: UICollectionViewCell {
     var storyImage = UIImage(named: "message")
     
     //let nc = UINavigationController()
-    weak var storyImageTapDelegate: StoryTappableDelegate?
+    public weak var storyImageTapDelegate: StoryTappableDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
