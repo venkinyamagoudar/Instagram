@@ -37,7 +37,10 @@ class ReelsViewController: UIViewController, UICollectionViewDelegate, UICollect
         return CGSize(width: 414, height: 743 )
     }
     
-    @IBAction func cameraButtonTapped(_ sender: Any) {
-        print("camera tapped")
+    // CAMERA button
+    
+    @IBAction func didTapCamera(_ sender: Any) {
+        let vc = CameraViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -29,6 +29,12 @@
 		24C932C22880A39A002A45EF /* OtherProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C932C02880A39A002A45EF /* OtherProfileCollectionViewCell.swift */; };
 		24C932CC2881925E002A45EF /* OthersProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C932CA2881925E002A45EF /* OthersProfileViewController.xib */; };
 		24C932CD2881925E002A45EF /* OthersProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C932CB2881925E002A45EF /* OthersProfileViewController.swift */; };
+		24C932D32881CEFE002A45EF /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C932D12881CEFE002A45EF /* FollowersViewController.swift */; };
+		24C932D42881CEFE002A45EF /* FollowersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C932D22881CEFE002A45EF /* FollowersViewController.xib */; };
+		24C932D72881CF11002A45EF /* FollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C932D52881CF11002A45EF /* FollowingViewController.swift */; };
+		24C932D82881CF11002A45EF /* FollowingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C932D62881CF11002A45EF /* FollowingViewController.xib */; };
+		24C932DB2881CF27002A45EF /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C932D92881CF27002A45EF /* SuggestionViewController.swift */; };
+		24C932DC2881CF27002A45EF /* SuggestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C932DA2881CF27002A45EF /* SuggestionViewController.xib */; };
 		24E2AC92286B61C9000834FD /* StoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E2AC90286B61C9000834FD /* StoryDetailViewController.swift */; };
 		24E2AC93286B61C9000834FD /* StoryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E2AC91286B61C9000834FD /* StoryDetailViewController.xib */; };
 		24E2AC9C286CB417000834FD /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E2AC9B286CB417000834FD /* GalleryViewController.swift */; };
@@ -94,6 +100,12 @@
 		24C932C02880A39A002A45EF /* OtherProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		24C932CA2881925E002A45EF /* OthersProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OthersProfileViewController.xib; sourceTree = "<group>"; };
 		24C932CB2881925E002A45EF /* OthersProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OthersProfileViewController.swift; sourceTree = "<group>"; };
+		24C932D12881CEFE002A45EF /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
+		24C932D22881CEFE002A45EF /* FollowersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowersViewController.xib; sourceTree = "<group>"; };
+		24C932D52881CF11002A45EF /* FollowingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingViewController.swift; sourceTree = "<group>"; };
+		24C932D62881CF11002A45EF /* FollowingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowingViewController.xib; sourceTree = "<group>"; };
+		24C932D92881CF27002A45EF /* SuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
+		24C932DA2881CF27002A45EF /* SuggestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionViewController.xib; sourceTree = "<group>"; };
 		24E2AC90286B61C9000834FD /* StoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailViewController.swift; sourceTree = "<group>"; };
 		24E2AC91286B61C9000834FD /* StoryDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryDetailViewController.xib; sourceTree = "<group>"; };
 		24E2AC9B286CB417000834FD /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
@@ -167,7 +179,7 @@
 				24B9B51A286343E8000DA190 /* AppDelegate.swift */,
 				24B9B51C286343E8000DA190 /* SceneDelegate.swift */,
 				24B9B51E286343E8000DA190 /* ViewController.swift */,
-				24B9B53228653914000DA190 /* view */,
+				24B9B53C28653B5B000DA190 /* Home */,
 				24E2AC82286B380A000834FD /* gallery */,
 				24E2ACA4286CE917000834FD /* Camera */,
 				24E2AC9D286CC66C000834FD /* Message */,
@@ -182,14 +194,6 @@
 				24B9B528286343E9000DA190 /* Info.plist */,
 			);
 			path = Instagram;
-			sourceTree = "<group>";
-		};
-		24B9B53228653914000DA190 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				24B9B53C28653B5B000DA190 /* Home */,
-			);
-			path = view;
 			sourceTree = "<group>";
 		};
 		24B9B53328653938000DA190 /* HomePageTableViewCells */ = {
@@ -261,8 +265,8 @@
 			isa = PBXGroup;
 			children = (
 				24C932BC2880A223002A45EF /* ProfileHeader */,
-				24C932BD2880A231002A45EF /* TabHeader */,
 				24C932BE2880A23C002A45EF /* AllStory */,
+				24C932BD2880A231002A45EF /* TabHeader */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -298,8 +302,38 @@
 			isa = PBXGroup;
 			children = (
 				24C932C02880A39A002A45EF /* OtherProfileCollectionViewCell.swift */,
+				24C932CF2881C3D2002A45EF /* Following */,
+				24C932D02881CECF002A45EF /* Suggestion */,
+				24C932CE2881C3C9002A45EF /* Followers */,
 			);
 			path = OtherProfileViewCells;
+			sourceTree = "<group>";
+		};
+		24C932CE2881C3C9002A45EF /* Followers */ = {
+			isa = PBXGroup;
+			children = (
+				24C932D12881CEFE002A45EF /* FollowersViewController.swift */,
+				24C932D22881CEFE002A45EF /* FollowersViewController.xib */,
+			);
+			path = Followers;
+			sourceTree = "<group>";
+		};
+		24C932CF2881C3D2002A45EF /* Following */ = {
+			isa = PBXGroup;
+			children = (
+				24C932D52881CF11002A45EF /* FollowingViewController.swift */,
+				24C932D62881CF11002A45EF /* FollowingViewController.xib */,
+			);
+			path = Following;
+			sourceTree = "<group>";
+		};
+		24C932D02881CECF002A45EF /* Suggestion */ = {
+			isa = PBXGroup;
+			children = (
+				24C932D92881CF27002A45EF /* SuggestionViewController.swift */,
+				24C932DA2881CF27002A45EF /* SuggestionViewController.xib */,
+			);
+			path = Suggestion;
 			sourceTree = "<group>";
 		};
 		24E2AC82286B380A000834FD /* gallery */ = {
@@ -561,6 +595,7 @@
 			files = (
 				24E2ACAE286CF6DE000834FD /* PhotoViewController.xib in Resources */,
 				24C932BB2880A209002A45EF /* OtherProfileStoryCollectionReusableView.xib in Resources */,
+				24C932D82881CF11002A45EF /* FollowingViewController.xib in Resources */,
 				24E2ACD2286F835B000834FD /* ReelsCollectionViewCell.xib in Resources */,
 				24F3491E287F4ABF0017C7AA /* ChatViewController.xib in Resources */,
 				24C932CC2881925E002A45EF /* OthersProfileViewController.xib in Resources */,
@@ -573,6 +608,8 @@
 				24E2AC93286B61C9000834FD /* StoryDetailViewController.xib in Resources */,
 				24B9B524286343E9000DA190 /* Assets.xcassets in Resources */,
 				24B9B522286343E8000DA190 /* Main.storyboard in Resources */,
+				24C932D42881CEFE002A45EF /* FollowersViewController.xib in Resources */,
+				24C932DC2881CF27002A45EF /* SuggestionViewController.xib in Resources */,
 				24E2ACEE28750ADE000834FD /* CartTableViewCell.xib in Resources */,
 				24E2ACEA28750A49000834FD /* ShopCartViewController.xib in Resources */,
 				24F348F0287F007D0017C7AA /* ListOfFollowersViewController.xib in Resources */,
@@ -594,14 +631,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C932D32881CEFE002A45EF /* FollowersViewController.swift in Sources */,
 				24E2ACED28750ADE000834FD /* CartTableViewCell.swift in Sources */,
 				24E2ACA9286CEE13000834FD /* CameraViewController.swift in Sources */,
+				24C932D72881CF11002A45EF /* FollowingViewController.swift in Sources */,
 				24F348D7287DF7C20017C7AA /* ProfileInfoHeaderCollectionReusableView.swift in Sources */,
 				24E2ACBD286E2B25000834FD /* ReelsViewController.swift in Sources */,
 				24E2ACE928750A49000834FD /* ShopCartViewController.swift in Sources */,
 				24E2AC92286B61C9000834FD /* StoryDetailViewController.swift in Sources */,
 				24F348C72878D4D70017C7AA /* ProfileCollectionViewCell.swift in Sources */,
 				24E2AC9C286CB417000834FD /* GalleryViewController.swift in Sources */,
+				24C932DB2881CF27002A45EF /* SuggestionViewController.swift in Sources */,
 				24B9B58D286A5C40000DA190 /* StoryCollectionViewCell.swift in Sources */,
 				24C932C22880A39A002A45EF /* OtherProfileCollectionViewCell.swift in Sources */,
 				24E2ACA2286CDB1A000834FD /* MessageTableViewCell.swift in Sources */,

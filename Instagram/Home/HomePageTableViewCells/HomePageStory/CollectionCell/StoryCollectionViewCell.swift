@@ -34,9 +34,18 @@ class StoryCollectionViewCell: UICollectionViewCell {
         let tapRecogniser = UITapGestureRecognizer(target: self, action: #selector(storyPressed(tapGestureRecognizer: )))
         userImage.addGestureRecognizer(tapRecogniser)
         
+        
+        userImage?.layer.cornerRadius = (userImage?.frame.size.height ?? 0.0) / 2
+        userImage?.clipsToBounds = true
+        userImage?.layer.borderWidth = 3.0
+        userImage.layer.borderColor = UIColor.blue.cgColor
+        
+        
+        
     }
     
     @objc func storyPressed(tapGestureRecognizer: UITapGestureRecognizer) {
         self.storyImageTapDelegate?.didTapStoryCell(with: self.storyImage!)
+        userImage.layer.borderColor = UIColor.gray.cgColor
     }
 }

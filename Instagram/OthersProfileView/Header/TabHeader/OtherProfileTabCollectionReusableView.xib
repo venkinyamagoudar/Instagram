@@ -10,10 +10,71 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OtherProfileTabCollectionReusableView" id="U6b-Vx-4bR" customClass="OtherProfileTabCollectionReusableView" customModule="Instagram" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDk-ZF-vOQ">
+                    <rect key="frame" x="0.0" y="0.0" width="138" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="138" id="6gV-GP-ucI"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="square.grid.3x3.fill" catalog="system"/>
+                    <connections>
+                        <action selector="didTapPostsButton:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="UPc-Hd-tOu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jB-mv-ACD">
+                    <rect key="frame" x="276" y="0.0" width="138" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="138" id="BSu-Ca-Fds"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="person.crop.rectangle" catalog="system"/>
+                    <connections>
+                        <action selector="didTapTaggedListButton:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="AVg-dg-6sP"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovr-L0-k51">
+                    <rect key="frame" x="138" y="0.0" width="138" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="138" id="lNs-60-6Bz"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="play.rectangle" catalog="system"/>
+                    <connections>
+                        <action selector="didTapVideosListButton:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="00s-52-Qji"/>
+                    </connections>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
-            <point key="canvasLocation" x="139" y="68"/>
+            <constraints>
+                <constraint firstItem="Ovr-L0-k51" firstAttribute="leading" secondItem="GDk-ZF-vOQ" secondAttribute="trailing" id="08t-0V-Mtw"/>
+                <constraint firstItem="3jB-mv-ACD" firstAttribute="leading" secondItem="Ovr-L0-k51" secondAttribute="trailing" id="0pd-XX-jmT"/>
+                <constraint firstItem="Ovr-L0-k51" firstAttribute="bottom" secondItem="VXr-Tz-HHm" secondAttribute="bottom" id="21d-2a-FbE"/>
+                <constraint firstItem="Ovr-L0-k51" firstAttribute="leading" secondItem="GDk-ZF-vOQ" secondAttribute="trailing" id="3F2-Ga-Rm1"/>
+                <constraint firstItem="GDk-ZF-vOQ" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="3FN-Ur-DT1"/>
+                <constraint firstItem="GDk-ZF-vOQ" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="BBA-mn-rmZ"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="GDk-ZF-vOQ" secondAttribute="bottom" id="Blv-iz-NJQ"/>
+                <constraint firstItem="3jB-mv-ACD" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="EAq-Fh-ysc"/>
+                <constraint firstItem="Ovr-L0-k51" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="TM8-2q-jzt"/>
+                <constraint firstItem="3jB-mv-ACD" firstAttribute="trailing" secondItem="VXr-Tz-HHm" secondAttribute="trailing" id="UlH-3V-bXP"/>
+                <constraint firstItem="GDk-ZF-vOQ" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="VMH-A3-KkD"/>
+                <constraint firstItem="3jB-mv-ACD" firstAttribute="bottom" secondItem="VXr-Tz-HHm" secondAttribute="bottom" id="hvk-U3-Dz5"/>
+                <constraint firstItem="GDk-ZF-vOQ" firstAttribute="bottom" secondItem="VXr-Tz-HHm" secondAttribute="bottom" id="lcN-ii-CyQ"/>
+                <constraint firstItem="GDk-ZF-vOQ" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="okz-K6-gM2"/>
+            </constraints>
+            <connections>
+                <outlet property="postButton" destination="GDk-ZF-vOQ" id="G4K-gL-GgT"/>
+                <outlet property="taggedListButton" destination="3jB-mv-ACD" id="GB8-bD-zzN"/>
+                <outlet property="videoListButton" destination="Ovr-L0-k51" id="dWH-Id-4Dc"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="67.633928571428569"/>
         </collectionReusableView>
     </objects>
+    <resources>
+        <image name="person.crop.rectangle" catalog="system" width="128" height="93"/>
+        <image name="play.rectangle" catalog="system" width="128" height="93"/>
+        <image name="square.grid.3x3.fill" catalog="system" width="128" height="112"/>
+    </resources>
 </document>

@@ -15,6 +15,8 @@ class OtherProfileStoryCollectionReusableView: UICollectionReusableView {
         return UINib(nibName: "OtherProfileStoryCollectionReusableView", bundle: nil)
     }
     
+    @IBOutlet weak var storyCollectionView: UICollectionView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

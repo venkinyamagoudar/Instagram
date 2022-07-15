@@ -337,11 +337,11 @@
                                 <rect key="frame" x="338.5" y="4.5" width="55.5" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="didTapCamera:" destination="3e3-J8-tDs" eventType="touchUpInside" id="ItZ-Cf-9ol"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="cameraButtonTapped:" destination="3e3-J8-tDs" id="aR1-IB-gBb"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
