@@ -1,5 +1,5 @@
 //
-//  OthersProfileCollectionViewController.swift
+//  OthersProfileViewController.swift
 //  Instagram
 //
 //  Created by Venkatesh Nyamagoudar on 7/14/22.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+class OthersProfileViewController: UIViewController {
 
-class OthersProfileCollectionViewController: UICollectionViewController {
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,8 @@ class OthersProfileCollectionViewController: UICollectionViewController {
         let moreButton = UIBarButtonItem(image: UIImage(systemName: "ellipsis"), style: .plain, target: self, action: #selector(didTapMoreButton))
         navigationItem.rightBarButtonItems = [moreButton, notificationButton]
     }
-
+    
+    
     // MARK: Bar BUtton Methods
     
     @objc func didTapNotificationButton() {
@@ -110,21 +111,23 @@ class OthersProfileCollectionViewController: UICollectionViewController {
         print("Share this profile")
     }
     
+}
+
+
+extension OthersProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
     
-    //MARK: Delegation Methods
-    
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 3
     }
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section < 2 {
             return 0
         }
         return 99
     }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OtherProfileCollectionViewCell.identifier, for: indexPath) as! OtherProfileCollectionViewCell
         cell.configure(debug: "car")
         return cell
@@ -141,7 +144,20 @@ class OthersProfileCollectionViewController: UICollectionViewController {
     }
     
     //header
-    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        var size = CGSize()
+        if section == 0 {
+            size = CGSize(width: collectionView.frame.width, height: 200)
+        } else if section == 1{
+            size = CGSize(width: collectionView.frame.width, height: 80)
+        }else {
+            size = CGSize(width: collectionView.frame.width, height: 50)
+        }
+        return size
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 
         if indexPath.section == 0 {
             let profileHeader = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
@@ -160,15 +176,6 @@ class OthersProfileCollectionViewController: UICollectionViewController {
         }
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        var size = CGSize()
-        if section == 0 {
-            size = CGSize(width: view.frame.width, height: 160)
-        } else if section == 1{
-            size = CGSize(width: view.frame.width, height: 80)
-        }else {
-            size = CGSize(width: view.frame.width, height: 50)
-        }
-        return size
-    }
+    
+    
 }

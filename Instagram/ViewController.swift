@@ -95,7 +95,7 @@ extension ViewController : StoryTableViewCellDelegate {
 
 extension ViewController : HomePagePostTableViewCellDelegate {
     func didTapLabelAndProfile() {
-        let vc = OthersProfileCollectionViewController()
+        let vc = OthersProfileViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 }
