@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfilePronounsViewController" customModule="Instagram" customModuleProvider="target">
+            <connections>
+                <outlet property="textField" destination="br5-0N-Ecs" id="dvP-zg-1DN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pronoun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEY-f1-PgJ">
+                    <rect key="frame" x="20" y="110" width="80" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="BBH-d3-WJ8"/>
+                        <constraint firstAttribute="width" constant="80" id="zDL-rY-XXq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="br5-0N-Ecs">
+                    <rect key="frame" x="0.0" y="139" width="414" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="4Q4-gK-UMx"/>
+                        <constraint firstAttribute="width" constant="414" id="rQI-03-PNu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8b7-tf-vfM">
+                    <rect key="frame" x="374" y="141" width="30" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="3Hh-xu-R4p"/>
+                        <constraint firstAttribute="height" constant="31" id="7aR-Ir-XV8"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="multiply.circle.fill" catalog="system"/>
+                    <connections>
+                        <action selector="crossButtonPressed:" destination="-1" eventType="touchUpInside" id="qVw-iJ-uOO"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8b7-tf-vfM" secondAttribute="trailing" constant="10" id="B0q-Ck-BFy"/>
+                <constraint firstItem="WEY-f1-PgJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="66" id="LI9-If-d6g"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8b7-tf-vfM" secondAttribute="bottom" constant="690" id="O4E-2O-gRU"/>
+                <constraint firstItem="br5-0N-Ecs" firstAttribute="top" secondItem="WEY-f1-PgJ" secondAttribute="bottom" constant="8" symbolic="YES" id="PS6-pM-yZc"/>
+                <constraint firstItem="WEY-f1-PgJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="QDt-WR-G49"/>
+                <constraint firstItem="8b7-tf-vfM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="97" id="YlY-LF-hn3"/>
+                <constraint firstItem="br5-0N-Ecs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="a3u-dz-YlG"/>
+                <constraint firstItem="br5-0N-Ecs" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mrf-CD-csr"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="24"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="multiply.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileNameViewController" customModule="Instagram" customModuleProvider="target">
+            <connections>
+                <outlet property="textField" destination="5hk-iL-Xgx" id="ToV-dE-JYe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWY-bV-cpN">
+                    <rect key="frame" x="20" y="110" width="51" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="1Te-Ed-yXb"/>
+                        <constraint firstAttribute="width" constant="51" id="jT7-oE-p4Y"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5hk-iL-Xgx">
+                    <rect key="frame" x="0.0" y="139" width="414" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="414" id="saI-0g-Zng"/>
+                        <constraint firstAttribute="height" constant="34" id="wJs-Bs-1wE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPK-gi-rFj">
+                    <rect key="frame" x="374" y="141" width="30" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="ZbU-xZ-RPH"/>
+                        <constraint firstAttribute="height" constant="31" id="iTp-mw-FjF"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="multiply.circle.fill" catalog="system"/>
+                    <connections>
+                        <action selector="CrossButtonPressed:" destination="-1" eventType="touchUpInside" id="yPE-kc-dLS"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cPK-gi-rFj" secondAttribute="bottom" constant="690" id="8ph-Do-U0T"/>
+                <constraint firstItem="5hk-iL-Xgx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JaE-8U-TXS"/>
+                <constraint firstItem="pWY-bV-cpN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="bTE-vC-33y"/>
+                <constraint firstItem="pWY-bV-cpN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="66" id="cYQ-LX-xJF"/>
+                <constraint firstItem="cPK-gi-rFj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="97" id="e1a-7b-WQK"/>
+                <constraint firstItem="5hk-iL-Xgx" firstAttribute="top" secondItem="pWY-bV-cpN" secondAttribute="bottom" constant="8" symbolic="YES" id="eCO-Lo-AhQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cPK-gi-rFj" secondAttribute="trailing" constant="10" id="hgi-EU-pd7"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="9.375"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="multiply.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

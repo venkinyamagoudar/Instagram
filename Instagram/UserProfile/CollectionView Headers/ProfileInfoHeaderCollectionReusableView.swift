@@ -33,6 +33,12 @@ final class ProfileInfoHeaderCollectionReusableView: UICollectionReusableView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        profileImage.layer.borderColor = UIColor.white.cgColor
+        profileImage.layer.masksToBounds = true
+        profileImage.layer.cornerRadius = self.profileImage.frame.width / 2
+        profileImage.layer.borderWidth = 1.0
+        
     }
     
     

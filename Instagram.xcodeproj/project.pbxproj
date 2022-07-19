@@ -59,6 +59,27 @@
 		24E2ACEE28750ADE000834FD /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E2ACEC28750ADE000834FD /* CartTableViewCell.xib */; };
 		24E2ACFE28762409000834FD /* ShoppongActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E2ACFD28762409000834FD /* ShoppongActivityViewController.xib */; };
 		24E2AD0028762413000834FD /* ShoppongActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E2ACFF28762413000834FD /* ShoppongActivityViewController.swift */; };
+		24EDD1732885C06400364660 /* EditProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EDD1712885C06400364660 /* EditProfileTableViewCell.swift */; };
+		24EDD1742885C06400364660 /* EditProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24EDD1722885C06400364660 /* EditProfileTableViewCell.xib */; };
+		24EDD1782885C71100364660 /* EditWebsiteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EDD1762885C71100364660 /* EditWebsiteTableViewCell.swift */; };
+		24EDD1792885C71100364660 /* EditWebsiteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24EDD1772885C71100364660 /* EditWebsiteTableViewCell.xib */; };
+		24EDD17C2885DACB00364660 /* EditProfileOtherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EDD17A2885DACB00364660 /* EditProfileOtherTableViewCell.swift */; };
+		24EDD17D2885DACB00364660 /* EditProfileOtherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24EDD17B2885DACB00364660 /* EditProfileOtherTableViewCell.xib */; };
+		24EDD1812885E1E500364660 /* EditProfileNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EDD17F2885E1E500364660 /* EditProfileNameViewController.swift */; };
+		24EDD1822885E1E500364660 /* EditProfileNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24EDD1802885E1E500364660 /* EditProfileNameViewController.xib */; };
+		24EDD1852885E1FD00364660 /* EditProfileUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EDD1832885E1FD00364660 /* EditProfileUsernameViewController.swift */; };
+		24EDD1862885E1FD00364660 /* EditProfileUsernameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24EDD1842885E1FD00364660 /* EditProfileUsernameViewController.xib */; };
+		24EDD1892885E22400364660 /* EditProfileBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EDD1872885E22400364660 /* EditProfileBioViewController.swift */; };
+		24EDD18A2885E22400364660 /* EditProfileBioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24EDD1882885E22400364660 /* EditProfileBioViewController.xib */; };
+		24EDD18D2885E25F00364660 /* EditProfilePronounsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EDD18B2885E25F00364660 /* EditProfilePronounsViewController.swift */; };
+		24EDD18E2885E25F00364660 /* EditProfilePronounsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24EDD18C2885E25F00364660 /* EditProfilePronounsViewController.xib */; };
+		24EDD1912885E29000364660 /* AvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EDD18F2885E29000364660 /* AvatarViewController.swift */; };
+		24EDD1922885E29000364660 /* AvatarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24EDD1902885E29000364660 /* AvatarViewController.xib */; };
+		24EDD1952885E3FB00364660 /* ProfessionalAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EDD1932885E3FB00364660 /* ProfessionalAccountViewController.swift */; };
+		24EDD1962885E3FB00364660 /* ProfessionalAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24EDD1942885E3FB00364660 /* ProfessionalAccountViewController.xib */; };
+		24EDD1992885E41700364660 /* personalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EDD1972885E41700364660 /* personalInformationViewController.swift */; };
+		24EDD19A2885E41700364660 /* personalInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24EDD1982885E41700364660 /* personalInformationViewController.xib */; };
+		24EDD19D2886355D00364660 /* PersonalInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EDD19C2886355D00364660 /* PersonalInformation.swift */; };
 		24F348C72878D4D70017C7AA /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F348C62878D4D70017C7AA /* ProfileCollectionViewCell.swift */; };
 		24F348D7287DF7C20017C7AA /* ProfileInfoHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F348D5287DF7C20017C7AA /* ProfileInfoHeaderCollectionReusableView.swift */; };
 		24F348D8287DF7C20017C7AA /* ProfileInfoHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F348D6287DF7C20017C7AA /* ProfileInfoHeaderCollectionReusableView.xib */; };
@@ -130,6 +151,27 @@
 		24E2ACEC28750ADE000834FD /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		24E2ACFD28762409000834FD /* ShoppongActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoppongActivityViewController.xib; sourceTree = "<group>"; };
 		24E2ACFF28762413000834FD /* ShoppongActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppongActivityViewController.swift; sourceTree = "<group>"; };
+		24EDD1712885C06400364660 /* EditProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewCell.swift; sourceTree = "<group>"; };
+		24EDD1722885C06400364660 /* EditProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileTableViewCell.xib; sourceTree = "<group>"; };
+		24EDD1762885C71100364660 /* EditWebsiteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWebsiteTableViewCell.swift; sourceTree = "<group>"; };
+		24EDD1772885C71100364660 /* EditWebsiteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditWebsiteTableViewCell.xib; sourceTree = "<group>"; };
+		24EDD17A2885DACB00364660 /* EditProfileOtherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileOtherTableViewCell.swift; sourceTree = "<group>"; };
+		24EDD17B2885DACB00364660 /* EditProfileOtherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileOtherTableViewCell.xib; sourceTree = "<group>"; };
+		24EDD17F2885E1E500364660 /* EditProfileNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileNameViewController.swift; sourceTree = "<group>"; };
+		24EDD1802885E1E500364660 /* EditProfileNameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileNameViewController.xib; sourceTree = "<group>"; };
+		24EDD1832885E1FD00364660 /* EditProfileUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileUsernameViewController.swift; sourceTree = "<group>"; };
+		24EDD1842885E1FD00364660 /* EditProfileUsernameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileUsernameViewController.xib; sourceTree = "<group>"; };
+		24EDD1872885E22400364660 /* EditProfileBioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileBioViewController.swift; sourceTree = "<group>"; };
+		24EDD1882885E22400364660 /* EditProfileBioViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileBioViewController.xib; sourceTree = "<group>"; };
+		24EDD18B2885E25F00364660 /* EditProfilePronounsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePronounsViewController.swift; sourceTree = "<group>"; };
+		24EDD18C2885E25F00364660 /* EditProfilePronounsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfilePronounsViewController.xib; sourceTree = "<group>"; };
+		24EDD18F2885E29000364660 /* AvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewController.swift; sourceTree = "<group>"; };
+		24EDD1902885E29000364660 /* AvatarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarViewController.xib; sourceTree = "<group>"; };
+		24EDD1932885E3FB00364660 /* ProfessionalAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalAccountViewController.swift; sourceTree = "<group>"; };
+		24EDD1942885E3FB00364660 /* ProfessionalAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfessionalAccountViewController.xib; sourceTree = "<group>"; };
+		24EDD1972885E41700364660 /* personalInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personalInformationViewController.swift; sourceTree = "<group>"; };
+		24EDD1982885E41700364660 /* personalInformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = personalInformationViewController.xib; sourceTree = "<group>"; };
+		24EDD19C2886355D00364660 /* PersonalInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformation.swift; sourceTree = "<group>"; };
 		24F348C62878D4D70017C7AA /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		24F348D5287DF7C20017C7AA /* ProfileInfoHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		24F348D6287DF7C20017C7AA /* ProfileInfoHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileInfoHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
@@ -188,6 +230,7 @@
 				24E2ACB0286E191F000834FD /* Shop */,
 				24E2ACB2286E1962000834FD /* UserProfile */,
 				24C932AA28806973002A45EF /* OthersProfileView */,
+				24EDD19B2886352C00364660 /* Model */,
 				24B9B520286343E8000DA190 /* Main.storyboard */,
 				24B9B523286343E9000DA190 /* Assets.xcassets */,
 				24B9B525286343E9000DA190 /* LaunchScreen.storyboard */,
@@ -407,7 +450,6 @@
 			isa = PBXGroup;
 			children = (
 				24E2ACBF286E2B37000834FD /* ProfileViewController.swift */,
-				24F348DD287E17810017C7AA /* ProfileData.swift */,
 				24F348C52878D4A30017C7AA /* Cells */,
 				24F348C42878D35F0017C7AA /* CollectionView Headers */,
 				24F348DF287E578F0017C7AA /* Controllers */,
@@ -453,6 +495,49 @@
 			path = ShoppingActivityViewController;
 			sourceTree = "<group>";
 		};
+		24EDD1752885C6B300364660 /* EditProfilecells */ = {
+			isa = PBXGroup;
+			children = (
+				24EDD1712885C06400364660 /* EditProfileTableViewCell.swift */,
+				24EDD1722885C06400364660 /* EditProfileTableViewCell.xib */,
+				24EDD1762885C71100364660 /* EditWebsiteTableViewCell.swift */,
+				24EDD1772885C71100364660 /* EditWebsiteTableViewCell.xib */,
+				24EDD17A2885DACB00364660 /* EditProfileOtherTableViewCell.swift */,
+				24EDD17B2885DACB00364660 /* EditProfileOtherTableViewCell.xib */,
+			);
+			path = EditProfilecells;
+			sourceTree = "<group>";
+		};
+		24EDD17E2885DE4C00364660 /* EditProfileControllers */ = {
+			isa = PBXGroup;
+			children = (
+				24EDD17F2885E1E500364660 /* EditProfileNameViewController.swift */,
+				24EDD1802885E1E500364660 /* EditProfileNameViewController.xib */,
+				24EDD1832885E1FD00364660 /* EditProfileUsernameViewController.swift */,
+				24EDD1842885E1FD00364660 /* EditProfileUsernameViewController.xib */,
+				24EDD1872885E22400364660 /* EditProfileBioViewController.swift */,
+				24EDD1882885E22400364660 /* EditProfileBioViewController.xib */,
+				24EDD18B2885E25F00364660 /* EditProfilePronounsViewController.swift */,
+				24EDD18C2885E25F00364660 /* EditProfilePronounsViewController.xib */,
+				24EDD18F2885E29000364660 /* AvatarViewController.swift */,
+				24EDD1902885E29000364660 /* AvatarViewController.xib */,
+				24EDD1932885E3FB00364660 /* ProfessionalAccountViewController.swift */,
+				24EDD1942885E3FB00364660 /* ProfessionalAccountViewController.xib */,
+				24EDD1972885E41700364660 /* personalInformationViewController.swift */,
+				24EDD1982885E41700364660 /* personalInformationViewController.xib */,
+			);
+			path = EditProfileControllers;
+			sourceTree = "<group>";
+		};
+		24EDD19B2886352C00364660 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				24F348DD287E17810017C7AA /* ProfileData.swift */,
+				24EDD19C2886355D00364660 /* PersonalInformation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		24F348C42878D35F0017C7AA /* CollectionView Headers */ = {
 			isa = PBXGroup;
 			children = (
@@ -488,6 +573,8 @@
 			children = (
 				24F348E4287E58270017C7AA /* EditProfileViewController.swift */,
 				24F348E5287E58270017C7AA /* EditProfileViewController.xib */,
+				24EDD1752885C6B300364660 /* EditProfilecells */,
+				24EDD17E2885DE4C00364660 /* EditProfileControllers */,
 			);
 			path = EditProfile;
 			sourceTree = "<group>";
@@ -594,19 +681,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				24E2ACAE286CF6DE000834FD /* PhotoViewController.xib in Resources */,
+				24EDD17D2885DACB00364660 /* EditProfileOtherTableViewCell.xib in Resources */,
 				24C932BB2880A209002A45EF /* OtherProfileStoryCollectionReusableView.xib in Resources */,
 				24C932D82881CF11002A45EF /* FollowingViewController.xib in Resources */,
 				24E2ACD2286F835B000834FD /* ReelsCollectionViewCell.xib in Resources */,
+				24EDD1862885E1FD00364660 /* EditProfileUsernameViewController.xib in Resources */,
 				24F3491E287F4ABF0017C7AA /* ChatViewController.xib in Resources */,
 				24C932CC2881925E002A45EF /* OthersProfileViewController.xib in Resources */,
+				24EDD1742885C06400364660 /* EditProfileTableViewCell.xib in Resources */,
 				24C932B32880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.xib in Resources */,
 				24E2ACD628747FCB000834FD /* ShoppingCollectionViewCell.xib in Resources */,
+				24EDD1792885C71100364660 /* EditWebsiteTableViewCell.xib in Resources */,
 				24B9B527286343E9000DA190 /* LaunchScreen.storyboard in Resources */,
 				24E2ACC6286E4355000834FD /* SearchCollectionViewCell.xib in Resources */,
 				24E2ACA3286CDB1A000834FD /* MessageTableViewCell.xib in Resources */,
 				24F348E7287E58270017C7AA /* EditProfileViewController.xib in Resources */,
 				24E2AC93286B61C9000834FD /* StoryDetailViewController.xib in Resources */,
 				24B9B524286343E9000DA190 /* Assets.xcassets in Resources */,
+				24EDD18A2885E22400364660 /* EditProfileBioViewController.xib in Resources */,
 				24B9B522286343E8000DA190 /* Main.storyboard in Resources */,
 				24C932D42881CEFE002A45EF /* FollowersViewController.xib in Resources */,
 				24C932DC2881CF27002A45EF /* SuggestionViewController.xib in Resources */,
@@ -615,11 +707,16 @@
 				24F348F0287F007D0017C7AA /* ListOfFollowersViewController.xib in Resources */,
 				24B9B58A286A5C2A000DA190 /* StoryTableViewCell.xib in Resources */,
 				24F348D8287DF7C20017C7AA /* ProfileInfoHeaderCollectionReusableView.xib in Resources */,
+				24EDD1922885E29000364660 /* AvatarViewController.xib in Resources */,
 				24F348DC287DF8C80017C7AA /* ProfileTabsCollectionReusableView.xib in Resources */,
+				24EDD1962885E3FB00364660 /* ProfessionalAccountViewController.xib in Resources */,
 				24B9B58E286A5C40000DA190 /* StoryCollectionViewCell.xib in Resources */,
+				24EDD1822885E1E500364660 /* EditProfileNameViewController.xib in Resources */,
 				24F348F4287F009D0017C7AA /* ListOfFollowingViewController.xib in Resources */,
+				24EDD19A2885E41700364660 /* personalInformationViewController.xib in Resources */,
 				24B9B582286A4C12000DA190 /* HomePagePostTableViewCell.xib in Resources */,
 				24C932B72880A1F6002A45EF /* OtherProfileTabCollectionReusableView.xib in Resources */,
+				24EDD18E2885E25F00364660 /* EditProfilePronounsViewController.xib in Resources */,
 				24E2ACFE28762409000834FD /* ShoppongActivityViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,6 +728,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24EDD17C2885DACB00364660 /* EditProfileOtherTableViewCell.swift in Sources */,
 				24C932D32881CEFE002A45EF /* FollowersViewController.swift in Sources */,
 				24E2ACED28750ADE000834FD /* CartTableViewCell.swift in Sources */,
 				24E2ACA9286CEE13000834FD /* CameraViewController.swift in Sources */,
@@ -643,23 +741,31 @@
 				24E2AC9C286CB417000834FD /* GalleryViewController.swift in Sources */,
 				24C932DB2881CF27002A45EF /* SuggestionViewController.swift in Sources */,
 				24B9B58D286A5C40000DA190 /* StoryCollectionViewCell.swift in Sources */,
+				24EDD19D2886355D00364660 /* PersonalInformation.swift in Sources */,
 				24C932C22880A39A002A45EF /* OtherProfileCollectionViewCell.swift in Sources */,
 				24E2ACA2286CDB1A000834FD /* MessageTableViewCell.swift in Sources */,
 				24E2ACC1286E2B37000834FD /* ProfileViewController.swift in Sources */,
 				24E2ACAD286CF6DE000834FD /* PhotoViewController.swift in Sources */,
+				24EDD1912885E29000364660 /* AvatarViewController.swift in Sources */,
 				24F348F3287F009D0017C7AA /* ListOfFollowingViewController.swift in Sources */,
 				24B9B51F286343E8000DA190 /* ViewController.swift in Sources */,
 				24B9B580286A4C04000DA190 /* HomePagePostTableViewCell.swift in Sources */,
 				24E2ACB5286E2AF9000834FD /* SearchViewController.swift in Sources */,
 				24E2ACC5286E4355000834FD /* SearchCollectionViewCell.swift in Sources */,
 				24E2ACD1286F835B000834FD /* ReelsCollectionViewCell.swift in Sources */,
+				24EDD1732885C06400364660 /* EditProfileTableViewCell.swift in Sources */,
 				24E2AD0028762413000834FD /* ShoppongActivityViewController.swift in Sources */,
+				24EDD1892885E22400364660 /* EditProfileBioViewController.swift in Sources */,
+				24EDD1992885E41700364660 /* personalInformationViewController.swift in Sources */,
+				24EDD1812885E1E500364660 /* EditProfileNameViewController.swift in Sources */,
 				24B9B51B286343E8000DA190 /* AppDelegate.swift in Sources */,
 				24E2ACD528747FCB000834FD /* ShoppingCollectionViewCell.swift in Sources */,
 				24B9B5472865F5F9000DA190 /* MessageTableViewController.swift in Sources */,
 				24C932B62880A1F6002A45EF /* OtherProfileTabCollectionReusableView.swift in Sources */,
 				24F348DE287E17810017C7AA /* ProfileData.swift in Sources */,
 				24B9B51D286343E8000DA190 /* SceneDelegate.swift in Sources */,
+				24EDD1952885E3FB00364660 /* ProfessionalAccountViewController.swift in Sources */,
+				24EDD18D2885E25F00364660 /* EditProfilePronounsViewController.swift in Sources */,
 				24E2ACB9286E2B0E000834FD /* ShopViewController.swift in Sources */,
 				24C932BA2880A209002A45EF /* OtherProfileStoryCollectionReusableView.swift in Sources */,
 				24F348DB287DF8C80017C7AA /* ProfileTabsCollectionReusableView.swift in Sources */,
@@ -667,6 +773,8 @@
 				24F348E6287E58270017C7AA /* EditProfileViewController.swift in Sources */,
 				24F3491D287F4ABF0017C7AA /* ChatViewController.swift in Sources */,
 				24F348EF287F007D0017C7AA /* ListOfFollowersViewController.swift in Sources */,
+				24EDD1852885E1FD00364660 /* EditProfileUsernameViewController.swift in Sources */,
+				24EDD1782885C71100364660 /* EditWebsiteTableViewCell.swift in Sources */,
 				24C932B22880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.swift in Sources */,
 				24C932CD2881925E002A45EF /* OthersProfileViewController.swift in Sources */,
 			);

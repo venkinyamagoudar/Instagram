@@ -32,6 +32,8 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         let optionButton = UIBarButtonItem(image: UIImage(systemName: "line.horizontal.3"), style: .done, target: self, action: #selector(optionsButtonTapped))
         navigationItem.rightBarButtonItems = [optionButton, reelButton]
     
+    
+        
     }
     
     
