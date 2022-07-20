@@ -9,10 +9,16 @@ import UIKit
 
 class ListOfFollowingViewController: UIViewController {
 
+    
+    var header1 = UIView() //Follow request
+    var header2 = UIView() //category
+    var header3 = UIView() // list of all followers
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
 
 

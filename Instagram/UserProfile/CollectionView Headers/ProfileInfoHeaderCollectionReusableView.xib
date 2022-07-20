@@ -47,7 +47,7 @@
                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="10"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="numberofFollowing:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="P5W-2Y-Wra"/>
+                        <action selector="numberOfFollowers:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="VZ8-hT-EWu"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2GG-DH-ReM">
@@ -111,7 +111,7 @@
                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="10"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="numberOfFollowers:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="xIe-fF-GgN"/>
+                        <action selector="numberofFollowing:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="XCA-5o-zm3"/>
                     </connections>
                 </button>
             </subviews>

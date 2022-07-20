@@ -118,4 +118,6 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }
+    
+    
 }
