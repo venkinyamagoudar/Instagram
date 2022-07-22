@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DiscoverPeopleCollectionViewCell" customModule="Instagram" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKw-DC-FQS">
+                        <rect key="frame" x="130" y="5" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="H0O-5w-zhN"/>
+                            <constraint firstAttribute="height" constant="15" id="M5l-ih-ffh"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="multiply" catalog="system"/>
+                        <connections>
+                            <action selector="crossButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="xau-2e-KpZ"/>
+                        </connections>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xa6-Qc-Nb7">
+                        <rect key="frame" x="25" y="8" width="100" height="100"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="bLX-on-w0g"/>
+                            <constraint firstAttribute="width" constant="100" id="mrC-pi-Tcg"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aej-5n-BNI">
+                        <rect key="frame" x="20" y="116" width="110" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="110" id="XM6-ZU-zgM"/>
+                            <constraint firstAttribute="height" constant="12" id="xwJ-UJ-drS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxM-xE-Die">
+                        <rect key="frame" x="8" y="128" width="134" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="134" id="DrX-G8-JUa"/>
+                            <constraint firstAttribute="height" constant="31" id="HeC-if-LWc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I98-H5-aBg">
+                        <rect key="frame" x="40" y="167" width="70" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="Dly-sC-Srr"/>
+                            <constraint firstAttribute="height" constant="25" id="Os8-aT-fAO"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="filled" title="Follow">
+                            <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="followButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="gnj-0f-TPg"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="I98-H5-aBg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="40" id="74v-tn-l4h"/>
+                <constraint firstAttribute="trailing" secondItem="QKw-DC-FQS" secondAttribute="trailing" constant="5" id="AeZ-7b-GLi"/>
+                <constraint firstItem="QKw-DC-FQS" firstAttribute="leading" secondItem="Xa6-Qc-Nb7" secondAttribute="trailing" constant="5" id="Gc3-RS-cGC"/>
+                <constraint firstAttribute="trailing" secondItem="I98-H5-aBg" secondAttribute="trailing" constant="40" id="J10-h5-yLF"/>
+                <constraint firstItem="fxM-xE-Die" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="R1p-zk-vv3"/>
+                <constraint firstAttribute="trailing" secondItem="fxM-xE-Die" secondAttribute="trailing" constant="8" id="TTZ-bV-ATO"/>
+                <constraint firstAttribute="trailing" secondItem="Aej-5n-BNI" secondAttribute="trailing" constant="20" id="UKj-XV-Src"/>
+                <constraint firstAttribute="trailing" secondItem="fxM-xE-Die" secondAttribute="trailing" constant="8" id="b0c-Eg-V9E"/>
+                <constraint firstItem="fxM-xE-Die" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="cbi-Yb-xQU"/>
+                <constraint firstAttribute="bottom" secondItem="I98-H5-aBg" secondAttribute="bottom" constant="8" id="e27-Q4-6Ep"/>
+                <constraint firstItem="Xa6-Qc-Nb7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="efG-ZD-IEg"/>
+                <constraint firstItem="Aej-5n-BNI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="eya-QR-Gbb"/>
+                <constraint firstItem="Xa6-Qc-Nb7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="gNu-AI-AVI"/>
+                <constraint firstItem="QKw-DC-FQS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="hkX-LQ-doZ"/>
+                <constraint firstItem="fxM-xE-Die" firstAttribute="top" secondItem="Aej-5n-BNI" secondAttribute="bottom" id="jfh-v3-TsV"/>
+                <constraint firstItem="I98-H5-aBg" firstAttribute="top" secondItem="fxM-xE-Die" secondAttribute="bottom" constant="8" symbolic="YES" id="ntj-uD-tJR"/>
+                <constraint firstItem="Aej-5n-BNI" firstAttribute="top" secondItem="Xa6-Qc-Nb7" secondAttribute="bottom" constant="8" symbolic="YES" id="tfW-Xy-Ukt"/>
+            </constraints>
+            <size key="customSize" width="145" height="200"/>
+            <connections>
+                <outlet property="listOfPeopleFollowing" destination="fxM-xE-Die" id="S1O-k6-gkI"/>
+                <outlet property="profileImageView" destination="Xa6-Qc-Nb7" id="mh9-hY-tr3"/>
+                <outlet property="usernameLabel" destination="Aej-5n-BNI" id="Zrg-xp-3cq"/>
+            </connections>
+            <point key="canvasLocation" x="442.02898550724643" y="43.526785714285715"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="multiply" catalog="system" width="128" height="111"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

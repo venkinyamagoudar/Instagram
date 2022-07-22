@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DiscoverPeopleCollectionReusableView" id="U6b-Vx-4bR" customClass="DiscoverPeopleCollectionReusableView" customModule="Instagram" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover People" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMp-va-FVg">
+                    <rect key="frame" x="20" y="8" width="123" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="123" id="crl-kU-bJk"/>
+                        <constraint firstAttribute="height" constant="20" id="hzp-rj-qGV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5f-nJ-gzf">
+                    <rect key="frame" x="327" y="8" width="67" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="3hh-rt-FmV"/>
+                        <constraint firstAttribute="width" constant="67" id="YPC-Bt-WmW"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="see all"/>
+                    <connections>
+                        <action selector="seeAllButtonPressed:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="E8n-Y8-HmW"/>
+                    </connections>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="M5c-Fo-yLY">
+                    <rect key="frame" x="0.0" y="36" width="414" height="206"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="414" id="6cl-Vw-EW4"/>
+                        <constraint firstAttribute="height" constant="206" id="Dvq-77-0vK"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VnL-fD-bYX">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="M5c-Fo-yLY" firstAttribute="top" secondItem="RMp-va-FVg" secondAttribute="bottom" constant="8" symbolic="YES" id="6Ll-hz-kkT"/>
+                <constraint firstItem="T5f-nJ-gzf" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="8" id="CWH-FP-mJq"/>
+                <constraint firstItem="M5c-Fo-yLY" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="IBS-7G-tzf"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="M5c-Fo-yLY" secondAttribute="bottom" constant="8" id="ZwK-0Q-BAb"/>
+                <constraint firstItem="RMp-va-FVg" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="8" id="aUE-rp-lJF"/>
+                <constraint firstItem="M5c-Fo-yLY" firstAttribute="trailing" secondItem="VXr-Tz-HHm" secondAttribute="trailing" id="qE7-x8-AR1"/>
+                <constraint firstAttribute="trailing" secondItem="T5f-nJ-gzf" secondAttribute="trailing" constant="20" symbolic="YES" id="u5W-nV-V8F"/>
+                <constraint firstItem="RMp-va-FVg" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="20" symbolic="YES" id="vFs-dY-uYY"/>
+            </constraints>
+            <connections>
+                <outlet property="discoverCollectionView" destination="M5c-Fo-yLY" id="3Px-oB-doV"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="78.348214285714278"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

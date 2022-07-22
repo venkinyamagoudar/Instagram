@@ -20,6 +20,12 @@
 		24B9B58A286A5C2A000DA190 /* StoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B9B588286A5C2A000DA190 /* StoryTableViewCell.xib */; };
 		24B9B58D286A5C40000DA190 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B9B58B286A5C40000DA190 /* StoryCollectionViewCell.swift */; };
 		24B9B58E286A5C40000DA190 /* StoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B9B58C286A5C40000DA190 /* StoryCollectionViewCell.xib */; };
+		24C45C072887C22D00E77DE3 /* CategoriesFollowingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C45C052887C22D00E77DE3 /* CategoriesFollowingTableViewCell.swift */; };
+		24C45C082887C22D00E77DE3 /* CategoriesFollowingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C45C062887C22D00E77DE3 /* CategoriesFollowingTableViewCell.xib */; };
+		24C45C15288850DA00E77DE3 /* DiscoverPeopleCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C45C13288850DA00E77DE3 /* DiscoverPeopleCollectionReusableView.swift */; };
+		24C45C16288850DA00E77DE3 /* DiscoverPeopleCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C45C14288850DA00E77DE3 /* DiscoverPeopleCollectionReusableView.xib */; };
+		24C45C1928885B0600E77DE3 /* DiscoverPeopleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C45C1728885B0600E77DE3 /* DiscoverPeopleCollectionViewCell.swift */; };
+		24C45C1A28885B0600E77DE3 /* DiscoverPeopleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C45C1828885B0600E77DE3 /* DiscoverPeopleCollectionViewCell.xib */; };
 		24C932B22880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C932B02880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.swift */; };
 		24C932B32880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C932B12880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.xib */; };
 		24C932B62880A1F6002A45EF /* OtherProfileTabCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C932B42880A1F6002A45EF /* OtherProfileTabCollectionReusableView.swift */; };
@@ -100,8 +106,6 @@
 		24F348E7287E58270017C7AA /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F348E5287E58270017C7AA /* EditProfileViewController.xib */; };
 		24F348EF287F007D0017C7AA /* ListOfFollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F348ED287F007D0017C7AA /* ListOfFollowersViewController.swift */; };
 		24F348F0287F007D0017C7AA /* ListOfFollowersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F348EE287F007D0017C7AA /* ListOfFollowersViewController.xib */; };
-		24F348F3287F009D0017C7AA /* ListOfFollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F348F1287F009D0017C7AA /* ListOfFollowingViewController.swift */; };
-		24F348F4287F009D0017C7AA /* ListOfFollowingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F348F2287F009D0017C7AA /* ListOfFollowingViewController.xib */; };
 		24F3491D287F4ABF0017C7AA /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F3491B287F4ABF0017C7AA /* ChatViewController.swift */; };
 		24F3491E287F4ABF0017C7AA /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24F3491C287F4ABF0017C7AA /* ChatViewController.xib */; };
 /* End PBXBuildFile section */
@@ -122,6 +126,12 @@
 		24B9B588286A5C2A000DA190 /* StoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryTableViewCell.xib; sourceTree = "<group>"; };
 		24B9B58B286A5C40000DA190 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		24B9B58C286A5C40000DA190 /* StoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		24C45C052887C22D00E77DE3 /* CategoriesFollowingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesFollowingTableViewCell.swift; sourceTree = "<group>"; };
+		24C45C062887C22D00E77DE3 /* CategoriesFollowingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesFollowingTableViewCell.xib; sourceTree = "<group>"; };
+		24C45C13288850DA00E77DE3 /* DiscoverPeopleCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPeopleCollectionReusableView.swift; sourceTree = "<group>"; };
+		24C45C14288850DA00E77DE3 /* DiscoverPeopleCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverPeopleCollectionReusableView.xib; sourceTree = "<group>"; };
+		24C45C1728885B0600E77DE3 /* DiscoverPeopleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPeopleCollectionViewCell.swift; sourceTree = "<group>"; };
+		24C45C1828885B0600E77DE3 /* DiscoverPeopleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverPeopleCollectionViewCell.xib; sourceTree = "<group>"; };
 		24C932B02880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		24C932B12880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherProfileHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		24C932B42880A1F6002A45EF /* OtherProfileTabCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileTabCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -202,8 +212,6 @@
 		24F348E5287E58270017C7AA /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		24F348ED287F007D0017C7AA /* ListOfFollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfFollowersViewController.swift; sourceTree = "<group>"; };
 		24F348EE287F007D0017C7AA /* ListOfFollowersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListOfFollowersViewController.xib; sourceTree = "<group>"; };
-		24F348F1287F009D0017C7AA /* ListOfFollowingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfFollowingViewController.swift; sourceTree = "<group>"; };
-		24F348F2287F009D0017C7AA /* ListOfFollowingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListOfFollowingViewController.xib; sourceTree = "<group>"; };
 		24F3491B287F4ABF0017C7AA /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		24F3491C287F4ABF0017C7AA /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -643,6 +651,8 @@
 			children = (
 				24EDD1B12887467D00364660 /* FollowingTableViewCell.swift */,
 				24EDD1B22887467D00364660 /* FollowingTableViewCell.xib */,
+				24C45C052887C22D00E77DE3 /* CategoriesFollowingTableViewCell.swift */,
+				24C45C062887C22D00E77DE3 /* CategoriesFollowingTableViewCell.xib */,
 			);
 			path = FollowingTableCell;
 			sourceTree = "<group>";
@@ -671,7 +681,6 @@
 			children = (
 				24F348E8287EFFE10017C7AA /* EditProfile */,
 				24F348E9287EFFF10017C7AA /* Followers */,
-				24F348EA287EFFFC0017C7AA /* Following */,
 				24F348EB287F00030017C7AA /* DiscoverPeople */,
 			);
 			path = Controllers;
@@ -698,18 +707,13 @@
 			path = Followers;
 			sourceTree = "<group>";
 		};
-		24F348EA287EFFFC0017C7AA /* Following */ = {
-			isa = PBXGroup;
-			children = (
-				24F348F1287F009D0017C7AA /* ListOfFollowingViewController.swift */,
-				24F348F2287F009D0017C7AA /* ListOfFollowingViewController.xib */,
-			);
-			path = Following;
-			sourceTree = "<group>";
-		};
 		24F348EB287F00030017C7AA /* DiscoverPeople */ = {
 			isa = PBXGroup;
 			children = (
+				24C45C13288850DA00E77DE3 /* DiscoverPeopleCollectionReusableView.swift */,
+				24C45C14288850DA00E77DE3 /* DiscoverPeopleCollectionReusableView.xib */,
+				24C45C1728885B0600E77DE3 /* DiscoverPeopleCollectionViewCell.swift */,
+				24C45C1828885B0600E77DE3 /* DiscoverPeopleCollectionViewCell.xib */,
 			);
 			path = DiscoverPeople;
 			sourceTree = "<group>";
@@ -797,6 +801,7 @@
 				24E2ACD2286F835B000834FD /* ReelsCollectionViewCell.xib in Resources */,
 				24EDD1862885E1FD00364660 /* EditProfileUsernameViewController.xib in Resources */,
 				24F3491E287F4ABF0017C7AA /* ChatViewController.xib in Resources */,
+				24C45C16288850DA00E77DE3 /* DiscoverPeopleCollectionReusableView.xib in Resources */,
 				24C932CC2881925E002A45EF /* OthersProfileViewController.xib in Resources */,
 				24EDD1742885C06400364660 /* EditProfileTableViewCell.xib in Resources */,
 				24C932B32880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.xib in Resources */,
@@ -817,16 +822,17 @@
 				24C932D42881CEFE002A45EF /* FollowersViewController.xib in Resources */,
 				24C932DC2881CF27002A45EF /* SuggestionViewController.xib in Resources */,
 				24E2ACEE28750ADE000834FD /* CartTableViewCell.xib in Resources */,
+				24C45C082887C22D00E77DE3 /* CategoriesFollowingTableViewCell.xib in Resources */,
 				24E2ACEA28750A49000834FD /* ShopCartViewController.xib in Resources */,
 				24F348F0287F007D0017C7AA /* ListOfFollowersViewController.xib in Resources */,
 				24B9B58A286A5C2A000DA190 /* StoryTableViewCell.xib in Resources */,
 				24F348D8287DF7C20017C7AA /* ProfileInfoHeaderCollectionReusableView.xib in Resources */,
 				24EDD1922885E29000364660 /* AvatarViewController.xib in Resources */,
 				24F348DC287DF8C80017C7AA /* ProfileTabsCollectionReusableView.xib in Resources */,
+				24C45C1A28885B0600E77DE3 /* DiscoverPeopleCollectionViewCell.xib in Resources */,
 				24EDD1962885E3FB00364660 /* ProfessionalAccountViewController.xib in Resources */,
 				24B9B58E286A5C40000DA190 /* StoryCollectionViewCell.xib in Resources */,
 				24EDD1822885E1E500364660 /* EditProfileNameViewController.xib in Resources */,
-				24F348F4287F009D0017C7AA /* ListOfFollowingViewController.xib in Resources */,
 				24EDD19A2885E41700364660 /* personalInformationViewController.xib in Resources */,
 				24B9B582286A4C12000DA190 /* HomePagePostTableViewCell.xib in Resources */,
 				24C932B72880A1F6002A45EF /* OtherProfileTabCollectionReusableView.xib in Resources */,
@@ -843,6 +849,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C45C15288850DA00E77DE3 /* DiscoverPeopleCollectionReusableView.swift in Sources */,
 				24EDD17C2885DACB00364660 /* EditProfileOtherTableViewCell.swift in Sources */,
 				24C932D32881CEFE002A45EF /* FollowersViewController.swift in Sources */,
 				24EDD1BA2887895D00364660 /* HeaderTableViewCell.swift in Sources */,
@@ -854,6 +861,7 @@
 				24E2ACE928750A49000834FD /* ShopCartViewController.swift in Sources */,
 				24E2AC92286B61C9000834FD /* StoryDetailViewController.swift in Sources */,
 				24F348C72878D4D70017C7AA /* ProfileCollectionViewCell.swift in Sources */,
+				24C45C1928885B0600E77DE3 /* DiscoverPeopleCollectionViewCell.swift in Sources */,
 				24E2AC9C286CB417000834FD /* GalleryViewController.swift in Sources */,
 				24C932DB2881CF27002A45EF /* SuggestionViewController.swift in Sources */,
 				24B9B58D286A5C40000DA190 /* StoryCollectionViewCell.swift in Sources */,
@@ -863,7 +871,6 @@
 				24E2ACC1286E2B37000834FD /* ProfileViewController.swift in Sources */,
 				24E2ACAD286CF6DE000834FD /* PhotoViewController.swift in Sources */,
 				24EDD1912885E29000364660 /* AvatarViewController.swift in Sources */,
-				24F348F3287F009D0017C7AA /* ListOfFollowingViewController.swift in Sources */,
 				24B9B51F286343E8000DA190 /* ViewController.swift in Sources */,
 				24B9B580286A4C04000DA190 /* HomePagePostTableViewCell.swift in Sources */,
 				24E2ACB5286E2AF9000834FD /* SearchViewController.swift in Sources */,
@@ -891,6 +898,7 @@
 				24B9B589286A5C2A000DA190 /* StoryTableViewCell.swift in Sources */,
 				24F348E6287E58270017C7AA /* EditProfileViewController.swift in Sources */,
 				24F3491D287F4ABF0017C7AA /* ChatViewController.swift in Sources */,
+				24C45C072887C22D00E77DE3 /* CategoriesFollowingTableViewCell.swift in Sources */,
 				24F348EF287F007D0017C7AA /* ListOfFollowersViewController.swift in Sources */,
 				24EDD1852885E1FD00364660 /* EditProfileUsernameViewController.swift in Sources */,
 				24EDD1782885C71100364660 /* EditWebsiteTableViewCell.swift in Sources */,

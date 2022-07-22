@@ -187,7 +187,7 @@ extension ProfileViewController: ProfileInfoHeaderCollectionReusableViewDelegate
     }
     
     func ProfileHeaderDidTapFollowingButton(_ header: ProfileInfoHeaderCollectionReusableView) {
-        let vc = ListOfFollowingViewController()
+        let vc = ListOfFollowersViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     

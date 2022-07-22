@@ -48,6 +48,7 @@ class ListOfFollowersViewController: UIViewController {
         
         //following table cells
         followingTableView.register(FollowingTableViewCell.nib(), forCellReuseIdentifier: FollowingTableViewCell.identifier)
+        followingTableView.register(CategoriesFollowingTableViewCell.nib(), forCellReuseIdentifier: CategoriesFollowingTableViewCell.identifier)
         
         self.followersSearchBar.delegate = self
     }
@@ -67,7 +68,7 @@ class ListOfFollowersViewController: UIViewController {
                                                  height: mainButtonView.frame.height
                                                 )
         )
-        followersButton.backgroundColor = .green
+        followersButton.backgroundColor = .systemBackground
         followersButton.setTitle("followers", for: .normal)
         followersButton.setTitleColor(UIColor.black, for: .normal)
         followersButton.addTarget(self, action: #selector(followersButtonTapped), for: .touchUpInside)
@@ -81,7 +82,7 @@ class ListOfFollowersViewController: UIViewController {
         )
         followingButton.setTitle("following", for: .normal)
         followingButton.setTitleColor(UIColor.black, for: .normal)
-        followingButton.backgroundColor = .orange
+        followingButton.backgroundColor = .systemBackground
         followingButton.addTarget(self, action: #selector(followingButtonTapped), for: .touchUpInside)
         mainButtonView.addSubview(followingButton)
         
@@ -106,17 +107,25 @@ extension ListOfFollowersViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.row {
+        if tableView == followersTableView {
+            switch indexPath.row {
+                case 0:
+                    return CGFloat(96)
+                case 1:
+                    return CGFloat(170)
+                default:
+                    return CGFloat(50)
+            }
+        } else if tableView == followingTableView {
+            switch indexPath.row {
             case 0:
-                return CGFloat(96)
-            case 1:
-                return CGFloat(170)
+                return CGFloat(204)
             default:
                 return CGFloat(50)
+            }
         }
+        return 0
     }
-    
-    //MARK: header
     
 //    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
 //        switch section {
@@ -148,11 +157,10 @@ extension ListOfFollowersViewController: UITableViewDelegate, UITableViewDataSou
             }
         } else if tableView == followingTableView {
             if indexPath.row == 0{
-                return UITableViewCell()
-            } else if indexPath.row == 1{
-                return UITableViewCell()
+                let cell = followingTableView.dequeueReusableCell(withIdentifier: CategoriesFollowingTableViewCell.identifier, for: indexPath) as! CategoriesFollowingTableViewCell
+                return cell
             } else {
-                let cell = followingTableView.dequeueReusableCell(withIdentifier: FollowingTableViewCell.identifier, for: indexPath)
+                let cell = followingTableView.dequeueReusableCell(withIdentifier: FollowingTableViewCell.identifier, for: indexPath) as! FollowingTableViewCell
                 return cell
             }
         }
@@ -198,7 +206,7 @@ extension ListOfFollowersViewController: UITableViewDelegate, UITableViewDataSou
         followingTableView.frame = CGRect(x: 0,
                                           y: 130,
                                           width: self.view.frame.width,
-                                          height: self.view.frame.height -  90
+                                          height: 636
         )
         self.view.addSubview(followingTableView)
         
@@ -216,7 +224,7 @@ extension ListOfFollowersViewController: UITableViewDelegate, UITableViewDataSou
         followersTableView.frame = CGRect(x: 0,
                                           y: 130,
                                           width: self.view.frame.width,
-                                          height: self.view.frame.height -  90
+                                          height: 637
         )
         self.view.addSubview(followersTableView)
 

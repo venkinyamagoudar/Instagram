@@ -15,9 +15,11 @@ class CategoryTableViewCell: UITableViewCell {
         return UINib(nibName: "CategoryTableViewCell", bundle: nil)
     }
 
+    @IBOutlet weak var accountsTobeFollowedView: UIView!
     @IBOutlet weak var followBackImageView: UIImageView!
     @IBOutlet weak var listOfToBeFollowedLabel: UILabel!
     
+    @IBOutlet weak var accountsLeastContacted: UIView!
     @IBOutlet weak var leastContactedImageView: UIImageView!
     @IBOutlet weak var listOfPeopleLabel: UILabel!
     

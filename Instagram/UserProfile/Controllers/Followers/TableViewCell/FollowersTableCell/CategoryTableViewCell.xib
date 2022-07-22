@@ -32,6 +32,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6xO-w3-QMX">
                                 <rect key="frame" x="20" y="5" width="40" height="40"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="IwO-JE-GfG"/>
                                     <constraint firstAttribute="height" constant="40" id="uIH-0Z-fIT"/>
@@ -57,7 +58,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
                             <constraint firstItem="Zrx-42-396" firstAttribute="top" secondItem="d1j-sm-buI" secondAttribute="bottom" constant="2" id="2Du-VA-EXl"/>
                             <constraint firstItem="d1j-sm-buI" firstAttribute="top" secondItem="8wK-BX-h3u" secondAttribute="top" constant="5" id="A5b-X0-6oA"/>
@@ -76,6 +76,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GmQ-mG-i9J">
                                 <rect key="frame" x="20" y="5" width="40" height="40"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="LQX-tv-bSD"/>
                                     <constraint firstAttribute="width" constant="40" id="fLz-Kx-ceA"/>
@@ -97,7 +98,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <constraints>
                             <constraint firstItem="GmQ-mG-i9J" firstAttribute="leading" secondItem="vjc-GD-zdj" secondAttribute="leading" constant="20" symbolic="YES" id="CeM-EN-uuR"/>
                             <constraint firstItem="p9b-ff-V4c" firstAttribute="leading" secondItem="GmQ-mG-i9J" secondAttribute="trailing" constant="20" id="Cwm-3a-yJa"/>
@@ -128,6 +128,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="accountsLeastContacted" destination="vjc-GD-zdj" id="22j-KO-JSU"/>
+                <outlet property="accountsTobeFollowedView" destination="8wK-BX-h3u" id="8Al-GW-Qwh"/>
                 <outlet property="followBackImageView" destination="6xO-w3-QMX" id="sBj-5A-0g0"/>
                 <outlet property="leastContactedImageView" destination="GmQ-mG-i9J" id="N8o-X2-Lku"/>
                 <outlet property="listOfPeopleLabel" destination="p9b-ff-V4c" id="HIM-HM-dNv"/>
@@ -137,11 +139,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
