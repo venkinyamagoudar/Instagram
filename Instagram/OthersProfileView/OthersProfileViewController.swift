@@ -184,7 +184,7 @@ extension OthersProfileViewController: OtherProfileHeaderCollectionReusableViewD
     }
     
     func didTapNumberOfFollwers() {
-        let vc = FollowersViewController()
+        let vc = FollowingViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     
