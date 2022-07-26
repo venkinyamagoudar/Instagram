@@ -8,6 +8,8 @@
 import UIKit
 
 class EditProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
 
     @IBOutlet weak var tableView: UITableView!
     

@@ -62,8 +62,8 @@
             filePath = "Instagram/OthersProfileView/OtherProfileViewCells/Following/FollowingViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "284"
-            endingLineNumber = "284"
+            startingLineNumber = "282"
+            endingLineNumber = "282"
             landmarkName = "unfollowTapped(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "Instagram/OthersProfileView/OtherProfileViewCells/Following/FollowingViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "269"
-            endingLineNumber = "269"
+            startingLineNumber = "266"
+            endingLineNumber = "266"
             landmarkName = "unfollowButtonMethod(button:)"
             landmarkType = "7">
          </BreakpointContent>

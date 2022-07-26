@@ -8,14 +8,24 @@
 import UIKit
 
 class ProfileViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate ,UICollectionViewDelegateFlowLayout{
-    
-    
-    
+
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var userInformationProfile : UserInformation!
+    var followingCountProfile : FollowingCount!
+    var followersCountProfile: FollowersCount!
+    var postCountProfile: PostCount!
+    var profileImage: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         collectionView.dataSource = self
         collectionView.delegate = self
         
@@ -32,10 +42,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         let optionButton = UIBarButtonItem(image: UIImage(systemName: "line.horizontal.3"), style: .done, target: self, action: #selector(optionsButtonTapped))
         navigationItem.rightBarButtonItems = [optionButton, reelButton]
     
-    
-        
     }
-    
     
     //MARK: - datasource functions
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -73,6 +80,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
                 withReuseIdentifier: ProfileInfoHeaderCollectionReusableView.identifier,
                 for: indexPath) as! ProfileInfoHeaderCollectionReusableView
             profileHeader.delegateProfile = self
+            
             return profileHeader
         } else {
             let tabHeader = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ProfileTabsCollectionReusableView.identifier, for: indexPath) as! ProfileTabsCollectionReusableView
@@ -176,6 +184,13 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
 // MARK: ProfileInfoHeaderCollectionReusableViewDelegate
 
 extension ProfileViewController: ProfileInfoHeaderCollectionReusableViewDelegate {
+    
+    func userInformationFunction(_ userInformation: UserInformation, headerProfileImage: UIImage, _ followersCount: FollowersCount, _ followingCount: FollowingCount, _ postCount: PostCount) {
+        self.userInformationProfile = userInformation
+        self.postCountProfile = postCount
+        self.profileImage = headerProfileImage
+    }
+    
     func ProfileHeaderDidTapPostButton(_ header: ProfileInfoHeaderCollectionReusableView) {
         print("Post tapped")
         collectionView.scrollToItem(at: IndexPath(row: 0, section: 1), at: .top, animated: true)

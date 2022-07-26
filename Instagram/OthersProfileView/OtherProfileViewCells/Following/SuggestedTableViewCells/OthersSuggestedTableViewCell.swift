@@ -53,5 +53,4 @@ class OthersSuggestedTableViewCell: UITableViewCell {
     @IBAction func deleteButtonTapped(_ sender: Any) {
         self.cellDelegate?.removeCellFromTableMethod()
     }
-    
 }

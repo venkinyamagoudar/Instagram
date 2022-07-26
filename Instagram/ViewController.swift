@@ -25,12 +25,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
      
+    override func viewWillAppear(_ animated: Bool) {
+
+    }
     
     
     // table View Delegate functions
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 9
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

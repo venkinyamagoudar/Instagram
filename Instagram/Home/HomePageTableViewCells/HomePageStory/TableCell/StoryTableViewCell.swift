@@ -12,8 +12,6 @@ protocol StoryTableViewCellDelegate: AnyObject {
 }
 
 class StoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, StoryTappableDelegate {
-    
-    
   
 //    static var identifier = "StoryTableViewCell"
 //    

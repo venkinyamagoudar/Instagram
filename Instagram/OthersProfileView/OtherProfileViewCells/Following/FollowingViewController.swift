@@ -29,8 +29,6 @@ class FollowingViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Other User Name"
-
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -116,11 +114,11 @@ extension FollowingViewController: UITableViewDelegate, UITableViewDataSource {
             print("\(indexPath.row)")
             return cell
         case followersTableView:
-            let cell = mutualTableView.dequeueReusableCell(withIdentifier: MutualTableViewCell.identifier, for: indexPath) as! MutualTableViewCell
+            let cell = followersTableView.dequeueReusableCell(withIdentifier: MutualTableViewCell.identifier, for: indexPath) as! MutualTableViewCell
             cell.delegate = self
             return cell
         case followingTableView:
-            let cell = mutualTableView.dequeueReusableCell(withIdentifier: MutualTableViewCell.identifier, for: indexPath) as! MutualTableViewCell
+            let cell = followingTableView.dequeueReusableCell(withIdentifier: MutualTableViewCell.identifier, for: indexPath) as! MutualTableViewCell
             cell.delegate = self
             return cell
         case mutualTableView:
@@ -156,8 +154,7 @@ extension FollowingViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     @objc func deleteCell( sender: UIButton){
-        print("yes")
-        suggestionTableView.deleteRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
+        print("deleting cell ....")
         suggestionTableView.reloadData()
     }
 }
@@ -277,6 +274,7 @@ extension FollowingViewController: MutualTableViewCellDelegate{
             button.setTitle("Follow", for: .normal)
             button.titleLabel?.font = UIFont.systemFont(ofSize: 10)
             buttonTrack = false
+            followingTableView.reloadData()
         }
     }
     
@@ -291,6 +289,7 @@ extension FollowingViewController: MutualTableViewCellDelegate{
             button.setTitle("Following", for: .normal)
             button.setTitleColor(UIColor.black, for: .normal)
             button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 10)
+            followingTableView.reloadData()
             buttonTrack = true
         }
     }

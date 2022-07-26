@@ -232,6 +232,7 @@ extension OthersProfileViewController: OtherProfileHeaderCollectionReusableViewD
 //MARK: Extension for Tab Header
 
 extension OthersProfileViewController: OtherProfileTabCollectionReusableViewDelegate {
+    
     func didTapPostButton() {
         collectionView.scrollToItem(at: IndexPath(row: 0, section: 2), at: .top, animated: true)
     }
@@ -243,6 +244,4 @@ extension OthersProfileViewController: OtherProfileTabCollectionReusableViewDele
     func didTapTaggedButton() {
         collectionView.scrollToItem(at: IndexPath(row: 0, section: 2), at: .top, animated: true)
     }
-    
-    
 }
