@@ -17,11 +17,49 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     var postCountProfile: PostCount!
     var profileImage: UIImage!
     
+    var userPosts: UserPosts!
+    var postDetails = [PostDetails]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let jsonData = extractDatafromJsonFile(fileName: "UserPosts")
         
-        
+        let decoder = JSONDecoder()
+        var parsedData : UserPosts!
+        do {
+            parsedData = try? decoder.decode(UserPosts.self, from: jsonData!)
+        } catch {
+            print("error wjile parsing \(error)")
+        }
+        userPosts = parsedData
+        postDetails = userPosts.postDetails
+    }
+    
+    func extractDatafromJsonFile(fileName:String) -> Data? {
+        do{
+            if let path = Bundle.main.path(forResource: fileName, ofType: "json"){
+                let fileURL = URL(fileURLWithPath: path)
+                let jsonData = try Data(contentsOf: fileURL)
+                return jsonData
+            }
+        } catch {
+            print("error while parsing\(error)")
+        }
+        return nil
+    }
+    
+    func extractImageFromURL(imageUrl: URL) -> UIImage?{
+        do {
+            if let imageData = try? Data(contentsOf: imageUrl){
+                if let image = UIImage(data: imageData){
+                    return image
+                }
+            }
+        } catch{
+            print("erroe while ectraing image \(error)")
+        }
+        return nil
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,12 +91,12 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         if section == 0 {
             return 0
         }
-        return 99
+        return postDetails.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileCollectionViewCell.identifier, for: indexPath) as! ProfileCollectionViewCell
-        cell.configure(debug: "car")
+        //cell.configure(debug: extractImageFromURL(imageUrl: self.postDetails[indexPath.row].postDisplayURL)!)
         return cell
     }
     

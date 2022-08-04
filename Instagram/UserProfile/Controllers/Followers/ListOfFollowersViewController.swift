@@ -9,6 +9,13 @@ import UIKit
 
 class ListOfFollowersViewController: UIViewController {
     
+    var userFollowingInformation: UserFollowingInformation!
+    var followingUserDetails = [FollowingUserDetails]()
+    
+    var userFollowersInformation: UserFollowersInformation!
+    var followersUserDetails = [FollowerUserDetails]()
+    
+    
     var mainButtonView = UIView()
     
     var followingButton = UIButton()
@@ -51,6 +58,56 @@ class ListOfFollowersViewController: UIViewController {
         followingTableView.register(CategoriesFollowingTableViewCell.nib(), forCellReuseIdentifier: CategoriesFollowingTableViewCell.identifier)
         
         self.followersSearchBar.delegate = self
+        
+        
+        //following User details
+        let followingJsonData = extractDataFromJson(fileName: "FollowingList")
+        let decoder = JSONDecoder()
+        var parsedFollowingData: UserFollowingInformation!
+        do{
+            parsedFollowingData = try? decoder.decode(UserFollowingInformation.self, from: followingJsonData!)
+        }catch{
+            print("error\(error)")
+        }
+        userFollowingInformation = parsedFollowingData
+        followingUserDetails = userFollowingInformation.followingDetails
+        
+        //followers details
+        let followersJsonData = extractDataFromJson(fileName: "FollowersList")
+        var parsedFollowersdata : UserFollowersInformation!
+        do {
+            parsedFollowersdata = try? decoder.decode(UserFollowersInformation.self, from: followersJsonData!)
+        } catch{
+            print("error\(error)")
+        }
+        userFollowersInformation = parsedFollowersdata
+        followersUserDetails = userFollowersInformation.followerDetails
+    }
+    
+    func extractDataFromJson(fileName: String) -> Data?{
+        do {
+            if let path = Bundle.main.path(forResource: fileName, ofType: "json"){
+                let fileURL = try URL(fileURLWithPath: path)
+                let jsonData = try Data(contentsOf: fileURL)
+                return jsonData
+            }
+        } catch {
+            print("error \(error)")
+        }
+        return nil
+    }
+    
+    func extractImageFromURL(imageURL: URL) -> UIImage? {
+        do{
+            if let imageData = try? Data(contentsOf: imageURL){
+                if let image = UIImage(data: imageData){
+                    return image
+                }
+            }
+        } catch {
+            print("error \(error)")
+        }
+        return nil
     }
     
     func buttonGrid() {
@@ -101,7 +158,11 @@ extension ListOfFollowersViewController: UITableViewDelegate, UITableViewDataSou
         if section == 0 && section == 1{
             return 1
         } else if section == 2{
-            return 30
+            if tableView == followingTableView{
+                return followingUserDetails.count
+            } else {
+                return followersUserDetails.count
+            }
         }
         return 0
     }
@@ -138,7 +199,6 @@ extension ListOfFollowersViewController: UITableViewDelegate, UITableViewDataSou
 //        default:
 //            return CGFloat(0)
 //        }
-//
 //    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -153,6 +213,9 @@ extension ListOfFollowersViewController: UITableViewDelegate, UITableViewDataSou
             } else {
                 let cell = followersTableView.dequeueReusableCell(withIdentifier: FollowersTableViewCell.identifier, for: indexPath) as! FollowersTableViewCell
                 cell.backgroundColor = .systemBackground
+                cell.usernameLabel.text = followersUserDetails[indexPath.row].followerUsername
+                cell.nameLabel.text = followersUserDetails[indexPath.row].followerName
+                cell.profilePhotoView.image = extractImageFromURL(imageURL: self.followersUserDetails[indexPath.row].followerProfileHd)
                 return cell
             }
         } else if tableView == followingTableView {
@@ -161,6 +224,9 @@ extension ListOfFollowersViewController: UITableViewDelegate, UITableViewDataSou
                 return cell
             } else {
                 let cell = followingTableView.dequeueReusableCell(withIdentifier: FollowingTableViewCell.identifier, for: indexPath) as! FollowingTableViewCell
+                cell.nameLabel.text = followingUserDetails[indexPath.row].followingUsername
+                cell.usernameLabel.text = followingUserDetails[indexPath.row].followingName
+                cell.profileImageView.image = extractImageFromURL(imageURL: followingUserDetails[indexPath.row].followingProfileHd)
                 return cell
             }
         }

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol StoryTappableDelegate : AnyObject {
-    func didTapStoryCell(with image: UIImage)
+    func didTapStoryCell(with model: [UserStoryFollowingDetails], indexpath: IndexPath)
 }
 
 class StoryCollectionViewCell: UICollectionViewCell {
@@ -22,10 +22,18 @@ class StoryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var userImage: UIImageView!
     
+    var followingUserDetails = [UserStoryFollowingDetails]()
+    
     var storyImage = UIImage(named: "message")
+    var indexpath : IndexPath!
     
     //let nc = UINavigationController()
     public weak var storyImageTapDelegate: StoryTappableDelegate?
+    
+    
+    func configure(model: [UserStoryFollowingDetails]){
+        self.followingUserDetails = model
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,12 +48,14 @@ class StoryCollectionViewCell: UICollectionViewCell {
         userImage?.layer.borderWidth = 3.0
         userImage.layer.borderColor = UIColor.blue.cgColor
         
-        
-        
+    }
+    
+    func selecetedIndexpath(indexpath: IndexPath){
+        self.indexpath = indexpath
     }
     
     @objc func storyPressed(tapGestureRecognizer: UITapGestureRecognizer) {
-        self.storyImageTapDelegate?.didTapStoryCell(with: self.storyImage!)
+        self.storyImageTapDelegate?.didTapStoryCell(with: followingUserDetails, indexpath: self.indexpath)
         userImage.layer.borderColor = UIColor.gray.cgColor
     }
 }

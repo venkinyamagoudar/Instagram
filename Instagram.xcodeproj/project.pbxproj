@@ -33,6 +33,17 @@
 		24C45C5A288B4FC800E77DE3 /* OthersSuggestedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C45C58288B4FC800E77DE3 /* OthersSuggestedTableViewCell.swift */; };
 		24C45C5B288B4FC800E77DE3 /* OthersSuggestedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C45C59288B4FC800E77DE3 /* OthersSuggestedTableViewCell.xib */; };
 		24C45C5D288EFF7B00E77DE3 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C45C5C288EFF7B00E77DE3 /* UserInformation.swift */; };
+		24C45C85289326F600E77DE3 /* UserFollowingInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C45C84289326F500E77DE3 /* UserFollowingInformation.swift */; };
+		24C45C872893284900E77DE3 /* UserFollowersInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C45C862893284900E77DE3 /* UserFollowersInformation.swift */; };
+		24C45C8928932E9300E77DE3 /* UserFollowingPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C45C8828932E9300E77DE3 /* UserFollowingPosts.swift */; };
+		24C45C8B289330E100E77DE3 /* UserPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C45C8A289330E100E77DE3 /* UserPosts.swift */; };
+		24C45C9D289344E500E77DE3 /* FollowingList.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C45C98289344E400E77DE3 /* FollowingList.json */; };
+		24C45C9E289344E500E77DE3 /* UserFollowingPosts.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C45C99289344E400E77DE3 /* UserFollowingPosts.json */; };
+		24C45C9F289344E500E77DE3 /* FollowersList.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C45C9A289344E500E77DE3 /* FollowersList.json */; };
+		24C45CA0289344E500E77DE3 /* UserInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C45C9B289344E500E77DE3 /* UserInformation.json */; };
+		24C45CA1289344E500E77DE3 /* UserPosts.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C45C9C289344E500E77DE3 /* UserPosts.json */; };
+		24C45CA428949C7400E77DE3 /* UserFollowingStories.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C45CA328949C7400E77DE3 /* UserFollowingStories.json */; };
+		24C45CA628949C9F00E77DE3 /* UserFollowingStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C45CA528949C9F00E77DE3 /* UserFollowingStories.swift */; };
 		24C932B22880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C932B02880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.swift */; };
 		24C932B32880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C932B12880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.xib */; };
 		24C932B62880A1F6002A45EF /* OtherProfileTabCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C932B42880A1F6002A45EF /* OtherProfileTabCollectionReusableView.swift */; };
@@ -48,6 +59,13 @@
 		24C932D82881CF11002A45EF /* FollowingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C932D62881CF11002A45EF /* FollowingViewController.xib */; };
 		24C932DB2881CF27002A45EF /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C932D92881CF27002A45EF /* SuggestionViewController.swift */; };
 		24C932DC2881CF27002A45EF /* SuggestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C932DA2881CF27002A45EF /* SuggestionViewController.xib */; };
+		24DFA5A128982F0800EB1587 /* UserSearch.json in Resources */ = {isa = PBXBuildFile; fileRef = 24DFA5A028982F0800EB1587 /* UserSearch.json */; };
+		24DFA5B428985F9500EB1587 /* SearchSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFA5B328985F9500EB1587 /* SearchSelectionViewController.swift */; };
+		24DFA5B62898620700EB1587 /* UserSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFA5B52898620700EB1587 /* UserSearch.swift */; };
+		24DFA5B92898728100EB1587 /* SearchSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFA5B72898728100EB1587 /* SearchSelectionTableViewCell.swift */; };
+		24DFA5BA2898728100EB1587 /* SearchSelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24DFA5B82898728100EB1587 /* SearchSelectionTableViewCell.xib */; };
+		24DFA5BC2899DE3000EB1587 /* Reels.json in Resources */ = {isa = PBXBuildFile; fileRef = 24DFA5BB2899DE3000EB1587 /* Reels.json */; };
+		24DFA5BE2899E63700EB1587 /* Reels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DFA5BD2899E63700EB1587 /* Reels.swift */; };
 		24E2AC92286B61C9000834FD /* StoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E2AC90286B61C9000834FD /* StoryDetailViewController.swift */; };
 		24E2AC93286B61C9000834FD /* StoryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E2AC91286B61C9000834FD /* StoryDetailViewController.xib */; };
 		24E2AC9C286CB417000834FD /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E2AC9B286CB417000834FD /* GalleryViewController.swift */; };
@@ -146,6 +164,17 @@
 		24C45C58288B4FC800E77DE3 /* OthersSuggestedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersSuggestedTableViewCell.swift; sourceTree = "<group>"; };
 		24C45C59288B4FC800E77DE3 /* OthersSuggestedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OthersSuggestedTableViewCell.xib; sourceTree = "<group>"; };
 		24C45C5C288EFF7B00E77DE3 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
+		24C45C84289326F500E77DE3 /* UserFollowingInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowingInformation.swift; sourceTree = "<group>"; };
+		24C45C862893284900E77DE3 /* UserFollowersInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowersInformation.swift; sourceTree = "<group>"; };
+		24C45C8828932E9300E77DE3 /* UserFollowingPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowingPosts.swift; sourceTree = "<group>"; };
+		24C45C8A289330E100E77DE3 /* UserPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPosts.swift; sourceTree = "<group>"; };
+		24C45C98289344E400E77DE3 /* FollowingList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FollowingList.json; sourceTree = "<group>"; };
+		24C45C99289344E400E77DE3 /* UserFollowingPosts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserFollowingPosts.json; sourceTree = "<group>"; };
+		24C45C9A289344E500E77DE3 /* FollowersList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FollowersList.json; sourceTree = "<group>"; };
+		24C45C9B289344E500E77DE3 /* UserInformation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserInformation.json; sourceTree = "<group>"; };
+		24C45C9C289344E500E77DE3 /* UserPosts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserPosts.json; sourceTree = "<group>"; };
+		24C45CA328949C7400E77DE3 /* UserFollowingStories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserFollowingStories.json; sourceTree = "<group>"; };
+		24C45CA528949C9F00E77DE3 /* UserFollowingStories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowingStories.swift; sourceTree = "<group>"; };
 		24C932B02880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		24C932B12880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherProfileHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		24C932B42880A1F6002A45EF /* OtherProfileTabCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileTabCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -161,6 +190,13 @@
 		24C932D62881CF11002A45EF /* FollowingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowingViewController.xib; sourceTree = "<group>"; };
 		24C932D92881CF27002A45EF /* SuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
 		24C932DA2881CF27002A45EF /* SuggestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionViewController.xib; sourceTree = "<group>"; };
+		24DFA5A028982F0800EB1587 /* UserSearch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserSearch.json; sourceTree = "<group>"; };
+		24DFA5B328985F9500EB1587 /* SearchSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSelectionViewController.swift; sourceTree = "<group>"; };
+		24DFA5B52898620700EB1587 /* UserSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearch.swift; sourceTree = "<group>"; };
+		24DFA5B72898728100EB1587 /* SearchSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		24DFA5B82898728100EB1587 /* SearchSelectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchSelectionTableViewCell.xib; sourceTree = "<group>"; };
+		24DFA5BB2899DE3000EB1587 /* Reels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Reels.json; sourceTree = "<group>"; };
+		24DFA5BD2899E63700EB1587 /* Reels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reels.swift; sourceTree = "<group>"; };
 		24E2AC90286B61C9000834FD /* StoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailViewController.swift; sourceTree = "<group>"; };
 		24E2AC91286B61C9000834FD /* StoryDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryDetailViewController.xib; sourceTree = "<group>"; };
 		24E2AC9B286CB417000834FD /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
@@ -273,6 +309,7 @@
 				24E2ACB2286E1962000834FD /* UserProfile */,
 				24C932AA28806973002A45EF /* OthersProfileView */,
 				24EDD19B2886352C00364660 /* Model */,
+				24C45C972893448600E77DE3 /* JsonData */,
 				24B9B520286343E8000DA190 /* Main.storyboard */,
 				24B9B523286343E9000DA190 /* Assets.xcassets */,
 				24B9B525286343E9000DA190 /* LaunchScreen.storyboard */,
@@ -360,6 +397,21 @@
 				24C45C59288B4FC800E77DE3 /* OthersSuggestedTableViewCell.xib */,
 			);
 			path = SuggestedTableViewCells;
+			sourceTree = "<group>";
+		};
+		24C45C972893448600E77DE3 /* JsonData */ = {
+			isa = PBXGroup;
+			children = (
+				24DFA5BB2899DE3000EB1587 /* Reels.json */,
+				24C45C9A289344E500E77DE3 /* FollowersList.json */,
+				24C45C99289344E400E77DE3 /* UserFollowingPosts.json */,
+				24C45C98289344E400E77DE3 /* FollowingList.json */,
+				24C45C9B289344E500E77DE3 /* UserInformation.json */,
+				24DFA5A028982F0800EB1587 /* UserSearch.json */,
+				24C45C9C289344E500E77DE3 /* UserPosts.json */,
+				24C45CA328949C7400E77DE3 /* UserFollowingStories.json */,
+			);
+			path = JsonData;
 			sourceTree = "<group>";
 		};
 		24C932AA28806973002A45EF /* OthersProfileView */ = {
@@ -451,6 +503,16 @@
 			path = Suggestion;
 			sourceTree = "<group>";
 		};
+		24DFA5A22898423900EB1587 /* SearchingData */ = {
+			isa = PBXGroup;
+			children = (
+				24DFA5B328985F9500EB1587 /* SearchSelectionViewController.swift */,
+				24DFA5B72898728100EB1587 /* SearchSelectionTableViewCell.swift */,
+				24DFA5B82898728100EB1587 /* SearchSelectionTableViewCell.xib */,
+			);
+			path = SearchingData;
+			sourceTree = "<group>";
+		};
 		24E2AC82286B380A000834FD /* gallery */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +554,7 @@
 			isa = PBXGroup;
 			children = (
 				24E2ACB3286E2AF9000834FD /* SearchViewController.swift */,
+				24DFA5A22898423900EB1587 /* SearchingData */,
 				24E2ACC8286F7A4A000834FD /* SearchCollectionCell */,
 			);
 			path = Search;
@@ -600,6 +663,13 @@
 				24F348DD287E17810017C7AA /* ProfileData.swift */,
 				24EDD19C2886355D00364660 /* PersonalInformation.swift */,
 				24C45C5C288EFF7B00E77DE3 /* UserInformation.swift */,
+				24C45C84289326F500E77DE3 /* UserFollowingInformation.swift */,
+				24C45C862893284900E77DE3 /* UserFollowersInformation.swift */,
+				24C45C8828932E9300E77DE3 /* UserFollowingPosts.swift */,
+				24C45C8A289330E100E77DE3 /* UserPosts.swift */,
+				24C45CA528949C9F00E77DE3 /* UserFollowingStories.swift */,
+				24DFA5B52898620700EB1587 /* UserSearch.swift */,
+				24DFA5BD2899E63700EB1587 /* Reels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -851,14 +921,17 @@
 				24EDD1742885C06400364660 /* EditProfileTableViewCell.xib in Resources */,
 				24C932B32880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.xib in Resources */,
 				24E2ACD628747FCB000834FD /* ShoppingCollectionViewCell.xib in Resources */,
+				24C45C9D289344E500E77DE3 /* FollowingList.json in Resources */,
 				24EDD1792885C71100364660 /* EditWebsiteTableViewCell.xib in Resources */,
 				24EDD1A82886E8FA00364660 /* PersonalInformationTableViewCell.xib in Resources */,
 				24B9B527286343E9000DA190 /* LaunchScreen.storyboard in Resources */,
 				24E2ACC6286E4355000834FD /* SearchCollectionViewCell.xib in Resources */,
+				24DFA5BC2899DE3000EB1587 /* Reels.json in Resources */,
 				24E2ACA3286CDB1A000834FD /* MessageTableViewCell.xib in Resources */,
 				24EDD1BF28878FF800364660 /* CategoryTableViewCell.xib in Resources */,
 				24F348E7287E58270017C7AA /* EditProfileViewController.xib in Resources */,
 				24C45C4F288B276700E77DE3 /* MutualTableViewCell.xib in Resources */,
+				24C45CA0289344E500E77DE3 /* UserInformation.json in Resources */,
 				24E2AC93286B61C9000834FD /* StoryDetailViewController.xib in Resources */,
 				24B9B524286343E9000DA190 /* Assets.xcassets in Resources */,
 				24EDD1AF28872B9700364660 /* FollowersTableViewCell.xib in Resources */,
@@ -868,18 +941,24 @@
 				24EDD1BB2887895D00364660 /* HeaderTableViewCell.xib in Resources */,
 				24C932D42881CEFE002A45EF /* FollowersViewController.xib in Resources */,
 				24C932DC2881CF27002A45EF /* SuggestionViewController.xib in Resources */,
+				24C45CA428949C7400E77DE3 /* UserFollowingStories.json in Resources */,
 				24E2ACEE28750ADE000834FD /* CartTableViewCell.xib in Resources */,
 				24C45C082887C22D00E77DE3 /* CategoriesFollowingTableViewCell.xib in Resources */,
+				24DFA5A128982F0800EB1587 /* UserSearch.json in Resources */,
 				24E2ACEA28750A49000834FD /* ShopCartViewController.xib in Resources */,
 				24F348F0287F007D0017C7AA /* ListOfFollowersViewController.xib in Resources */,
 				24B9B58A286A5C2A000DA190 /* StoryTableViewCell.xib in Resources */,
+				24C45C9F289344E500E77DE3 /* FollowersList.json in Resources */,
 				24F348D8287DF7C20017C7AA /* ProfileInfoHeaderCollectionReusableView.xib in Resources */,
+				24DFA5BA2898728100EB1587 /* SearchSelectionTableViewCell.xib in Resources */,
 				24EDD1922885E29000364660 /* AvatarViewController.xib in Resources */,
+				24C45C9E289344E500E77DE3 /* UserFollowingPosts.json in Resources */,
 				24F348DC287DF8C80017C7AA /* ProfileTabsCollectionReusableView.xib in Resources */,
 				24C45C1A28885B0600E77DE3 /* DiscoverPeopleCollectionViewCell.xib in Resources */,
 				24EDD1962885E3FB00364660 /* ProfessionalAccountViewController.xib in Resources */,
 				24B9B58E286A5C40000DA190 /* StoryCollectionViewCell.xib in Resources */,
 				24C45C46288AE46200E77DE3 /* FollowingButtonCollectionViewCell.xib in Resources */,
+				24C45CA1289344E500E77DE3 /* UserPosts.json in Resources */,
 				24EDD1822885E1E500364660 /* EditProfileNameViewController.xib in Resources */,
 				24EDD19A2885E41700364660 /* personalInformationViewController.xib in Resources */,
 				24B9B582286A4C12000DA190 /* HomePagePostTableViewCell.xib in Resources */,
@@ -923,13 +1002,17 @@
 				24B9B580286A4C04000DA190 /* HomePagePostTableViewCell.swift in Sources */,
 				24E2ACB5286E2AF9000834FD /* SearchViewController.swift in Sources */,
 				24C45C5D288EFF7B00E77DE3 /* UserInformation.swift in Sources */,
+				24C45C8928932E9300E77DE3 /* UserFollowingPosts.swift in Sources */,
 				24E2ACC5286E4355000834FD /* SearchCollectionViewCell.swift in Sources */,
 				24E2ACD1286F835B000834FD /* ReelsCollectionViewCell.swift in Sources */,
 				24EDD1732885C06400364660 /* EditProfileTableViewCell.swift in Sources */,
 				24EDD1A72886E8FA00364660 /* PersonalInformationTableViewCell.swift in Sources */,
 				24E2AD0028762413000834FD /* ShoppongActivityViewController.swift in Sources */,
 				24EDD1892885E22400364660 /* EditProfileBioViewController.swift in Sources */,
+				24DFA5BE2899E63700EB1587 /* Reels.swift in Sources */,
 				24EDD1992885E41700364660 /* personalInformationViewController.swift in Sources */,
+				24C45C8B289330E100E77DE3 /* UserPosts.swift in Sources */,
+				24DFA5B62898620700EB1587 /* UserSearch.swift in Sources */,
 				24EDD1812885E1E500364660 /* EditProfileNameViewController.swift in Sources */,
 				24B9B51B286343E8000DA190 /* AppDelegate.swift in Sources */,
 				24E2ACD528747FCB000834FD /* ShoppingCollectionViewCell.swift in Sources */,
@@ -941,10 +1024,14 @@
 				24EDD1952885E3FB00364660 /* ProfessionalAccountViewController.swift in Sources */,
 				24C45C5A288B4FC800E77DE3 /* OthersSuggestedTableViewCell.swift in Sources */,
 				24EDD1AE28872B9700364660 /* FollowersTableViewCell.swift in Sources */,
+				24C45C872893284900E77DE3 /* UserFollowersInformation.swift in Sources */,
+				24DFA5B92898728100EB1587 /* SearchSelectionTableViewCell.swift in Sources */,
 				24EDD18D2885E25F00364660 /* EditProfilePronounsViewController.swift in Sources */,
 				24E2ACB9286E2B0E000834FD /* ShopViewController.swift in Sources */,
+				24DFA5B428985F9500EB1587 /* SearchSelectionViewController.swift in Sources */,
 				24C932BA2880A209002A45EF /* OtherProfileStoryCollectionReusableView.swift in Sources */,
 				24C45C4E288B276700E77DE3 /* MutualTableViewCell.swift in Sources */,
+				24C45CA628949C9F00E77DE3 /* UserFollowingStories.swift in Sources */,
 				24F348DB287DF8C80017C7AA /* ProfileTabsCollectionReusableView.swift in Sources */,
 				24EDD1B32887467D00364660 /* FollowingTableViewCell.swift in Sources */,
 				24B9B589286A5C2A000DA190 /* StoryTableViewCell.swift in Sources */,
@@ -957,6 +1044,7 @@
 				24C932B22880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.swift in Sources */,
 				24C932CD2881925E002A45EF /* OthersProfileViewController.swift in Sources */,
 				24EDD1BE28878FF800364660 /* CategoryTableViewCell.swift in Sources */,
+				24C45C85289326F600E77DE3 /* UserFollowingInformation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

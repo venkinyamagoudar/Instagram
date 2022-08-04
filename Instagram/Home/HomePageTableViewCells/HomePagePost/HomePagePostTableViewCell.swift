@@ -23,6 +23,10 @@ class HomePagePostTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        postedUserProfile.layer.borderColor = UIColor.white.cgColor
+        postedUserProfile.layer.cornerRadius = postedUserProfile.frame.width / 2
+        postedUserProfile.layer.masksToBounds = true
+        
         let tapUserName = UITapGestureRecognizer(target: self, action: #selector(tappedUserName))
         postedUserName.isUserInteractionEnabled = true
         postedUserName.addGestureRecognizer(tapUserName)

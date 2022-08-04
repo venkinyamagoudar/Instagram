@@ -7,25 +7,61 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
+class SearchViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource  {
     
-    @IBOutlet weak var searchBar: UISearchBar!
+    var userSearch: UserSearch!
+    var userSearchDetails = [UserSearchDetails]()
+    
+    let searchController = UISearchController(searchResultsController: SearchSelectionViewController())
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = .systemBackground
         
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        self.searchBar.delegate = self
+        
         
         collectionView.register(SearchCollectionViewCell.nib(), forCellWithReuseIdentifier: SearchCollectionViewCell.identifier)
         
         //layout
         collectionView.collectionViewLayout = self.createLayout()
         
+        
+        //MARK: Search Controller
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
+        
+        //MARK: JSON READING
+        let jsonData = extractDataFromJsonFile(filename: "UserSearch")
+        let decoder = JSONDecoder()
+        
+        var searchData: UserSearch!
+        do{
+            searchData = try decoder.decode(UserSearch.self, from: jsonData!)
+        }catch{
+            print(error)
+        }
+        self.userSearch = searchData
+        userSearchDetails = userSearch.data
+    }
+    
+    //MARK: data extraction
+    
+    func extractDataFromJsonFile(filename: String) -> Data?{
+        do{
+            if let path = try Bundle.main.path(forResource: filename, ofType: "json"){
+                let pathURL = try URL(fileURLWithPath: path)
+                let jsonData = try Data(contentsOf: pathURL)
+                return jsonData
+            }
+        } catch {
+            print("error  \(error)")
+        }
+        return nil
     }
     
     //Collection view delegate
@@ -104,6 +140,7 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         //section
         let section = NSCollectionLayoutSection(group: containerGroup)
+        
         //return
         return UICollectionViewCompositionalLayout(section: section)
     }
@@ -112,12 +149,24 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Cell tapped")
     }
-    
-    //MARK: Search Bar -> Keyboard closing
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
+}
+
+
+extension SearchViewController: UISearchResultsUpdating{
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else {
+            return
+        }
+        
+        var matchedUsers = [UserSearchDetails]()
+        for user in userSearchDetails{
+            if user.full_name.contains(text) || user.username.contains(text) {
+                matchedUsers.append(user)
+            }
+        }
+        let vc = SearchSelectionViewController()
+        vc.configure(model: matchedUsers)
+        
+        
     }
-    
-    
 }

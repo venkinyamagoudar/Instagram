@@ -1,0 +1,48 @@
+{
+    "username": "venki_nyamagoudar",
+    "userID": 4795835361,
+    "followingCount": 7,
+    "followingDetails": [{
+      "followingName": "Laxman",
+      "followingUsername": "laxy_",
+      "followingProfileHd": "https://scontent-sof1-1.cdninstagram.com/v/t51.2885-19/11334673_1629509187295585_767016610_a.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com&_nc_cat=101&_nc_ohc=eNL6P6OV5RQAX-0xURt&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-VAABYrTDH0nna64ZzoGW__Z8EgHEmGkdT4j3lRd4RfA&oe=62E9F4C6&_nc_sid=8fd12b",
+      "isUserFollowing": "Yes"
+    },
+    {
+      "followingName": "Aditi",
+      "followingUsername": "aditi_",
+      "followingProfileHd": "https://scontent-sof1-1.cdninstagram.com/v/t51.2885-19/291705307_407818918076340_5675199979316604154_n.jpg?stp=dst-jpg_s320x320&_nc_ht=scontent-sof1-1.cdninstagram.com&_nc_cat=1&_nc_ohc=knMl4waNStYAX-L8TwJ&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9OLN27LPj8nSp0iUJUsHlnQghR0qKqHMaSM0x1X8gmkg&oe=62E96F29&_nc_sid=8fd12b",
+      "isUserFollowing": "Yes"
+    },
+    {
+      "followingName": "Vinod",
+      "followingUsername": "vinod_",
+      "followingProfileHd": "https://scontent-iad3-2.cdninstagram.com/v/t51.2885-19/95623943_688876191880245_8139226096961847296_n.jpg?stp=dst-jpg_s150x150&efg=eyJybWQiOiJpZ19hbmRyb2lkX21vYmlsZV9uZXR3b3JrX3N0YWNrX2JhY2t0ZXN0X3YyNDI6bW5zIn0&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_cat=1&_nc_ohc=cI_g9lfIDR8AX_c2C-g&edm=AM7KJZYBAAAA&ccb=7-5&oh=00_AT-DMfXOg3qWUKrG4sPpUeyMyWElAB-S-YpCxgBwKhmtXQ&oe=62F0F7A3&_nc_sid=d96ff1",
+      "isUserFollowing": "Yes"
+    },
+    {
+      "followingName": "Ravi",
+      "followingUsername": "ravi_",
+      "followingProfileHd": "https://scontent-sof1-1.cdninstagram.com/v/t51.2885-19/291174913_625140688546790_2860833881703999535_n.jpg?stp=dst-jpg_s320x320&_nc_ht=scontent-sof1-1.cdninstagram.com&_nc_cat=1&_nc_ohc=Gr50_4byGTkAX_6yAgi&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8Llc4sa2ipUG5-Ty6vP4J6op7fDr5IP4vGZubCmmiL7A&oe=62E9EF71&_nc_sid=8fd12b",
+      "isUserFollowing": "Yes"
+    },
+    {
+      "followingName": "Akash",
+      "followingUsername": "aki_",
+      "followingProfileHd": "https://scontent-sof1-1.cdninstagram.com/v/t51.2885-19/43818140_2116018831763532_3803033961098117120_n.jpg?stp=dst-jpg_s320x320&_nc_ht=scontent-sof1-1.cdninstagram.com&_nc_cat=1&_nc_ohc=M7Ru8VNCFUkAX84LcDD&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT8SIK2jWdBSgNOdnZTbwms4flXIFSwP6rYrDsmkfjZP6Q&oe=62E95B32&_nc_sid=8fd12b",
+      "isUserFollowing": "Yes"
+    },
+    {
+      "followingName": "Nisarg",
+      "followingUsername": "nisarg_",
+      "followingProfileHd": "https://scontent-sof1-1.cdninstagram.com/v/t51.2885-19/50107772_2285154058397637_3741617225845440512_n.jpg?stp=dst-jpg_s320x320&_nc_ht=scontent-sof1-1.cdninstagram.com&_nc_cat=1&_nc_ohc=OOsgcocQt_kAX9WSJL4&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-sxWjnUxSe8KHF-BpGjJvmtwnI3BLGgzk3tJ0rYO4qEQ&oe=62E9A6D4&_nc_sid=8fd12b",
+      "isUserFollowing": "Yes"
+    },
+    {
+      "followingName": "Avani",
+      "followingUsername": "avani_",
+      "followingProfileHd": "https://scontent-sof1-1.cdninstagram.com/v/t51.2885-19/184566693_801335614084595_1354035959397705352_n.jpg?stp=dst-jpg_s320x320&_nc_ht=scontent-sof1-1.cdninstagram.com&_nc_cat=1&_nc_ohc=366M7OzHuGAAX8Kznm6&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT9WqZCItKVvP1To0Ix6uXpnoizPY7OGdIBB6Im2Ex4XRQ&oe=62EA4D32&_nc_sid=8fd12b",
+      "isUserFollowing": "Yes"
+    }
+    ]
+}
