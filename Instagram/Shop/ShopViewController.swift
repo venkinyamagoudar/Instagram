@@ -21,6 +21,9 @@ class ShopViewController: UIViewController, UICollectionViewDelegate, UICollecti
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        // searchbar delegate
+        searchBar.delegate = self
+        
         //bar button
         let accountButton = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"), style: .plain, target: self, action: #selector(accountTapped))
         let cartButton = UIBarButtonItem(image: UIImage(systemName: "cart"), style: .plain, target: self, action: #selector(cartTapped))
@@ -65,9 +68,12 @@ class ShopViewController: UIViewController, UICollectionViewDelegate, UICollecti
    
     @IBAction func cameraButton(_ sender: Any) {
         print("camera tapped")
+        let vc = CameraViewController()
+        navigationController?.pushViewController(vc, animated: true)
+        
     }
-// bar buttons
-//accout button
+    
+// bar buttons accout button
     @objc func accountTapped() {
         let alertController = UIAlertController(title: "Your Account", message: nil, preferredStyle: .actionSheet)
         alertController.addAction(UIAlertAction(title: "Wishlist", style: .default, handler: wishList))
@@ -135,5 +141,12 @@ class ShopViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @objc func bellTapped() {
         let viewController = ShoppongActivityViewController()
         self.navigationController!.pushViewController(viewController, animated: true)
+    }
+}
+
+extension ShopViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }

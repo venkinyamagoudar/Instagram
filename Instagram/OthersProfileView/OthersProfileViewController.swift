@@ -163,19 +163,85 @@ extension OthersProfileViewController: UICollectionViewDelegate, UICollectionVie
             let profileHeader = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
                 withReuseIdentifier: OtherProfileHeaderCollectionReusableView.identifier,
                 for: indexPath) as! OtherProfileHeaderCollectionReusableView
-
+            profileHeader.otherProfileDelegate = self
             return profileHeader
         } else if indexPath.section == 1 {
             let storyHeader = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: OtherProfileStoryCollectionReusableView.identifier, for: indexPath) as! OtherProfileStoryCollectionReusableView
-            
+
             return storyHeader
         } else {
             let tabHeader = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: OtherProfileTabCollectionReusableView.identifier, for: indexPath) as! OtherProfileTabCollectionReusableView
-
+            tabHeader.otherProfileTabDelegate = self
             return tabHeader
         }
     }
+}
+//MARK: Extension for Main Header
 
+extension OthersProfileViewController: OtherProfileHeaderCollectionReusableViewDelegate{
+    func didTapNumberOfPostsButton() {
+        collectionView.scrollToItem(at: IndexPath(row: 0, section: 2), at: .top, animated: true)
+    }
     
+    func didTapNumberOfFollwers() {
+        let vc = FollowingViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
+    func didTapNumberOfFollowing() {
+        let vc = FollowingViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func didTapFollowingButton() {
+        let alertController = UIAlertController(title: "UserName", message: nil, preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "Add to close List Friend", style: .default, handler: addToCloseListFriend))
+        alertController.addAction(UIAlertAction(title: "Mute", style: .default, handler: didTapMute))
+        alertController.addAction(UIAlertAction(title: "Restrict", style: .default, handler: didTapRestrictButton))
+        alertController.addAction(UIAlertAction(title: "Unfollow", style: .default, handler: didTapUnfollow))
+        present(alertController, animated: true)
+    }
+    
+    func addToCloseListFriend(sender: UIAlertAction){
+        print("add to close friends")
+    }
+    
+    func didTapMute(sender: UIAlertAction){
+        print("tap om mute")
+    }
+    
+    func didTapRestrictButton(sender: UIAlertAction){
+        print("Tap restrict")
+    }
+    
+    func didTapUnfollow(sender: UIAlertAction){
+        print("Tapped on unfollow")
+    }
+    
+    func didTapMessageButton() {
+        let vc = ChatViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func didTapSuggestionButton() {
+        let vc = SuggestionViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+//MARK: Extension for Tab Header
+
+extension OthersProfileViewController: OtherProfileTabCollectionReusableViewDelegate {
+    
+    func didTapPostButton() {
+        collectionView.scrollToItem(at: IndexPath(row: 0, section: 2), at: .top, animated: true)
+    }
+    
+    func didTapVideoButton() {
+        collectionView.scrollToItem(at: IndexPath(row: 0, section: 2), at: .top, animated: true)
+    }
+    
+    func didTapTaggedButton() {
+        collectionView.scrollToItem(at: IndexPath(row: 0, section: 2), at: .top, animated: true)
+    }
 }

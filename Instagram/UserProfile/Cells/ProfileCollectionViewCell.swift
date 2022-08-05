@@ -39,14 +39,7 @@ class ProfileCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func configure(with model: UserPost) {
-        let url = model.thumbNailImage
-        _ = URLSession.shared.dataTask(with: url, completionHandler: { [self] data, _, _ in
-            photoImageView.image = UIImage(data: data!)
-            
-        })
-    }
-    public func configure(debug imageName: String){
-        photoImageView.image = UIImage(named: imageName)
+    public func configure(debug imageName: UIImage){
+        photoImageView.image = imageName
     }
 }

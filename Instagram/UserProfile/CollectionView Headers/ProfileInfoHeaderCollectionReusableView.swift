@@ -12,6 +12,7 @@ protocol ProfileInfoHeaderCollectionReusableViewDelegate : AnyObject {
     func ProfileHeaderDidTapFollowingButton(_ header: ProfileInfoHeaderCollectionReusableView)
     func ProfileHeaderDidTapEditProfileButton(_ header: ProfileInfoHeaderCollectionReusableView)
     func ProfileHeaderDidTapDiscoverPeopleButton(_ header: ProfileInfoHeaderCollectionReusableView)
+    func userInformationFunction(_ userInformation: UserInformation, headerProfileImage: UIImage, _ followersCount: FollowersCount,_ followingCount: FollowingCount,_ postCount: PostCount)
 }
 
 final class ProfileInfoHeaderCollectionReusableView: UICollectionReusableView {
@@ -19,6 +20,11 @@ final class ProfileInfoHeaderCollectionReusableView: UICollectionReusableView {
     static var identifier = "ProfileInfoHeaderCollectionReusableView"
     
     public weak var delegateProfile : ProfileInfoHeaderCollectionReusableViewDelegate?
+    
+    var userInformation : UserInformation!
+    var followingCount : FollowingCount!
+    var followersCount: FollowersCount!
+    var postCount: PostCount!
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
@@ -33,6 +39,11 @@ final class ProfileInfoHeaderCollectionReusableView: UICollectionReusableView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        profileImage.layer.borderColor = UIColor.white.cgColor
+        profileImage.layer.masksToBounds = true
+        profileImage.layer.cornerRadius = self.profileImage.frame.width / 2
+        profileImage.layer.borderWidth = 1.0
     }
     
     

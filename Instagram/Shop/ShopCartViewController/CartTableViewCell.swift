@@ -8,7 +8,6 @@
 import UIKit
 
 class CartTableViewCell: UITableViewCell {
-
     
     static var identifier = "CartCell"
     static func nib() -> UINib {
