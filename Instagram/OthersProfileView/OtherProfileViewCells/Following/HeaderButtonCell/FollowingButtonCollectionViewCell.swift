@@ -20,10 +20,6 @@ class FollowingButtonCollectionViewCell: UICollectionViewCell {
         return UINib(nibName: "FollowingButtonCollectionViewCell", bundle: nil)
     }
     
-    
-   
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         

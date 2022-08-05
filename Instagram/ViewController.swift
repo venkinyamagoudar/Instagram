@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         navigationItem.rightBarButtonItems = [UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(messageButton)), UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(cameraButton))]
         
         self.tableView.register(UINib(nibName: "HomePagePostTableViewCell", bundle: nil), forCellReuseIdentifier: "PostCell")
-        self.tableView.register(UINib(nibName: "StoryTableViewCell", bundle: nil), forCellReuseIdentifier: "StoryTableViewCell")
+        self.tableView.register(StoryTableViewCell.nib(), forCellReuseIdentifier: StoryTableViewCell.identifier)
         tableView.reloadData()
     }
      

@@ -8,13 +8,14 @@
 import UIKit
 
 class EditProfileOtherTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var firstLabel: UILabel!
     
     static let identifier = "EditProfileOtherTableViewCell"
     
     static func nib() -> UINib {
         return UINib(nibName: "EditProfileOtherTableViewCell", bundle: nil)
     }
-    @IBOutlet weak var firstLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,7 +24,6 @@ class EditProfileOtherTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     

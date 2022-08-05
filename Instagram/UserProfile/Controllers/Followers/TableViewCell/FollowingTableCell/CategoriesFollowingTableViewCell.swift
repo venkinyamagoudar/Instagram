@@ -25,7 +25,6 @@ class CategoriesFollowingTableViewCell: UITableViewCell {
         return UINib(nibName: "CategoriesFollowingTableViewCell", bundle: nil)
     }
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

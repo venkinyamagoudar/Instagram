@@ -8,9 +8,7 @@
 import UIKit
 
 class EditProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    
-
+   
     @IBOutlet weak var tableView: UITableView!
     
     var imageView: UIImageView!
@@ -42,23 +40,23 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
         case 0 :
             let cell = tableView.dequeueReusableCell(withIdentifier: EditProfileTableViewCell.identifier, for: indexPath) as! EditProfileTableViewCell
             cell.firstLabel.text = "Name"
-//            cell.secondLabel.isUserInteractionEnabled = true
-//            let tap = UITapGestureRecognizer(target: self, action: #selector(chanegeNameMethod(tapGestureRecognizer:)))
-//            cell.secondLabel.addGestureRecognizer(tap)
+            cell.secondLabel.isUserInteractionEnabled = true
+            let tap = UITapGestureRecognizer(target: self, action: #selector(chanegeNameMethod(tapGestureRecognizer:)))
+            cell.secondLabel.addGestureRecognizer(tap)
             return cell
         case 1 :
             let cell = tableView.dequeueReusableCell(withIdentifier: EditProfileTableViewCell.identifier, for: indexPath) as! EditProfileTableViewCell
             cell.firstLabel.text = "Username"
-//            cell.secondLabel.isUserInteractionEnabled = true
-//            let tap = UITapGestureRecognizer(target: self, action: #selector(chanegeUsernameMethod(tapGestureRecognizer:)))
-//            cell.secondLabel.addGestureRecognizer(tap)
+            cell.secondLabel.isUserInteractionEnabled = true
+            let tap = UITapGestureRecognizer(target: self, action: #selector(chanegeUsernameMethod(tapGestureRecognizer:)))
+            cell.secondLabel.addGestureRecognizer(tap)
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: EditProfileTableViewCell.identifier, for: indexPath) as! EditProfileTableViewCell
             cell.firstLabel.text = "Pronouns"
-//            cell.secondLabel.isUserInteractionEnabled = true
-//            let tap = UITapGestureRecognizer(target: self, action: #selector(chanegePronounsMethod(tapGestureRecognizer:)))
-//            cell.secondLabel.addGestureRecognizer(tap)
+            cell.secondLabel.isUserInteractionEnabled = true
+            let tap = UITapGestureRecognizer(target: self, action: #selector(chanegePronounsMethod(tapGestureRecognizer:)))
+            cell.secondLabel.addGestureRecognizer(tap)
             return cell
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: EditWebsiteTableViewCell.identifier, for: indexPath) as! EditWebsiteTableViewCell
@@ -67,9 +65,9 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
         case 4:
             let cell = tableView.dequeueReusableCell(withIdentifier: EditProfileTableViewCell.identifier, for: indexPath) as! EditProfileTableViewCell
             cell.firstLabel.text = "Bio"
-//            cell.secondLabel.isUserInteractionEnabled = true
-//            let tap = UITapGestureRecognizer(target: self, action: #selector(chanegeBioMethod(tapGestureRecognizer:)))
-//            cell.secondLabel.addGestureRecognizer(tap)
+            cell.secondLabel.isUserInteractionEnabled = true
+            let tap = UITapGestureRecognizer(target: self, action: #selector(chanegeBioMethod(tapGestureRecognizer:)))
+            cell.secondLabel.addGestureRecognizer(tap)
             return cell
         case 5:
             let cell = tableView.dequeueReusableCell(withIdentifier: EditProfileOtherTableViewCell.identifier, for: indexPath) as! EditProfileOtherTableViewCell
@@ -202,30 +200,25 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     // MARK: Edit Profile Labels methods
-//
-//    @objc func chanegeNameMethod(tapGestureRecognizer: UITapGestureRecognizer) {
-//        let vc = CameraViewController()
-//        navigationController?.pushViewController(vc, animated: true)
-//    }
-//
-//    @objc func chanegeUsernameMethod(tapGestureRecognizer: UITapGestureRecognizer) {
-//        let vc = CameraViewController()
-//        navigationController?.pushViewController(vc, animated: true)
-//    }
-//
-//    @objc func chanegePronounsMethod(tapGestureRecognizer: UITapGestureRecognizer) {
-//        let vc = CameraViewController()
-//        navigationController?.pushViewController(vc, animated: true)
-//    }
-//
-//    @objc func chanegeWebsiteMethod(tapGestureRecognizer: UITapGestureRecognizer) {
-//        let vc = CameraViewController()
-//        navigationController?.pushViewController(vc, animated: true)
-//    }
-//
-//    @objc func chanegeBioMethod(tapGestureRecognizer: UITapGestureRecognizer) {
-//        let vc = CameraViewController()
-//        navigationController?.pushViewController(vc, animated: true)
-//    }
+
+    @objc func chanegeNameMethod(tapGestureRecognizer: UITapGestureRecognizer) {
+        let vc = EditProfileNameViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
+    @objc func chanegeUsernameMethod(tapGestureRecognizer: UITapGestureRecognizer) {
+        let vc = EditProfileUsernameViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
+    @objc func chanegePronounsMethod(tapGestureRecognizer: UITapGestureRecognizer) {
+        let vc = EditProfilePronounsViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
+    @objc func chanegeBioMethod(tapGestureRecognizer: UITapGestureRecognizer) {
+        let vc = EditProfileBioViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
 }

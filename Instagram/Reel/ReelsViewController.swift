@@ -9,31 +9,21 @@ import UIKit
 import AVFoundation
 
 class ReelsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
-    
-    var collectionView: UICollectionView!
+
     var reelsData: Reels!
     var reelCreators = [ReelCreator]()
+
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    var player: AVPlayer?
+    var avPlayerLayer: AVPlayerLayer?
     
     @IBOutlet weak var displayView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let appearance = UINavigationBarAppearance()
-//        appearance.configureWithTransparentBackground()
-//        navigationController?.navigationBar.standardAppearance = appearance
-        
-        var layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: self.view.frame.width
-                                 , height: self.displayView.frame.height - 40)
-        layout.scrollDirection = .vertical
-        layout.minimumInteritemSpacing = CGFloat(1)
-        layout.minimumLineSpacing = CGFloat(1)
-        
-        
-        collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         collectionView.backgroundColor = .blue
         
-        displayView.addSubview(collectionView)
         collectionView.register(ReelsCollectionViewCell.nib(), forCellWithReuseIdentifier: ReelsCollectionViewCell.identifier)
         
         collectionView.delegate = self
@@ -47,13 +37,13 @@ class ReelsViewController: UIViewController, UICollectionViewDelegate, UICollect
         do {
             parsedReelsData = try? decoder.decode(Reels.self, from: jsonData)
         }
-//        catch {
-//            print(error)
-//        }
+        catch {
+            print(error)
+        }
         self.reelsData = parsedReelsData
         self.reelCreators = parsedReelsData.reelCreators
         
-        
+            
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -68,40 +58,49 @@ class ReelsViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReelsCollectionViewCell.identifier, for: indexPath) as! ReelsCollectionViewCell
+        
+        let videoURL = reelCreators[indexPath.row].url
+        player = AVPlayer(url: videoURL)
+        player?.isMuted = false
+        avPlayerLayer = AVPlayerLayer(player: player)
+
+        avPlayerLayer?.frame = cell.reelView.frame
+        avPlayerLayer?.videoGravity = .resizeAspectFill
+        avPlayerLayer?.zPosition = -1
+        cell.reelView.layer.addSublayer(avPlayerLayer!)
+
+        cell.avPlayerLayer = avPlayerLayer
+        cell.player = player
+//
         cell.configure(model: reelCreators[indexPath.row])
-        cell.playVideo()
+//
         cell.reelsCellDelegate = self
         return cell
     }
     
-   
-    
-    //cell size
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: 414, height: 750 )
-//    }
-    
-    // CAMERA button
-    
-    @IBAction func didTapCamera(_ sender: Any) {
-        let vc = CameraViewController()
-        navigationController?.pushViewController(vc, animated: true)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
     
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        let visibleCells = self.collectionView.indexPathsForVisibleItems.sorted{top, bottom -> Bool in
-//            return top.section < bottom.section || top.row < bottom.row
-//        }.compactMap{indexPath -> UICollectionViewCell? in
-//            return self.collectionView.cellForItem(at: indexPath)}
-//        let indexpaths = self.collectionView.indexPathsForVisibleItems.sorted()
-//
-//    }
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        (cell as? ReelsCollectionViewCell)?.player!.play()
+        
+            NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.player?.currentItem, queue: .main) { [weak self] _ in
+                self?.player?.seek(to: CMTime.zero)
+                self?.player?.play()
+            }
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        (cell as? ReelsCollectionViewCell)?.player!.pause()
+    }
     
 }
 
 extension ReelsViewController : ReelsCollectionViewCellDelegate {
     func didTapMoreButton() {
-        let ac = UIAlertController(title: "More OPtions", message: "", preferredStyle: .actionSheet)
+        let ac = UIAlertController(title: "More Options", message: "", preferredStyle: .actionSheet)
         ac.addAction(UIAlertAction(title: "Share", style: .default, handler: shareButtonTapped))
         ac.addAction(UIAlertAction(title: "Save", style: .default, handler: saveButtonTapped))
         present(ac, animated: true)
@@ -122,10 +121,6 @@ extension ReelsViewController : ReelsCollectionViewCellDelegate {
     }
     
     func didTapCommentButton() {
-//        let vc = CommentViewController()
-//        present(vc)
         print("Comments")
     }
-    
-    
 }

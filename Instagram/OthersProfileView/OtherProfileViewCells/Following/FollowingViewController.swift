@@ -298,10 +298,9 @@ extension FollowingViewController: MutualTableViewCellDelegate{
 
 //MARK: Other SUggested Cell delegate and extension
 
-//extension FollowingViewController: OthersSuggestedTableViewCellDelegate{
-//
-//    func removeCellFromTableMethod() {
-//        print("cell tapped")
-//
-//    }
-//}
+extension FollowingViewController: OthersSuggestedTableViewCellDelegate{
+
+    func removeCellFromTableMethod() {
+        print("Cell must be removed")
+    }
+}

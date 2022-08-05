@@ -19,6 +19,11 @@ class HomePagePostTableViewCell: UITableViewCell {
     
     public var postPageDelegate: HomePagePostTableViewCellDelegate?
     
+    static var identifier = "StoryTableViewCell"
+    
+    static func nib() -> UINib {
+        return UINib(nibName: "StoryTableViewCell", bundle: nil)
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

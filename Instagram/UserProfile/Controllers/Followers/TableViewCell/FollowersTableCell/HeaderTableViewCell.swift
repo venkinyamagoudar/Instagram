@@ -9,18 +9,18 @@ import UIKit
 
 class HeaderTableViewCell: UITableViewCell {
     
-    static var identifier = "HeaderTableViewCell"
-    
-    static func nib() -> UINib {
-        return UINib(nibName: "HeaderTableViewCell", bundle: nil)
-    }
-
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var userContentView: UIView!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var listOfRequest: UILabel!
     @IBOutlet weak var nextButton: UIButton!
     
+    static var identifier = "HeaderTableViewCell"
+    
+    static func nib() -> UINib {
+        return UINib(nibName: "HeaderTableViewCell", bundle: nil)
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,9 +32,8 @@ class HeaderTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    
     @IBAction func ButtonTapped(_ sender: Any) {
-        
+        print("Go to list of followers requested")
     }
     
 }

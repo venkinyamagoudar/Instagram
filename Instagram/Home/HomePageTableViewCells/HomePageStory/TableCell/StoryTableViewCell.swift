@@ -13,11 +13,11 @@ protocol StoryTableViewCellDelegate: AnyObject {
 
 class StoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, StoryTappableDelegate {
   
-//    static var identifier = "StoryTableViewCell"
-//    
-//    static func nib() -> UINib {
-//        return UINib(nibName: "StoryTableViewCell", bundle: nil)
-//    }
+    static var identifier = "StoryTableViewCell"
+    
+    static func nib() -> UINib {
+        return UINib(nibName: "StoryTableViewCell", bundle: nil)
+    }
     
     //story data
     public var userStoryData: UserFollowingStories!
@@ -37,9 +37,10 @@ class StoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        collectionView.register(UINib(nibName: "StoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "StoryCollectionViewCell")
+        collectionView.register(StoryCollectionViewCell.nib(), forCellWithReuseIdentifier: StoryCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

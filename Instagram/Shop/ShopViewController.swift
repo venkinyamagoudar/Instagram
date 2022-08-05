@@ -72,8 +72,8 @@ class ShopViewController: UIViewController, UICollectionViewDelegate, UICollecti
         navigationController?.pushViewController(vc, animated: true)
         
     }
-// bar buttons
-//accout button
+    
+// bar buttons accout button
     @objc func accountTapped() {
         let alertController = UIAlertController(title: "Your Account", message: nil, preferredStyle: .actionSheet)
         alertController.addAction(UIAlertAction(title: "Wishlist", style: .default, handler: wishList))

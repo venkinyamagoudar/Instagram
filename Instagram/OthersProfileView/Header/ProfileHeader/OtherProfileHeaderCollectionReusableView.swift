@@ -47,7 +47,6 @@ class OtherProfileHeaderCollectionReusableView: UICollectionReusableView {
         
     }
     
-    
     //Action Connections
     
     @IBAction func didTapNumberOfPosts(_ sender: Any) {

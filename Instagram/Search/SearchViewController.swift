@@ -81,7 +81,6 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     //layout function
-    
     func createLayout() -> UICollectionViewCompositionalLayout {
         //items
         //1st row
@@ -151,7 +150,6 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
 }
 
-
 extension SearchViewController: UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text else {
@@ -166,7 +164,5 @@ extension SearchViewController: UISearchResultsUpdating{
         }
         let vc = SearchSelectionViewController()
         vc.configure(model: matchedUsers)
-        
-        
     }
 }

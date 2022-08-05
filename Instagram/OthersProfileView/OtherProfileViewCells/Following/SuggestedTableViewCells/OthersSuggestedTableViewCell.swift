@@ -47,7 +47,7 @@ class OthersSuggestedTableViewCell: UITableViewCell {
     }
     
     @IBAction func followButtonTapped(_ sender: Any) {
-        
+        print("Follow Button Tapped")
     }
     
     @IBAction func deleteButtonTapped(_ sender: Any) {

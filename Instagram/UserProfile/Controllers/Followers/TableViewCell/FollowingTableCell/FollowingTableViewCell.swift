@@ -29,6 +29,7 @@ class FollowingTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
     @IBAction func followingButtonTapped(_ sender: Any) {
         print("follow tapped")
     }

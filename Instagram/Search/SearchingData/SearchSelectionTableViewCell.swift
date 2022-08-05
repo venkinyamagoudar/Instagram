@@ -37,16 +37,7 @@ class SearchSelectionTableViewCell: UITableViewCell {
     }
     
     func configure(username: String, fullName: String, profileImage: UIImage){
-        print(username)
-        if self.searchUsername.text != nil {
-            self.searchUsername.text =  username
-        }else if self.searchFullName.text != nil{
-            self.searchFullName.text = fullName
-        } else if self.searchProfileView.image != nil {
-            searchProfileView.image = profileImage
-        } else {
-            print("error")
-        }
+        print("assign values")
     }
     
 }

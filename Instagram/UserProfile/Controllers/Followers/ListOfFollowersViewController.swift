@@ -34,21 +34,14 @@ class ListOfFollowersViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Username"
         
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         followersTableView.delegate = self
         followersTableView.dataSource = self
         
         followingTableView.delegate = self
         followingTableView.dataSource = self
-        
         buttonGrid()
         
         //followers table cells
-        
         followersTableView.register(FollowersTableViewCell.nib(), forCellReuseIdentifier: FollowersTableViewCell.identifier)
         followersTableView.register(HeaderTableViewCell.nib(), forCellReuseIdentifier: HeaderTableViewCell.identifier)
         followersTableView.register(CategoryTableViewCell.nib(), forCellReuseIdentifier: CategoryTableViewCell.identifier)
@@ -58,7 +51,10 @@ class ListOfFollowersViewController: UIViewController {
         followingTableView.register(CategoriesFollowingTableViewCell.nib(), forCellReuseIdentifier: CategoriesFollowingTableViewCell.identifier)
         
         self.followersSearchBar.delegate = self
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         //following User details
         let followingJsonData = extractDataFromJson(fileName: "FollowingList")
@@ -128,7 +124,7 @@ class ListOfFollowersViewController: UIViewController {
         followersButton.backgroundColor = .systemBackground
         followersButton.setTitle("followers", for: .normal)
         followersButton.setTitleColor(UIColor.black, for: .normal)
-        followersButton.addTarget(self, action: #selector(followersButtonTapped), for: .touchUpInside)
+        followersButton.addTarget(self, action: #selector(followingOrFollowersButtonTapped), for: .touchUpInside)
         mainButtonView.addSubview(followersButton)
         
         followingButton = UIButton(frame: CGRect(x: mainButtonView.frame.width / 2,
@@ -140,14 +136,14 @@ class ListOfFollowersViewController: UIViewController {
         followingButton.setTitle("following", for: .normal)
         followingButton.setTitleColor(UIColor.black, for: .normal)
         followingButton.backgroundColor = .systemBackground
-        followingButton.addTarget(self, action: #selector(followingButtonTapped), for: .touchUpInside)
+        followingButton.addTarget(self, action: #selector(followingOrFollowersButtonTapped), for: .touchUpInside)
         mainButtonView.addSubview(followingButton)
         
     }
     
 }
 
-
+//MARK: EXTENSIONS TableView
 extension ListOfFollowersViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -187,20 +183,7 @@ extension ListOfFollowersViewController: UITableViewDelegate, UITableViewDataSou
         }
         return 0
     }
-    
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        switch section {
-//        case 0:
-//            return CGFloat(80)
-//        case 1:
-//            return CGFloat(120)
-//        case 2:
-//            return CGFloat(40)
-//        default:
-//            return CGFloat(0)
-//        }
-//    }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if tableView == followersTableView {
@@ -232,71 +215,40 @@ extension ListOfFollowersViewController: UITableViewDelegate, UITableViewDataSou
         }
         return UITableViewCell()
     }
-
     
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//
-//        switch section {
-//        case 0:
-//            header1 = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 80))
-//            header1.backgroundColor = .systemBackground
-//            followersSearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 25))
-//            header1.addSubview(followersSearchBar)
-//
-//
-//
-//            return header1
-//        case 1:
-////            header2 = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 120))
-////            header2.backgroundColor = .blue
-////            return header2
-//            return UIView()
-//        case 2:
-////            header3 = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 40))
-////            header3.backgroundColor = .cyan
-////            return header3
-//            return UIView()
-//        default:
-//            return UIView()
-//        }
-//    }
-    
-    @objc func followingButtonTapped() {
-        self.followersTableView.isHidden = true
-        self.followingTableView.isHidden = false
-        
-        
-        followingButton.setTitleColor(.black, for: .normal)
-        followersButton.setTitleColor(.gray, for: .normal)
-        
-        followingTableView.frame = CGRect(x: 0,
-                                          y: 130,
-                                          width: self.view.frame.width,
-                                          height: 636
-        )
-        self.view.addSubview(followingTableView)
-        
-        
-    }
-    
-    @objc func followersButtonTapped() {
-        self.followersTableView.isHidden = false
-        self.followingTableView.isHidden = true
-        
-        
-        followingButton.setTitleColor(.gray, for: .normal)
-        followersButton.setTitleColor(.black, for: .normal)
-        
-        followersTableView.frame = CGRect(x: 0,
-                                          y: 130,
-                                          width: self.view.frame.width,
-                                          height: 637
-        )
-        self.view.addSubview(followersTableView)
-
+    @objc func followingOrFollowersButtonTapped(sender: UIButton) {
+        if sender == followingButton{
+            self.followersTableView.isHidden = true
+            self.followingTableView.isHidden = false
+            
+            
+            followingButton.setTitleColor(.black, for: .normal)
+            followersButton.setTitleColor(.gray, for: .normal)
+            
+            followingTableView.frame = CGRect(x: 0,
+                                              y: 130,
+                                              width: self.view.frame.width,
+                                              height: 636
+            )
+            self.view.addSubview(followingTableView)
+        }else {
+            self.followersTableView.isHidden = false
+            self.followingTableView.isHidden = true
+            
+            followingButton.setTitleColor(.gray, for: .normal)
+            followersButton.setTitleColor(.black, for: .normal)
+            
+            followersTableView.frame = CGRect(x: 0,
+                                              y: 130,
+                                              width: self.view.frame.width,
+                                              height: 637
+            )
+            self.view.addSubview(followersTableView)
+        }
     }
 }
 
+//MARK: EXTENSIONS Search Bar
 
 extension ListOfFollowersViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

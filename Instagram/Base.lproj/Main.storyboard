@@ -295,27 +295,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0VP-j7-MJo">
-                                <rect key="frame" x="0.0" y="88" width="414" height="718"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fth-fD-7ez">
+                                <rect key="frame" x="0.0" y="88" width="414" height="676"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="9Wa-2u-U2a"/>
-                                </constraints>
-                            </view>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aN4-e2-Zd0">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Wei-Os-ods">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7lK-YB-Q5v">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lqS-KM-sdb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0VP-j7-MJo" firstAttribute="top" secondItem="lqS-KM-sdb" secondAttribute="top" id="Z5R-P2-vK2"/>
-                            <constraint firstItem="0VP-j7-MJo" firstAttribute="leading" secondItem="lqS-KM-sdb" secondAttribute="leading" id="cyw-PJ-BGo"/>
-                            <constraint firstAttribute="bottom" secondItem="0VP-j7-MJo" secondAttribute="bottom" constant="90" id="fQX-O4-nk9"/>
+                            <constraint firstItem="lqS-KM-sdb" firstAttribute="bottom" secondItem="Fth-fD-7ez" secondAttribute="bottom" id="OOZ-Go-EGj"/>
+                            <constraint firstItem="Fth-fD-7ez" firstAttribute="leading" secondItem="lqS-KM-sdb" secondAttribute="leading" id="a3x-Qn-62v"/>
+                            <constraint firstItem="Fth-fD-7ez" firstAttribute="top" secondItem="lqS-KM-sdb" secondAttribute="top" id="hfV-Ra-cGK"/>
+                            <constraint firstItem="lqS-KM-sdb" firstAttribute="trailing" secondItem="Fth-fD-7ez" secondAttribute="trailing" id="kkJ-Gf-3oq"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="0xQ-kQ-R4g"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="displayView" destination="0VP-j7-MJo" id="MOl-oi-mZW"/>
+                        <outlet property="collectionView" destination="Fth-fD-7ez" id="Szc-0B-4Y9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tX-2G-S7R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -63,12 +63,12 @@ extension SearchSelectionViewController:  UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SearchSelectionTableViewCell.identifier, for: indexPath) as! SearchSelectionTableViewCell
-//        if userSearchDetails.count > 0 {
-//            //cell.configure(model: userSearchDetails[indexPath.row])
-//            cell.searchFullName.text = self.userSearchDetails[indexPath.row].full_name
-//            cell.searchUsername.text = self.userSearchDetails[indexPath.row].username
-//            cell.searchProfileView.image = extractImagefromURL(imageURL: self.userSearchDetails[indexPath.row].profile_pic_url)
-//        }
+        if userSearchDetails.count > 0 {
+//            cell.configure(username: <#T##String#>, fullName: <#T##String#>, profileImage: <#T##UIImage#>)
+            cell.searchFullName.text = self.userSearchDetails[indexPath.row].full_name
+            cell.searchUsername.text = self.userSearchDetails[indexPath.row].username
+            cell.searchProfileView.image = extractImagefromURL(imageURL: self.userSearchDetails[indexPath.row].profile_pic_url)
+        }
         return cell
     }
 }

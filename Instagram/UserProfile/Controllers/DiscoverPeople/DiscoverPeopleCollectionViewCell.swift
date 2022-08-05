@@ -32,13 +32,13 @@ class DiscoverPeopleCollectionViewCell: UICollectionViewCell {
         
     }
     
-    
     @IBAction func crossButtonPressed(_ sender: Any) {
-        
+        print("removed the cell")
     }
     
     
     @IBAction func followButtonTapped(_ sender: Any) {
+        print("Follow the user")
     }
     
 }

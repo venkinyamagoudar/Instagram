@@ -71,16 +71,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "701D8BF2-8DC7-4A44-972E-B4692653EAD4"
+            uuid = "FEC750F6-B5B9-4D08-9F8F-6A313EB9E0AC"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Instagram/Search/SearchingData/SearchSelectionViewController.swift"
+            filePath = "Instagram/OthersProfileView/OthersProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "configure(model:)"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
+            landmarkName = "didTapSuggestionButton()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

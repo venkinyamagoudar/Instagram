@@ -30,8 +30,8 @@ class ReelsCollectionViewCell: UICollectionViewCell {
 
     var reelCreatorIncell: ReelCreator!
     
-    var player: AVPlayer!
-    var avPlayerLayer: AVPlayerLayer!
+    var player: AVPlayer?
+    var avPlayerLayer: AVPlayerLayer?
     var a = true
     
     public var reelsCellDelegate : ReelsCollectionViewCellDelegate?
@@ -46,11 +46,14 @@ class ReelsCollectionViewCell: UICollectionViewCell {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(cellTapped))
         reelView.isUserInteractionEnabled = true
         reelView.addGestureRecognizer(tapGesture)
+        
+        player?.isMuted = false
     }
     
     @objc func cellTapped(){
         mute()
     }
+    
     func configure(model: ReelCreator){
         self.reelCreatorIncell = model
         profileImageView.image = getImageData(imageURL: model.profile_pic_url)
@@ -58,29 +61,11 @@ class ReelsCollectionViewCell: UICollectionViewCell {
     
     }
     
-    func playVideo(){
-        player = AVPlayer(url: reelCreatorIncell.url)
-        avPlayerLayer = AVPlayerLayer(player: player)
-        avPlayerLayer.frame = reelView.frame
-        //avPlayerLayer.videoGravity = .resizeAspect
-        reelView.layer.insertSublayer(avPlayerLayer, at: 0)
-        player.playImmediately(atRate: 1)
-        mute()
-        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.player.currentItem, queue: .main) { [weak self] _ in
-            self?.player?.seek(to: CMTime.zero)
-            self?.player?.play()
-        }
-        
-    }
-    func stopVideo(){
-        player.pause()
-    }
-    
     func mute() {
-        if player.isMuted {
-            player.isMuted = false
-        } else if !player.isMuted{
-            player.isMuted = true
+        if !player!.isMuted {
+            player?.isMuted = true
+        } else if player!.isMuted{
+            player?.isMuted = false
         }
     }
 

@@ -40,52 +40,6 @@ final class ProfileInfoHeaderCollectionReusableView: UICollectionReusableView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-//        let headers = [
-//            "X-RapidAPI-Key": "4146e22360msh54b767a3c398b2fp1d4ea3jsn9e7cd3101918",
-//            "X-RapidAPI-Host": "instagram-data1.p.rapidapi.com"
-//        ]
-//
-//        let request = NSMutableURLRequest(url: NSURL(string: "https://instagram-data1.p.rapidapi.com/user/info?username=venki_nyamagoudar")! as URL,
-//                                                cachePolicy: .useProtocolCachePolicy,
-//                                            timeoutInterval: 10.0)
-//        request.httpMethod = "GET"
-//        request.allHTTPHeaderFields = headers
-//
-//        let session = URLSession.shared
-//        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-//            if (error != nil) {
-//                print("error")
-//            } else {
-//                let httpResponse = response as? HTTPURLResponse
-////                print(httpResponse)
-//                let decoder = JSONDecoder()
-//                var userData: UserInformation!
-//                do {
-//                    userData = try decoder.decode(UserInformation.self, from: data!)
-//                } catch {
-//                    print("Error while decoding Json file into SWIFT structure: \(error)")
-//                }
-//                self.userInformation = userData
-//                self.followingCount = self.userInformation.edge_follow
-//                self.followersCount = self.userInformation.edge_followed_by
-//                self.postCount = self.userInformation.edge_owner_to_timeline_media
-//                
-//                if let imageData = try? Data(contentsOf: self.userInformation.profile_pic_url_hd) {
-//                    if let loadedImage = UIImage(data: imageData){
-//                        DispatchQueue.main.async { [self] in
-//                            self.profileImage.image = loadedImage
-//                            self.userName.text = self.userInformation.username
-//                            self.numberOfFollowers.setTitle(String(self.followersCount.count), for: .normal)
-//                            self.numberOfFollowing.setTitle(String(self.followingCount.count), for: .normal)
-//                            self.numberOfPosts.setTitle(String(self.postCount.count), for: .normal)
-//                        }
-//                    }
-//                }
-//            }
-//        })
-//        dataTask.resume()
-        
-        
         profileImage.layer.borderColor = UIColor.white.cgColor
         profileImage.layer.masksToBounds = true
         profileImage.layer.cornerRadius = self.profileImage.frame.width / 2

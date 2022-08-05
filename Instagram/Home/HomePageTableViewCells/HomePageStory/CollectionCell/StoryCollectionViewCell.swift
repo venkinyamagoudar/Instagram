@@ -13,11 +13,11 @@ protocol StoryTappableDelegate : AnyObject {
 
 class StoryCollectionViewCell: UICollectionViewCell {
 
-//    static var identifier = "StoryCollectionViewCell"
-//
-//    static func nib() -> UINib {
-//        return UINib(nibName: "StoryCollectionViewCell", bundle: nil)
-//    }
+    static var identifier = "StoryCollectionViewCell"
+
+    static func nib() -> UINib {
+        return UINib(nibName: "StoryCollectionViewCell", bundle: nil)
+    }
     @IBOutlet var userProfile: UILabel!
     
     @IBOutlet var userImage: UIImageView!

@@ -96,7 +96,6 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileCollectionViewCell.identifier, for: indexPath) as! ProfileCollectionViewCell
-        //cell.configure(debug: extractImageFromURL(imageUrl: self.postDetails[indexPath.row].postDisplayURL)!)
         return cell
     }
     

@@ -26,3 +26,4 @@ class EditProfileNameViewController: UIViewController {
         textField.text = ""
     }
 }
+
