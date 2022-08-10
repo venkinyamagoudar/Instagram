@@ -8,11 +8,6 @@
 import UIKit
 import AVFoundation
 
-protocol ReelsCollectionViewCellDelegate: AnyObject{
-    func didTapMoreButton()
-    func didTapForwardButton()
-    func didTapCommentButton()
-}
 
 class ReelsCollectionViewCell: UICollectionViewCell {
 
@@ -28,13 +23,9 @@ class ReelsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
 
-    var reelCreatorIncell: ReelCreator!
+    let reelCollectionViewModel = ReelCollectionViewModel()
     
-    var player: AVPlayer?
-    var avPlayerLayer: AVPlayerLayer?
-    var a = true
     
-    public var reelsCellDelegate : ReelsCollectionViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,66 +38,34 @@ class ReelsCollectionViewCell: UICollectionViewCell {
         reelView.isUserInteractionEnabled = true
         reelView.addGestureRecognizer(tapGesture)
         
-        player?.isMuted = false
+        reelCollectionViewModel.player?.isMuted = false
     }
     
     @objc func cellTapped(){
-        mute()
+        reelCollectionViewModel.mute()
     }
     
     func configure(model: ReelCreator){
-        self.reelCreatorIncell = model
-        profileImageView.image = getImageData(imageURL: model.profile_pic_url)
-        userNameLabel.text = model.username
-    
+        reelCollectionViewModel.configure(model: model, username: userNameLabel, userProfileimageView: profileImageView)
     }
     
-    func mute() {
-        if !player!.isMuted {
-            player?.isMuted = true
-        } else if player!.isMuted{
-            player?.isMuted = false
-        }
-    }
-
     @IBAction func moreButton(_ sender: Any) {
         print("more button")
-        self.reelsCellDelegate?.didTapMoreButton()
+        self.reelCollectionViewModel.reelsCellDelegate?.didTapMoreButton()
     }
     
     @IBAction func forwardButton(_ sender: Any) {
         print("forward button")
-        self.reelsCellDelegate?.didTapForwardButton()
+        self.reelCollectionViewModel.reelsCellDelegate?.didTapForwardButton()
     }
     
     @IBAction func commntButton(_ sender: Any) {
         print("comment button")
-        self.reelsCellDelegate?.didTapCommentButton()
+        self.reelCollectionViewModel.reelsCellDelegate?.didTapCommentButton()
     }
     
     @IBAction func likeButtonTapped(_ sender: Any) {
         print("likeButton")
-        
-        if a{
-            a = false
-            self.likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-        } else {
-            a = true
-            self.likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
-        }
+        reelCollectionViewModel.likeButtonTapped(self.likeButton)
     }
-    
-    func getImageData(imageURL: URL) -> UIImage?{
-        do {
-            if let imageData = try? Data(contentsOf: imageURL){
-                if let image = UIImage(data: imageData){
-                    return image
-                }
-            }
-        }catch{
-            print("error in image \(error)")
-        }
-        return nil
-    }
-    
 }

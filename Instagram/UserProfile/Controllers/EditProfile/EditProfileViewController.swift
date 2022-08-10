@@ -14,6 +14,10 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
     var imageView: UIImageView!
     var changeProfilePhotoLabel: UILabel!
     
+    var userDetails = User(username: "", bio: "", name: "", pronouns: "", websites: "")
+    
+    var personalDetails = PersonalInformation(email: "", phone: "", gender: "", birthday: "")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,6 +31,7 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
         self.tableView.register(EditProfileTableViewCell.nib(), forCellReuseIdentifier: EditProfileTableViewCell.identifier)
         self.tableView.register(EditWebsiteTableViewCell.nib(), forCellReuseIdentifier: EditWebsiteTableViewCell.identifier)
         self.tableView.register(EditProfileOtherTableViewCell.nib(), forCellReuseIdentifier: EditProfileOtherTableViewCell.identifier)
+        tableView.reloadData()
     }
 
     //MARK: - Data source
@@ -43,10 +48,12 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
             cell.secondLabel.isUserInteractionEnabled = true
             let tap = UITapGestureRecognizer(target: self, action: #selector(chanegeNameMethod(tapGestureRecognizer:)))
             cell.secondLabel.addGestureRecognizer(tap)
+            cell.secondLabel.text = userDetails.name
             return cell
         case 1 :
             let cell = tableView.dequeueReusableCell(withIdentifier: EditProfileTableViewCell.identifier, for: indexPath) as! EditProfileTableViewCell
             cell.firstLabel.text = "Username"
+            cell.secondLabel.text = userDetails.username
             cell.secondLabel.isUserInteractionEnabled = true
             let tap = UITapGestureRecognizer(target: self, action: #selector(chanegeUsernameMethod(tapGestureRecognizer:)))
             cell.secondLabel.addGestureRecognizer(tap)
@@ -54,6 +61,7 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: EditProfileTableViewCell.identifier, for: indexPath) as! EditProfileTableViewCell
             cell.firstLabel.text = "Pronouns"
+            cell.secondLabel.text = userDetails.pronouns
             cell.secondLabel.isUserInteractionEnabled = true
             let tap = UITapGestureRecognizer(target: self, action: #selector(chanegePronounsMethod(tapGestureRecognizer:)))
             cell.secondLabel.addGestureRecognizer(tap)
@@ -65,6 +73,7 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
         case 4:
             let cell = tableView.dequeueReusableCell(withIdentifier: EditProfileTableViewCell.identifier, for: indexPath) as! EditProfileTableViewCell
             cell.firstLabel.text = "Bio"
+            cell.secondLabel.text = userDetails.bio
             cell.secondLabel.isUserInteractionEnabled = true
             let tap = UITapGestureRecognizer(target: self, action: #selector(chanegeBioMethod(tapGestureRecognizer:)))
             cell.secondLabel.addGestureRecognizer(tap)
@@ -113,10 +122,11 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
             navigationController?.pushViewController(vc, animated: true)
         case 7:
             let vc = personalInformationViewController()
+            vc.personalInformationViewModel.personalInformationDelegate = self
+            vc.personalInformationViewModel.personalDetails = self.personalDetails
             navigationController?.pushViewController(vc, animated: true)
         default:
-            print("do nothing")
-            
+            return
         }
         
     }
@@ -158,6 +168,7 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
         return headerView
     }
     
+//    MARK: Profile change
     
     @objc func changeProfilePhoto(tapGestureRecognizer: UITapGestureRecognizer) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -218,7 +229,27 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
 
     @objc func chanegeBioMethod(tapGestureRecognizer: UITapGestureRecognizer) {
         let vc = EditProfileBioViewController()
+        vc.editBioDelegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
     
+}
+
+extension EditProfileViewController: personalInformationViewControllerDelegate{
+    func assigningText(text: String, indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0: personalDetails.email = text
+        case 1: personalDetails.phone = text
+        case 2: personalDetails.gender = text
+        case 3: personalDetails.birthday = text
+        default: return
+        }
+    }
+}
+
+extension EditProfileViewController : EditProfileBioViewControllerDelegate{
+    func saveBio(text: String) {
+        self.userDetails.bio = text
+        self.tableView.reloadData()
+    }
 }

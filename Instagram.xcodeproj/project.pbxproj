@@ -44,6 +44,22 @@
 		24C45CA1289344E500E77DE3 /* UserPosts.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C45C9C289344E500E77DE3 /* UserPosts.json */; };
 		24C45CA428949C7400E77DE3 /* UserFollowingStories.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C45CA328949C7400E77DE3 /* UserFollowingStories.json */; };
 		24C45CA628949C9F00E77DE3 /* UserFollowingStories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C45CA528949C9F00E77DE3 /* UserFollowingStories.swift */; };
+		24C8B8D528A1CCF900D1D726 /* SearchSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8B8D428A1CCF900D1D726 /* SearchSelectionViewModel.swift */; };
+		24C8B8D728A2934300D1D726 /* ReelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8B8D628A2934300D1D726 /* ReelViewModel.swift */; };
+		24C8B8D928A29F9700D1D726 /* ReelCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8B8D828A29F9700D1D726 /* ReelCollectionViewModel.swift */; };
+		24C8B8DB28A2A51300D1D726 /* StoryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8B8DA28A2A51300D1D726 /* StoryDetailViewModel.swift */; };
+		24C8B8DD28A2AA0100D1D726 /* StoryCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8B8DC28A2AA0100D1D726 /* StoryCollectionViewModel.swift */; };
+		24C8B8DF28A2B58A00D1D726 /* StoryTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8B8DE28A2B58A00D1D726 /* StoryTableViewModel.swift */; };
+		24C8B8E128A2CEDF00D1D726 /* HomePagePostTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8B8E028A2CEDF00D1D726 /* HomePagePostTableViewModel.swift */; };
+		24C8B8E328A2D5D100D1D726 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8B8E228A2D5D100D1D726 /* GalleryViewModel.swift */; };
+		24C8B8E528A2E3C700D1D726 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8B8E428A2E3C700D1D726 /* CameraViewModel.swift */; };
+		24C8B8E928A2EA7700D1D726 /* MessageTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8B8E828A2EA7700D1D726 /* MessageTableCellViewModel.swift */; };
+		24C8B8EB28A30BD100D1D726 /* DiscoverPeopleCollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8B8EA28A30BD100D1D726 /* DiscoverPeopleCollectionCellViewModel.swift */; };
+		24C8B8ED28A30DD500D1D726 /* CategoriesFollowingTableCellModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8B8EC28A30DD500D1D726 /* CategoriesFollowingTableCellModelView.swift */; };
+		24C8B8EF28A30E9C00D1D726 /* ListOfFollowersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8B8EE28A30E9C00D1D726 /* ListOfFollowersViewModel.swift */; };
+		24C8B8F128A3200000D1D726 /* FollowingTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8B8F028A3200000D1D726 /* FollowingTableCellViewModel.swift */; };
+		24C8B8F328A402B400D1D726 /* PersonalInformationTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8B8F228A402B300D1D726 /* PersonalInformationTableCellViewModel.swift */; };
+		24C8B8F528A4048000D1D726 /* PersonalInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8B8F428A4048000D1D726 /* PersonalInformationViewModel.swift */; };
 		24C932B22880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C932B02880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.swift */; };
 		24C932B32880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C932B12880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.xib */; };
 		24C932B62880A1F6002A45EF /* OtherProfileTabCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C932B42880A1F6002A45EF /* OtherProfileTabCollectionReusableView.swift */; };
@@ -173,6 +189,22 @@
 		24C45C9C289344E500E77DE3 /* UserPosts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserPosts.json; sourceTree = "<group>"; };
 		24C45CA328949C7400E77DE3 /* UserFollowingStories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserFollowingStories.json; sourceTree = "<group>"; };
 		24C45CA528949C9F00E77DE3 /* UserFollowingStories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowingStories.swift; sourceTree = "<group>"; };
+		24C8B8D428A1CCF900D1D726 /* SearchSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSelectionViewModel.swift; sourceTree = "<group>"; };
+		24C8B8D628A2934300D1D726 /* ReelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelViewModel.swift; sourceTree = "<group>"; };
+		24C8B8D828A29F9700D1D726 /* ReelCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelCollectionViewModel.swift; sourceTree = "<group>"; };
+		24C8B8DA28A2A51300D1D726 /* StoryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailViewModel.swift; sourceTree = "<group>"; };
+		24C8B8DC28A2AA0100D1D726 /* StoryCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewModel.swift; sourceTree = "<group>"; };
+		24C8B8DE28A2B58A00D1D726 /* StoryTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTableViewModel.swift; sourceTree = "<group>"; };
+		24C8B8E028A2CEDF00D1D726 /* HomePagePostTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePagePostTableViewModel.swift; sourceTree = "<group>"; };
+		24C8B8E228A2D5D100D1D726 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		24C8B8E428A2E3C700D1D726 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		24C8B8E828A2EA7700D1D726 /* MessageTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableCellViewModel.swift; sourceTree = "<group>"; };
+		24C8B8EA28A30BD100D1D726 /* DiscoverPeopleCollectionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPeopleCollectionCellViewModel.swift; sourceTree = "<group>"; };
+		24C8B8EC28A30DD500D1D726 /* CategoriesFollowingTableCellModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesFollowingTableCellModelView.swift; sourceTree = "<group>"; };
+		24C8B8EE28A30E9C00D1D726 /* ListOfFollowersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfFollowersViewModel.swift; sourceTree = "<group>"; };
+		24C8B8F028A3200000D1D726 /* FollowingTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingTableCellViewModel.swift; sourceTree = "<group>"; };
+		24C8B8F228A402B300D1D726 /* PersonalInformationTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationTableCellViewModel.swift; sourceTree = "<group>"; };
+		24C8B8F428A4048000D1D726 /* PersonalInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationViewModel.swift; sourceTree = "<group>"; };
 		24C932B02880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		24C932B12880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherProfileHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		24C932B42880A1F6002A45EF /* OtherProfileTabCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileTabCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -345,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				24B9B587286A5C2A000DA190 /* StoryTableViewCell.swift */,
+				24C8B8DE28A2B58A00D1D726 /* StoryTableViewModel.swift */,
 				24B9B588286A5C2A000DA190 /* StoryTableViewCell.xib */,
 			);
 			path = TableCell;
@@ -354,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				24B9B58B286A5C40000DA190 /* StoryCollectionViewCell.swift */,
+				24C8B8DC28A2AA0100D1D726 /* StoryCollectionViewModel.swift */,
 				24B9B58C286A5C40000DA190 /* StoryCollectionViewCell.xib */,
 			);
 			path = CollectionCell;
@@ -363,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				24B9B57F286A4C04000DA190 /* HomePagePostTableViewCell.swift */,
+				24C8B8E028A2CEDF00D1D726 /* HomePagePostTableViewModel.swift */,
 				24B9B581286A4C12000DA190 /* HomePagePostTableViewCell.xib */,
 			);
 			path = HomePagePost;
@@ -484,6 +519,7 @@
 			isa = PBXGroup;
 			children = (
 				24DFA5B328985F9500EB1587 /* SearchSelectionViewController.swift */,
+				24C8B8D428A1CCF900D1D726 /* SearchSelectionViewModel.swift */,
 				24DFA5B72898728100EB1587 /* SearchSelectionTableViewCell.swift */,
 				24DFA5B82898728100EB1587 /* SearchSelectionTableViewCell.xib */,
 			);
@@ -503,6 +539,7 @@
 			isa = PBXGroup;
 			children = (
 				24E2AC9B286CB417000834FD /* GalleryViewController.swift */,
+				24C8B8E228A2D5D100D1D726 /* GalleryViewModel.swift */,
 			);
 			path = gallery;
 			sourceTree = "<group>";
@@ -511,6 +548,7 @@
 			isa = PBXGroup;
 			children = (
 				24E2AC90286B61C9000834FD /* StoryDetailViewController.swift */,
+				24C8B8DA28A2A51300D1D726 /* StoryDetailViewModel.swift */,
 				24E2AC91286B61C9000834FD /* StoryDetailViewController.xib */,
 			);
 			path = StoryDetailView;
@@ -530,6 +568,7 @@
 			isa = PBXGroup;
 			children = (
 				24E2ACA7286CEE13000834FD /* CameraViewController.swift */,
+				24C8B8E428A2E3C700D1D726 /* CameraViewModel.swift */,
 				24E2ACAB286CF6DE000834FD /* PhotoViewController.swift */,
 				24E2ACAC286CF6DE000834FD /* PhotoViewController.xib */,
 			);
@@ -561,6 +600,8 @@
 			isa = PBXGroup;
 			children = (
 				24E2ACBB286E2B25000834FD /* ReelsViewController.swift */,
+				24C8B8D628A2934300D1D726 /* ReelViewModel.swift */,
+				24C8B8D828A29F9700D1D726 /* ReelCollectionViewModel.swift */,
 				24E2ACCF286F835B000834FD /* ReelsCollectionViewCell.swift */,
 				24E2ACD0286F835B000834FD /* ReelsCollectionViewCell.xib */,
 			);
@@ -718,9 +759,11 @@
 			isa = PBXGroup;
 			children = (
 				24EDD1972885E41700364660 /* personalInformationViewController.swift */,
+				24C8B8F428A4048000D1D726 /* PersonalInformationViewModel.swift */,
 				24EDD1982885E41700364660 /* personalInformationViewController.xib */,
 				24EDD1A52886E8F900364660 /* PersonalInformationTableViewCell.swift */,
 				24EDD1A62886E8F900364660 /* PersonalInformationTableViewCell.xib */,
+				24C8B8F228A402B300D1D726 /* PersonalInformationTableCellViewModel.swift */,
 			);
 			path = PersonalInformation;
 			sourceTree = "<group>";
@@ -751,8 +794,10 @@
 			isa = PBXGroup;
 			children = (
 				24EDD1B12887467D00364660 /* FollowingTableViewCell.swift */,
+				24C8B8F028A3200000D1D726 /* FollowingTableCellViewModel.swift */,
 				24EDD1B22887467D00364660 /* FollowingTableViewCell.xib */,
 				24C45C052887C22D00E77DE3 /* CategoriesFollowingTableViewCell.swift */,
+				24C8B8EC28A30DD500D1D726 /* CategoriesFollowingTableCellModelView.swift */,
 				24C45C062887C22D00E77DE3 /* CategoriesFollowingTableViewCell.xib */,
 			);
 			path = FollowingTableCell;
@@ -802,6 +847,7 @@
 			isa = PBXGroup;
 			children = (
 				24F348ED287F007D0017C7AA /* ListOfFollowersViewController.swift */,
+				24C8B8EE28A30E9C00D1D726 /* ListOfFollowersViewModel.swift */,
 				24F348EE287F007D0017C7AA /* ListOfFollowersViewController.xib */,
 				24EDD1A928872B4F00364660 /* TableViewCell */,
 			);
@@ -814,6 +860,7 @@
 				24C45C13288850DA00E77DE3 /* DiscoverPeopleCollectionReusableView.swift */,
 				24C45C14288850DA00E77DE3 /* DiscoverPeopleCollectionReusableView.xib */,
 				24C45C1728885B0600E77DE3 /* DiscoverPeopleCollectionViewCell.swift */,
+				24C8B8EA28A30BD100D1D726 /* DiscoverPeopleCollectionCellViewModel.swift */,
 				24C45C1828885B0600E77DE3 /* DiscoverPeopleCollectionViewCell.xib */,
 			);
 			path = DiscoverPeople;
@@ -823,6 +870,7 @@
 			isa = PBXGroup;
 			children = (
 				24E2ACA0286CDB1A000834FD /* MessageTableViewCell.swift */,
+				24C8B8E828A2EA7700D1D726 /* MessageTableCellViewModel.swift */,
 				24E2ACA1286CDB1A000834FD /* MessageTableViewCell.xib */,
 			);
 			path = MessageTableCell;
@@ -963,29 +1011,37 @@
 			files = (
 				24C45C15288850DA00E77DE3 /* DiscoverPeopleCollectionReusableView.swift in Sources */,
 				24EDD17C2885DACB00364660 /* EditProfileOtherTableViewCell.swift in Sources */,
+				24C8B8D528A1CCF900D1D726 /* SearchSelectionViewModel.swift in Sources */,
 				24EDD1BA2887895D00364660 /* HeaderTableViewCell.swift in Sources */,
 				24E2ACED28750ADE000834FD /* CartTableViewCell.swift in Sources */,
 				24E2ACA9286CEE13000834FD /* CameraViewController.swift in Sources */,
 				24C932D72881CF11002A45EF /* FollowingViewController.swift in Sources */,
+				24C8B8E128A2CEDF00D1D726 /* HomePagePostTableViewModel.swift in Sources */,
 				24F348D7287DF7C20017C7AA /* ProfileInfoHeaderCollectionReusableView.swift in Sources */,
 				24E2ACBD286E2B25000834FD /* ReelsViewController.swift in Sources */,
 				24E2ACE928750A49000834FD /* ShopCartViewController.swift in Sources */,
 				24E2AC92286B61C9000834FD /* StoryDetailViewController.swift in Sources */,
 				24F348C72878D4D70017C7AA /* ProfileCollectionViewCell.swift in Sources */,
 				24C45C1928885B0600E77DE3 /* DiscoverPeopleCollectionViewCell.swift in Sources */,
+				24C8B8EB28A30BD100D1D726 /* DiscoverPeopleCollectionCellViewModel.swift in Sources */,
 				24E2AC9C286CB417000834FD /* GalleryViewController.swift in Sources */,
 				24B9B58D286A5C40000DA190 /* StoryCollectionViewCell.swift in Sources */,
 				24EDD19D2886355D00364660 /* PersonalInformation.swift in Sources */,
 				24C932C22880A39A002A45EF /* OtherProfileCollectionViewCell.swift in Sources */,
+				24C8B8F528A4048000D1D726 /* PersonalInformationViewModel.swift in Sources */,
+				24C8B8E528A2E3C700D1D726 /* CameraViewModel.swift in Sources */,
 				24E2ACA2286CDB1A000834FD /* MessageTableViewCell.swift in Sources */,
 				24E2ACC1286E2B37000834FD /* ProfileViewController.swift in Sources */,
 				24E2ACAD286CF6DE000834FD /* PhotoViewController.swift in Sources */,
+				24C8B8D728A2934300D1D726 /* ReelViewModel.swift in Sources */,
 				24EDD1912885E29000364660 /* AvatarViewController.swift in Sources */,
 				24B9B51F286343E8000DA190 /* ViewController.swift in Sources */,
 				24B9B580286A4C04000DA190 /* HomePagePostTableViewCell.swift in Sources */,
 				24E2ACB5286E2AF9000834FD /* SearchViewController.swift in Sources */,
 				24C45C5D288EFF7B00E77DE3 /* UserInformation.swift in Sources */,
+				24C8B8D928A29F9700D1D726 /* ReelCollectionViewModel.swift in Sources */,
 				24C45C8928932E9300E77DE3 /* UserFollowingPosts.swift in Sources */,
+				24C8B8E328A2D5D100D1D726 /* GalleryViewModel.swift in Sources */,
 				24E2ACC5286E4355000834FD /* SearchCollectionViewCell.swift in Sources */,
 				24E2ACD1286F835B000834FD /* ReelsCollectionViewCell.swift in Sources */,
 				24EDD1732885C06400364660 /* EditProfileTableViewCell.swift in Sources */,
@@ -993,14 +1049,19 @@
 				24E2AD0028762413000834FD /* ShoppongActivityViewController.swift in Sources */,
 				24EDD1892885E22400364660 /* EditProfileBioViewController.swift in Sources */,
 				24DFA5BE2899E63700EB1587 /* Reels.swift in Sources */,
+				24C8B8DF28A2B58A00D1D726 /* StoryTableViewModel.swift in Sources */,
 				24EDD1992885E41700364660 /* personalInformationViewController.swift in Sources */,
 				24C45C8B289330E100E77DE3 /* UserPosts.swift in Sources */,
 				24DFA5B62898620700EB1587 /* UserSearch.swift in Sources */,
 				24EDD1812885E1E500364660 /* EditProfileNameViewController.swift in Sources */,
 				24B9B51B286343E8000DA190 /* AppDelegate.swift in Sources */,
+				24C8B8E928A2EA7700D1D726 /* MessageTableCellViewModel.swift in Sources */,
 				24E2ACD528747FCB000834FD /* ShoppingCollectionViewCell.swift in Sources */,
 				24C45C45288AE46200E77DE3 /* FollowingButtonCollectionViewCell.swift in Sources */,
 				24B9B5472865F5F9000DA190 /* MessageTableViewController.swift in Sources */,
+				24C8B8EF28A30E9C00D1D726 /* ListOfFollowersViewModel.swift in Sources */,
+				24C8B8ED28A30DD500D1D726 /* CategoriesFollowingTableCellModelView.swift in Sources */,
+				24C8B8F128A3200000D1D726 /* FollowingTableCellViewModel.swift in Sources */,
 				24C932B62880A1F6002A45EF /* OtherProfileTabCollectionReusableView.swift in Sources */,
 				24F348DE287E17810017C7AA /* ProfileData.swift in Sources */,
 				24B9B51D286343E8000DA190 /* SceneDelegate.swift in Sources */,
@@ -1017,8 +1078,10 @@
 				24C45C4E288B276700E77DE3 /* MutualTableViewCell.swift in Sources */,
 				24C45CA628949C9F00E77DE3 /* UserFollowingStories.swift in Sources */,
 				24F348DB287DF8C80017C7AA /* ProfileTabsCollectionReusableView.swift in Sources */,
+				24C8B8F328A402B400D1D726 /* PersonalInformationTableCellViewModel.swift in Sources */,
 				24EDD1B32887467D00364660 /* FollowingTableViewCell.swift in Sources */,
 				24B9B589286A5C2A000DA190 /* StoryTableViewCell.swift in Sources */,
+				24C8B8DB28A2A51300D1D726 /* StoryDetailViewModel.swift in Sources */,
 				24F348E6287E58270017C7AA /* EditProfileViewController.swift in Sources */,
 				24F3491D287F4ABF0017C7AA /* ChatViewController.swift in Sources */,
 				24C45C072887C22D00E77DE3 /* CategoriesFollowingTableViewCell.swift in Sources */,
@@ -1028,6 +1091,7 @@
 				24C932B22880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.swift in Sources */,
 				24C932CD2881925E002A45EF /* OthersProfileViewController.swift in Sources */,
 				24EDD1BE28878FF800364660 /* CategoryTableViewCell.swift in Sources */,
+				24C8B8DD28A2AA0100D1D726 /* StoryCollectionViewModel.swift in Sources */,
 				24C45C85289326F600E77DE3 /* UserFollowingInformation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

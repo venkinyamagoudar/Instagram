@@ -12,7 +12,9 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     var userSearch: UserSearch!
     var userSearchDetails = [UserSearchDetails]()
     
-    let searchController = UISearchController(searchResultsController: SearchSelectionViewController())
+    lazy var searchSelectionViewController: SearchSelectionViewController = {
+        SearchSelectionViewController()
+    }()
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -32,6 +34,7 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         
         //MARK: Search Controller
+        let searchController = UISearchController(searchResultsController: searchSelectionViewController)
         searchController.searchResultsUpdater = self
         navigationItem.searchController = searchController
         
@@ -150,7 +153,8 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
 }
 
-extension SearchViewController: UISearchResultsUpdating{
+extension SearchViewController: UISearchResultsUpdating {
+    
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text else {
             return
@@ -162,7 +166,6 @@ extension SearchViewController: UISearchResultsUpdating{
                 matchedUsers.append(user)
             }
         }
-        let vc = SearchSelectionViewController()
-        vc.configure(model: matchedUsers)
+        searchSelectionViewController.configure(model: matchedUsers)
     }
 }

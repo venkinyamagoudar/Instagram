@@ -36,8 +36,9 @@ class SearchSelectionTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(username: String, fullName: String, profileImage: UIImage){
-        print("assign values")
+    func configure(username: String, fullName: String, profileImage: URL){
+        searchUsername.text = username
+        searchFullName.text = fullName
     }
     
 }

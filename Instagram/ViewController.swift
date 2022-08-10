@@ -97,12 +97,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //        guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryTableViewCell", for: indexPath) as? StoryTableViewCell else {return UITableViewCell() }
         if indexPath.row == 0 {
             let storyCell = tableView.dequeueReusableCell(withIdentifier: "StoryTableViewCell", for: indexPath) as! StoryTableViewCell
-            storyCell.configure(model: userFollowingStories)
-            storyCell.storyDelegate = self
+            storyCell.storyTableViewModel.configure(model: userFollowingStories)
+            storyCell.storyTableViewModel.storyDelegate = self
             return storyCell
         } else {
             let postCell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! HomePagePostTableViewCell
-            postCell.postPageDelegate = self
+            postCell.homePagePostTableViewModel.postPageDelegate = self
             postCell.postedUserProfile.image = getImageData(imageURL: self.postDetails[indexPath.row].followingUserProfilePicture)
             postCell.postedUserName.text = self.postDetails[indexPath.row].followingUserUsername
             postCell.postedImageName.image = getImageData(imageURL: self.postDetails[indexPath.row].followingUserPostURL)

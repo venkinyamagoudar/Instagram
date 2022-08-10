@@ -7,9 +7,7 @@
 
 import UIKit
 
-protocol HomePagePostTableViewCellDelegate : AnyObject {
-    func didTapLabelAndProfile()
-}
+
 
 class HomePagePostTableViewCell: UITableViewCell {
 
@@ -17,13 +15,13 @@ class HomePagePostTableViewCell: UITableViewCell {
     @IBOutlet weak var postedUserProfile: UIImageView!
     @IBOutlet weak var postedImageName: UIImageView!
     
-    public var postPageDelegate: HomePagePostTableViewCellDelegate?
-    
     static var identifier = "StoryTableViewCell"
     
     static func nib() -> UINib {
         return UINib(nibName: "StoryTableViewCell", bundle: nil)
     }
+    
+    var homePagePostTableViewModel = HomePagePostTableViewModel()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,20 +39,19 @@ class HomePagePostTableViewCell: UITableViewCell {
         postedUserProfile.addGestureRecognizer(tapProfileImage)
         
     }
+    
+    @objc func tappedProfile(_ sender: UITapGestureRecognizer){
+        print("tapped image")
+        homePagePostTableViewModel.postPageDelegate?.didTapLabelAndProfile()
+    }
+    
+    @objc func tappedUserName(_ sender: UITapGestureRecognizer){
+        print("tapped label")
+        homePagePostTableViewModel.postPageDelegate?.didTapLabelAndProfile()
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
     }
-    
-    @objc func tappedProfile(sender: UITapGestureRecognizer){
-        print("tapped image")
-        postPageDelegate?.didTapLabelAndProfile()
-    }
-    
-    @objc func tappedUserName(sender: UITapGestureRecognizer){
-        print("tapped label")
-        postPageDelegate?.didTapLabelAndProfile()
-    }
-    
 }

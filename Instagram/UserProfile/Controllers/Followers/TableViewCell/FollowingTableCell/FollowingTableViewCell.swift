@@ -19,9 +19,11 @@ class FollowingTableViewCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
+    var followingTableCellViewMode = FollowingTableCellViewModel()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        followingTableCellViewMode.setProfileImage(profileImageView)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,5 +35,7 @@ class FollowingTableViewCell: UITableViewCell {
     @IBAction func followingButtonTapped(_ sender: Any) {
         print("follow tapped")
     }
+    
+    
     
 }

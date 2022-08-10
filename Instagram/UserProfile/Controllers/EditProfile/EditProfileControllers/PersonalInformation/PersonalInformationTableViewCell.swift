@@ -7,11 +7,8 @@
 
 import UIKit
 
-protocol PersonalInformationTableViewCellDelegate {
-    static var textField: UITextField { get }
-}
 
-class PersonalInformationTableViewCell: UITableViewCell {
+class PersonalInformationTableViewCell: UITableViewCell{
 
     static var identifier = "PersonalInformationTableViewCell"
     
@@ -19,15 +16,15 @@ class PersonalInformationTableViewCell: UITableViewCell {
         return UINib(nibName: "PersonalInformationTableViewCell", bundle: nil)
     }
     
+    @IBOutlet weak var firstLabel: UILabel?
+    @IBOutlet weak var textField: UITextField?
     
-    @IBOutlet weak var firstLabel: UILabel!
-    @IBOutlet weak var textField: UITextField!
-    
-    public var personalDelegate : PersonalInformationTableViewCellDelegate?
+    var personalInformationTableCellViewModel = PersonalInformationTableCellViewModel()
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        textField!.delegate = self
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -36,4 +33,11 @@ class PersonalInformationTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+
+extension PersonalInformationTableViewCell: UITextFieldDelegate{
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        personalInformationTableCellViewModel.enteredText = textField.text
+        personalInformationTableCellViewModel.personalDelegate?.assigninfTextField(textField: personalInformationTableCellViewModel.enteredText, indexPath: personalInformationTableCellViewModel.indexPath)
+    }
 }
