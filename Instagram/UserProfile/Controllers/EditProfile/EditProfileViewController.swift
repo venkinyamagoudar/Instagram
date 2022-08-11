@@ -68,7 +68,7 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
             let cell = tableView.dequeueReusableCell(withIdentifier: EditWebsiteTableViewCell.identifier, for: indexPath) as! EditWebsiteTableViewCell
             cell.firstLabel.text = "Website"
             cell.textField.text = editProfileViewModel.userDetails.websites
-            cell.editWebsiteTableViewCellDelegate = self
+            cell.editWebsiteTableCellViewModel.editWebsiteTableViewCellDelegate = self
             return cell
         case 4:
             let cell = tableView.dequeueReusableCell(withIdentifier: EditProfileTableViewCell.identifier, for: indexPath) as! EditProfileTableViewCell

@@ -7,9 +7,7 @@
 
 import UIKit
 
-protocol OthersSuggestedTableViewCellDelegate {
-    func removeCellFromTableMethod()
-}
+
 
 class OthersSuggestedTableViewCell: UITableViewCell {
     
@@ -19,7 +17,7 @@ class OthersSuggestedTableViewCell: UITableViewCell {
         return UINib(nibName: "OthersSuggestedTableViewCell", bundle: nil)
     }
     
-    public var cellDelegate : OthersSuggestedTableViewCellDelegate?
+    var othersSuggestedModel = OthersSuggestedTabelCellViewModel()
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
@@ -51,6 +49,6 @@ class OthersSuggestedTableViewCell: UITableViewCell {
     }
     
     @IBAction func deleteButtonTapped(_ sender: Any) {
-        self.cellDelegate?.removeCellFromTableMethod()
+        self.othersSuggestedModel.cellDelegate?.removeCellFromTableMethod()
     }
 }

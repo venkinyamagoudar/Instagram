@@ -26,16 +26,8 @@ class ReelsViewController: UIViewController, UICollectionViewDelegate, UICollect
         collectionView.dataSource = self
         
         //MARK: reel data
-        let vc = ViewController()
-        guard let jsonData = vc.readLocalJsonFile(fileName: "Reels") else {return}
-        let decoder = JSONDecoder()
-        var parsedReelsData: Reels!
-        do {
-            parsedReelsData = try? decoder.decode(Reels.self, from: jsonData)
-        }
-        catch {
-            print(error)
-        }
+        let vc = HomeViewModel()
+        guard let parsedReelsData = vc.readLocalJsonFile(fileName: "Reels", dataType: Reels.self) else {return}
         self.reelViewModel.reelsData = parsedReelsData
         self.reelViewModel.reelCreators = parsedReelsData.reelCreators
     }
@@ -46,6 +38,11 @@ class ReelsViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     //collectrion view
     
+    /// Description: - collection view
+    /// - Parameters:
+    ///   - collectionView: <#collectionView description#>
+    ///   - section: <#section description#>
+    /// - Returns: <#description#>
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return reelViewModel.reelCreators.count
     }

@@ -16,6 +16,10 @@ class ReelViewModel {
     var player: AVPlayer?
     var avPlayerLayer: AVPlayerLayer?
     
+    
+    /// Description - create video Player funcnction
+    /// - Parameter videoURL: URL for the video
+    /// - Returns: player and AVPLayer layer
     func createPlayer(_ videoURL: URL) -> (AVPlayer?, AVPlayerLayer?){
         self.player = AVPlayer(url: videoURL)
         self.player?.isMuted = false

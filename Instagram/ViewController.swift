@@ -11,15 +11,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet weak var tableView: UITableView!
     
-    
-    //Posts
-    var userFollowingPosts: UserFollowingPosts!
-    var postDetails = [UserFollowingPostsDetails]()
-    var extractedImage: [UIImage]!
-    
-    //Story
-    var userFollowingStories: UserFollowingStories!
-    
+    var homeViewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,75 +29,36 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
      
     override func viewWillAppear(_ animated: Bool) {
         //Post
-        let postJsonData = readLocalJsonFile(fileName:"UserFollowingPosts")
-        let decoder = JSONDecoder()
-        var parsedPostData : UserFollowingPosts!
-        do {
-            parsedPostData = try decoder.decode(UserFollowingPosts.self, from: postJsonData!)
-        } catch {
-            print("error while parsing \(error)")
-        }
-        self.userFollowingPosts = parsedPostData
-        self.postDetails = userFollowingPosts.mediaInPostSection
+        let parsedPostData = homeViewModel.readLocalJsonFile(fileName:"UserFollowingPosts", dataType: UserFollowingPosts.self)
+       
+        self.homeViewModel.userFollowingPosts = parsedPostData
+        self.homeViewModel.postDetails = homeViewModel.userFollowingPosts.mediaInPostSection
         
         
         //Story
-        let storyJsonData = readLocalJsonFile(fileName: "UserFollowingStories")
-        var parsedStoryData: UserFollowingStories!
-        do{
-            parsedStoryData = try decoder.decode(UserFollowingStories.self, from: storyJsonData!)
-        }catch{
-            print("error \(error)")
-        }
-        userFollowingStories = parsedStoryData
+        let parsedStoryData = homeViewModel.readLocalJsonFile(fileName: "UserFollowingStories",dataType:UserFollowingStories.self)
+        homeViewModel.userFollowingStories = parsedStoryData
     }
-    
-    
-    func readLocalJsonFile(fileName: String) -> Data?{
-        do {
-            if let path = Bundle.main.path(forResource: fileName, ofType: "json"){
-                let fileURL = URL(fileURLWithPath: path)
-                let data = try Data(contentsOf: fileURL)
-                return data
-            }
-        } catch {
-            print("error \(error)")
-        }
-        return nil
-    }
-    
-    func getImageData(imageURL: URL) -> UIImage?{
-        do {
-            if let imageData = try? Data(contentsOf: imageURL){
-                if let image = UIImage(data: imageData){
-                    return image
-                }
-            }
-        }catch{
-            print("error in image \(error)")
-        }
-        return nil
-    }
-    
+
     // table View Delegate functions
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return postDetails.count
+        return homeViewModel.postDetails.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryTableViewCell", for: indexPath) as? StoryTableViewCell else {return UITableViewCell() }
         if indexPath.row == 0 {
             let storyCell = tableView.dequeueReusableCell(withIdentifier: "StoryTableViewCell", for: indexPath) as! StoryTableViewCell
-            storyCell.storyTableViewModel.configure(model: userFollowingStories)
+            storyCell.storyTableViewModel.configure(model: homeViewModel.userFollowingStories)
             storyCell.storyTableViewModel.storyDelegate = self
             return storyCell
         } else {
             let postCell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! HomePagePostTableViewCell
             postCell.homePagePostTableViewModel.postPageDelegate = self
-            postCell.postedUserProfile.image = getImageData(imageURL: self.postDetails[indexPath.row].followingUserProfilePicture)
-            postCell.postedUserName.text = self.postDetails[indexPath.row].followingUserUsername
-            postCell.postedImageName.image = getImageData(imageURL: self.postDetails[indexPath.row].followingUserPostURL)
+            postCell.postedUserProfile.image = homeViewModel.getImageData(imageURL: self.homeViewModel.postDetails[indexPath.row].followingUserProfilePicture)
+            postCell.postedUserName.text = self.homeViewModel.postDetails[indexPath.row].followingUserUsername
+            postCell.postedImageName.image = homeViewModel.getImageData(imageURL: self.homeViewModel.postDetails[indexPath.row].followingUserPostURL)
             return postCell
         }
     }
@@ -134,15 +87,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let messageViewController = self.storyboard!.instantiateViewController(withIdentifier: "MessageTableViewController") as! MessageTableViewController
         self.navigationController!.pushViewController(messageViewController, animated: true)
     }
-
-    
-    //tap story
-    
-//    func didTapStoryCell(with image: UIImage) {
-//        print("image tapped")
-//        let nextController = StoryDetailViewController(nibName: "StoryDetailViewController", bundle: nil)
-//        self.navigationController?.pushViewController(nextController, animated: true)
-//    }
 }
 
 extension ViewController : StoryTableViewCellDelegate {

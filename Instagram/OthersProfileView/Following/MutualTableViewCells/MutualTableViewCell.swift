@@ -7,14 +7,11 @@
 
 import UIKit
 
-protocol MutualTableViewCellDelegate {
-    func unfollowButtonMethod(button: UIButton)
-    func followButtonMethod(button: UIButton)
-}
+
 
 class MutualTableViewCell: UITableViewCell {
     
-    public var delegate: MutualTableViewCellDelegate?
+    var mutualTableViewModel = MutualTableViewModel()
 
     static var identifier = "MutualTableViewCell"
     
@@ -39,7 +36,6 @@ class MutualTableViewCell: UITableViewCell {
         profileImageView.layer.borderColor = UIColor.white.cgColor
         profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
         
-        
         buttonLabel.backgroundColor = .lightGray
         buttonLabel.titleLabel?.font = UIFont.systemFont(ofSize: 10)
         buttonLabel.setTitleColor(UIColor.black, for: .normal)
@@ -51,11 +47,11 @@ class MutualTableViewCell: UITableViewCell {
         
         if trackButton == false{
             
-            self.delegate?.unfollowButtonMethod(button: buttonLabel)
+            self.mutualTableViewModel.delegate?.unfollowButtonMethod(button: buttonLabel)
             trackButton = true
         } else if trackButton == true{
             
-            self.delegate?.followButtonMethod(button: buttonLabel)
+            self.mutualTableViewModel.delegate?.followButtonMethod(button: buttonLabel)
             trackButton = false
         }
     }

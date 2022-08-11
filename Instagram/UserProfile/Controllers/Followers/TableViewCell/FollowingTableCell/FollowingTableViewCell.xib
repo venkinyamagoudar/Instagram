@@ -81,7 +81,7 @@
                 <outlet property="profileImageView" destination="agg-KM-Gho" id="zOj-6v-aqn"/>
                 <outlet property="usernameLabel" destination="XHV-CP-FFE" id="WOR-qH-A3d"/>
             </connections>
-            <point key="canvasLocation" x="139" y="10"/>
+            <point key="canvasLocation" x="137.68115942028987" y="9.375"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -12,6 +12,20 @@
 		244992D028A46F370082F6F3 /* EditProfileUsernameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244992CF28A46F370082F6F3 /* EditProfileUsernameViewModel.swift */; };
 		244992D228A4727F0082F6F3 /* EditProfileNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244992D128A4727F0082F6F3 /* EditProfileNameViewModel.swift */; };
 		244992D428A47E9A0082F6F3 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244992D328A47E9A0082F6F3 /* EditProfileViewModel.swift */; };
+		247D81A528A5466C00D6D247 /* EditWebsiteTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D81A428A5466C00D6D247 /* EditWebsiteTableCellViewModel.swift */; };
+		247D81A728A5474000D6D247 /* ProfileTabsCollectionReusableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D81A628A5474000D6D247 /* ProfileTabsCollectionReusableViewModel.swift */; };
+		247D81A928A5488B00D6D247 /* ProfileInfoHeaderCollectionReusableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D81A828A5488B00D6D247 /* ProfileInfoHeaderCollectionReusableViewModel.swift */; };
+		247D81AB28A54CCB00D6D247 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D81AA28A54CCB00D6D247 /* ProfileViewModel.swift */; };
+		247D81AD28A55AC000D6D247 /* MutualTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D81AC28A55AC000D6D247 /* MutualTableViewModel.swift */; };
+		247D81AF28A55CFF00D6D247 /* OthersSuggestedTabelCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D81AE28A55CFF00D6D247 /* OthersSuggestedTabelCellViewModel.swift */; };
+		247D81B128A5604100D6D247 /* FollowingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D81B028A5604100D6D247 /* FollowingViewModel.swift */; };
+		247D81B528A5642A00D6D247 /* OtherProfileTabCollectionReusableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D81B428A5642A00D6D247 /* OtherProfileTabCollectionReusableViewModel.swift */; };
+		247D81B828A5756D00D6D247 /* OtherStoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D81B628A5756D00D6D247 /* OtherStoryCollectionViewCell.swift */; };
+		247D81B928A5756D00D6D247 /* OtherStoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247D81B728A5756D00D6D247 /* OtherStoryCollectionViewCell.xib */; };
+		247D81BB28A57E0E00D6D247 /* OtherProfileHeaderCollectionReusableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D81BA28A57E0E00D6D247 /* OtherProfileHeaderCollectionReusableViewModel.swift */; };
+		247D81BD28A57EEF00D6D247 /* OtherProfileCollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D81BC28A57EEF00D6D247 /* OtherProfileCollectionCellViewModel.swift */; };
+		247D81BF28A581D400D6D247 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D81BE28A581D400D6D247 /* SearchViewModel.swift */; };
+		247D81C128A58A1900D6D247 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D81C028A58A1900D6D247 /* HomeViewModel.swift */; };
 		24B9B51B286343E8000DA190 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B9B51A286343E8000DA190 /* AppDelegate.swift */; };
 		24B9B51D286343E8000DA190 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B9B51C286343E8000DA190 /* SceneDelegate.swift */; };
 		24B9B51F286343E8000DA190 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B9B51E286343E8000DA190 /* ViewController.swift */; };
@@ -160,6 +174,20 @@
 		244992CF28A46F370082F6F3 /* EditProfileUsernameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileUsernameViewModel.swift; sourceTree = "<group>"; };
 		244992D128A4727F0082F6F3 /* EditProfileNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileNameViewModel.swift; sourceTree = "<group>"; };
 		244992D328A47E9A0082F6F3 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		247D81A428A5466C00D6D247 /* EditWebsiteTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWebsiteTableCellViewModel.swift; sourceTree = "<group>"; };
+		247D81A628A5474000D6D247 /* ProfileTabsCollectionReusableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabsCollectionReusableViewModel.swift; sourceTree = "<group>"; };
+		247D81A828A5488B00D6D247 /* ProfileInfoHeaderCollectionReusableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoHeaderCollectionReusableViewModel.swift; sourceTree = "<group>"; };
+		247D81AA28A54CCB00D6D247 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		247D81AC28A55AC000D6D247 /* MutualTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutualTableViewModel.swift; sourceTree = "<group>"; };
+		247D81AE28A55CFF00D6D247 /* OthersSuggestedTabelCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersSuggestedTabelCellViewModel.swift; sourceTree = "<group>"; };
+		247D81B028A5604100D6D247 /* FollowingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingViewModel.swift; sourceTree = "<group>"; };
+		247D81B428A5642A00D6D247 /* OtherProfileTabCollectionReusableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileTabCollectionReusableViewModel.swift; sourceTree = "<group>"; };
+		247D81B628A5756D00D6D247 /* OtherStoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherStoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		247D81B728A5756D00D6D247 /* OtherStoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherStoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		247D81BA28A57E0E00D6D247 /* OtherProfileHeaderCollectionReusableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileHeaderCollectionReusableViewModel.swift; sourceTree = "<group>"; };
+		247D81BC28A57EEF00D6D247 /* OtherProfileCollectionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileCollectionCellViewModel.swift; sourceTree = "<group>"; };
+		247D81BE28A581D400D6D247 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		247D81C028A58A1900D6D247 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		24B9B517286343E8000DA190 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24B9B51A286343E8000DA190 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24B9B51C286343E8000DA190 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -337,6 +365,7 @@
 				24B9B51A286343E8000DA190 /* AppDelegate.swift */,
 				24B9B51C286343E8000DA190 /* SceneDelegate.swift */,
 				24B9B51E286343E8000DA190 /* ViewController.swift */,
+				247D81C028A58A1900D6D247 /* HomeViewModel.swift */,
 				24B9B53C28653B5B000DA190 /* Home */,
 				24E2AC82286B380A000834FD /* gallery */,
 				24E2ACA4286CE917000834FD /* Camera */,
@@ -426,6 +455,7 @@
 			isa = PBXGroup;
 			children = (
 				24C45C4C288B276700E77DE3 /* MutualTableViewCell.swift */,
+				247D81AC28A55AC000D6D247 /* MutualTableViewModel.swift */,
 				24C45C4D288B276700E77DE3 /* MutualTableViewCell.xib */,
 			);
 			path = MutualTableViewCells;
@@ -435,6 +465,7 @@
 			isa = PBXGroup;
 			children = (
 				24C45C58288B4FC800E77DE3 /* OthersSuggestedTableViewCell.swift */,
+				247D81AE28A55CFF00D6D247 /* OthersSuggestedTabelCellViewModel.swift */,
 				24C45C59288B4FC800E77DE3 /* OthersSuggestedTableViewCell.xib */,
 			);
 			path = SuggestedTableViewCells;
@@ -461,7 +492,8 @@
 				24C932CB2881925E002A45EF /* OthersProfileViewController.swift */,
 				24C932CA2881925E002A45EF /* OthersProfileViewController.xib */,
 				24C932AF2880A1A7002A45EF /* Header */,
-				24C932BF2880A355002A45EF /* OtherProfileViewCells */,
+				24C932CF2881C3D2002A45EF /* Following */,
+				24DFA65C289CADA600EB1587 /* Suggestion */,
 			);
 			path = OthersProfileView;
 			sourceTree = "<group>";
@@ -469,6 +501,7 @@
 		24C932AF2880A1A7002A45EF /* Header */ = {
 			isa = PBXGroup;
 			children = (
+				24C932BF2880A355002A45EF /* OtherProfileViewCells */,
 				24C932BC2880A223002A45EF /* ProfileHeader */,
 				24C932BE2880A23C002A45EF /* AllStory */,
 				24C932BD2880A231002A45EF /* TabHeader */,
@@ -481,6 +514,7 @@
 			children = (
 				24C932B02880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.swift */,
 				24C932B12880A1D6002A45EF /* OtherProfileHeaderCollectionReusableView.xib */,
+				247D81BA28A57E0E00D6D247 /* OtherProfileHeaderCollectionReusableViewModel.swift */,
 			);
 			path = ProfileHeader;
 			sourceTree = "<group>";
@@ -489,6 +523,7 @@
 			isa = PBXGroup;
 			children = (
 				24C932B42880A1F6002A45EF /* OtherProfileTabCollectionReusableView.swift */,
+				247D81B428A5642A00D6D247 /* OtherProfileTabCollectionReusableViewModel.swift */,
 				24C932B52880A1F6002A45EF /* OtherProfileTabCollectionReusableView.xib */,
 			);
 			path = TabHeader;
@@ -499,6 +534,8 @@
 			children = (
 				24C932B82880A209002A45EF /* OtherProfileStoryCollectionReusableView.swift */,
 				24C932B92880A209002A45EF /* OtherProfileStoryCollectionReusableView.xib */,
+				247D81B628A5756D00D6D247 /* OtherStoryCollectionViewCell.swift */,
+				247D81B728A5756D00D6D247 /* OtherStoryCollectionViewCell.xib */,
 			);
 			path = AllStory;
 			sourceTree = "<group>";
@@ -507,8 +544,7 @@
 			isa = PBXGroup;
 			children = (
 				24C932C02880A39A002A45EF /* OtherProfileCollectionViewCell.swift */,
-				24DFA65C289CADA600EB1587 /* Suggestion */,
-				24C932CF2881C3D2002A45EF /* Following */,
+				247D81BC28A57EEF00D6D247 /* OtherProfileCollectionCellViewModel.swift */,
 			);
 			path = OtherProfileViewCells;
 			sourceTree = "<group>";
@@ -517,6 +553,7 @@
 			isa = PBXGroup;
 			children = (
 				24C932D52881CF11002A45EF /* FollowingViewController.swift */,
+				247D81B028A5604100D6D247 /* FollowingViewModel.swift */,
 				24C932D62881CF11002A45EF /* FollowingViewController.xib */,
 				24C45C47288B207000E77DE3 /* HeaderButtonCell */,
 				24C45C4B288B20D200E77DE3 /* SuggestedTableViewCells */,
@@ -589,6 +626,7 @@
 			isa = PBXGroup;
 			children = (
 				24E2ACB3286E2AF9000834FD /* SearchViewController.swift */,
+				247D81BE28A581D400D6D247 /* SearchViewModel.swift */,
 				24DFA5A22898423900EB1587 /* SearchingData */,
 				24E2ACC8286F7A4A000834FD /* SearchCollectionCell */,
 			);
@@ -622,6 +660,7 @@
 			isa = PBXGroup;
 			children = (
 				24E2ACBF286E2B37000834FD /* ProfileViewController.swift */,
+				247D81AA28A54CCB00D6D247 /* ProfileViewModel.swift */,
 				24F348C52878D4A30017C7AA /* Cells */,
 				24F348C42878D35F0017C7AA /* CollectionView Headers */,
 				24F348DF287E578F0017C7AA /* Controllers */,
@@ -673,6 +712,7 @@
 				24EDD1712885C06400364660 /* EditProfileTableViewCell.swift */,
 				24EDD1722885C06400364660 /* EditProfileTableViewCell.xib */,
 				24EDD1762885C71100364660 /* EditWebsiteTableViewCell.swift */,
+				247D81A428A5466C00D6D247 /* EditWebsiteTableCellViewModel.swift */,
 				24EDD1772885C71100364660 /* EditWebsiteTableViewCell.xib */,
 				24EDD17A2885DACB00364660 /* EditProfileOtherTableViewCell.swift */,
 				24EDD17B2885DACB00364660 /* EditProfileOtherTableViewCell.xib */,
@@ -821,8 +861,10 @@
 			isa = PBXGroup;
 			children = (
 				24F348D5287DF7C20017C7AA /* ProfileInfoHeaderCollectionReusableView.swift */,
+				247D81A828A5488B00D6D247 /* ProfileInfoHeaderCollectionReusableViewModel.swift */,
 				24F348D6287DF7C20017C7AA /* ProfileInfoHeaderCollectionReusableView.xib */,
 				24F348D9287DF8C80017C7AA /* ProfileTabsCollectionReusableView.swift */,
+				247D81A628A5474000D6D247 /* ProfileTabsCollectionReusableViewModel.swift */,
 				24F348DA287DF8C80017C7AA /* ProfileTabsCollectionReusableView.xib */,
 			);
 			path = "CollectionView Headers";
@@ -1000,6 +1042,7 @@
 				24DFA5BA2898728100EB1587 /* SearchSelectionTableViewCell.xib in Resources */,
 				24EDD1922885E29000364660 /* AvatarViewController.xib in Resources */,
 				24C45C9E289344E500E77DE3 /* UserFollowingPosts.json in Resources */,
+				247D81B928A5756D00D6D247 /* OtherStoryCollectionViewCell.xib in Resources */,
 				24F348DC287DF8C80017C7AA /* ProfileTabsCollectionReusableView.xib in Resources */,
 				24C45C1A28885B0600E77DE3 /* DiscoverPeopleCollectionViewCell.xib in Resources */,
 				24DFA660289CADA600EB1587 /* SuggestionViewController.xib in Resources */,
@@ -1026,6 +1069,7 @@
 			files = (
 				24C45C15288850DA00E77DE3 /* DiscoverPeopleCollectionReusableView.swift in Sources */,
 				24EDD17C2885DACB00364660 /* EditProfileOtherTableViewCell.swift in Sources */,
+				247D81BB28A57E0E00D6D247 /* OtherProfileHeaderCollectionReusableViewModel.swift in Sources */,
 				24C8B8D528A1CCF900D1D726 /* SearchSelectionViewModel.swift in Sources */,
 				24EDD1BA2887895D00364660 /* HeaderTableViewCell.swift in Sources */,
 				244992CC28A469310082F6F3 /* EditProfilePronounsViewModel.swift in Sources */,
@@ -1036,10 +1080,12 @@
 				24F348D7287DF7C20017C7AA /* ProfileInfoHeaderCollectionReusableView.swift in Sources */,
 				24E2ACBD286E2B25000834FD /* ReelsViewController.swift in Sources */,
 				24E2ACE928750A49000834FD /* ShopCartViewController.swift in Sources */,
+				247D81AB28A54CCB00D6D247 /* ProfileViewModel.swift in Sources */,
 				24E2AC92286B61C9000834FD /* StoryDetailViewController.swift in Sources */,
 				24F348C72878D4D70017C7AA /* ProfileCollectionViewCell.swift in Sources */,
 				24C45C1928885B0600E77DE3 /* DiscoverPeopleCollectionViewCell.swift in Sources */,
 				24C8B8EB28A30BD100D1D726 /* DiscoverPeopleCollectionCellViewModel.swift in Sources */,
+				247D81A728A5474000D6D247 /* ProfileTabsCollectionReusableViewModel.swift in Sources */,
 				24E2AC9C286CB417000834FD /* GalleryViewController.swift in Sources */,
 				24B9B58D286A5C40000DA190 /* StoryCollectionViewCell.swift in Sources */,
 				24EDD19D2886355D00364660 /* PersonalInformation.swift in Sources */,
@@ -1063,6 +1109,7 @@
 				24E2ACC5286E4355000834FD /* SearchCollectionViewCell.swift in Sources */,
 				24E2ACD1286F835B000834FD /* ReelsCollectionViewCell.swift in Sources */,
 				244992D228A4727F0082F6F3 /* EditProfileNameViewModel.swift in Sources */,
+				247D81BF28A581D400D6D247 /* SearchViewModel.swift in Sources */,
 				24EDD1732885C06400364660 /* EditProfileTableViewCell.swift in Sources */,
 				24EDD1A72886E8FA00364660 /* PersonalInformationTableViewCell.swift in Sources */,
 				24E2AD0028762413000834FD /* ShoppongActivityViewController.swift in Sources */,
@@ -1071,10 +1118,12 @@
 				24DFA5BE2899E63700EB1587 /* Reels.swift in Sources */,
 				24C8B8DF28A2B58A00D1D726 /* StoryTableViewModel.swift in Sources */,
 				24EDD1992885E41700364660 /* personalInformationViewController.swift in Sources */,
+				247D81A528A5466C00D6D247 /* EditWebsiteTableCellViewModel.swift in Sources */,
 				24C45C8B289330E100E77DE3 /* UserPosts.swift in Sources */,
 				24DFA5B62898620700EB1587 /* UserSearch.swift in Sources */,
 				24EDD1812885E1E500364660 /* EditProfileNameViewController.swift in Sources */,
 				24B9B51B286343E8000DA190 /* AppDelegate.swift in Sources */,
+				247D81BD28A57EEF00D6D247 /* OtherProfileCollectionCellViewModel.swift in Sources */,
 				24C8B8E928A2EA7700D1D726 /* MessageTableCellViewModel.swift in Sources */,
 				24E2ACD528747FCB000834FD /* ShoppingCollectionViewCell.swift in Sources */,
 				24C45C45288AE46200E77DE3 /* FollowingButtonCollectionViewCell.swift in Sources */,
@@ -1092,17 +1141,24 @@
 				24DFA5B92898728100EB1587 /* SearchSelectionTableViewCell.swift in Sources */,
 				24DFA65F289CADA600EB1587 /* SuggestionViewController.swift in Sources */,
 				24EDD18D2885E25F00364660 /* EditProfilePronounsViewController.swift in Sources */,
+				247D81A928A5488B00D6D247 /* ProfileInfoHeaderCollectionReusableViewModel.swift in Sources */,
 				24E2ACB9286E2B0E000834FD /* ShopViewController.swift in Sources */,
 				24DFA5B428985F9500EB1587 /* SearchSelectionViewController.swift in Sources */,
 				24C932BA2880A209002A45EF /* OtherProfileStoryCollectionReusableView.swift in Sources */,
 				24C45C4E288B276700E77DE3 /* MutualTableViewCell.swift in Sources */,
 				24C45CA628949C9F00E77DE3 /* UserFollowingStories.swift in Sources */,
+				247D81AD28A55AC000D6D247 /* MutualTableViewModel.swift in Sources */,
 				24F348DB287DF8C80017C7AA /* ProfileTabsCollectionReusableView.swift in Sources */,
+				247D81B828A5756D00D6D247 /* OtherStoryCollectionViewCell.swift in Sources */,
 				24C8B8F328A402B400D1D726 /* PersonalInformationTableCellViewModel.swift in Sources */,
+				247D81B528A5642A00D6D247 /* OtherProfileTabCollectionReusableViewModel.swift in Sources */,
+				247D81C128A58A1900D6D247 /* HomeViewModel.swift in Sources */,
+				247D81B128A5604100D6D247 /* FollowingViewModel.swift in Sources */,
 				24EDD1B32887467D00364660 /* FollowingTableViewCell.swift in Sources */,
 				24B9B589286A5C2A000DA190 /* StoryTableViewCell.swift in Sources */,
 				24C8B8DB28A2A51300D1D726 /* StoryDetailViewModel.swift in Sources */,
 				24F348E6287E58270017C7AA /* EditProfileViewController.swift in Sources */,
+				247D81AF28A55CFF00D6D247 /* OthersSuggestedTabelCellViewModel.swift in Sources */,
 				24F3491D287F4ABF0017C7AA /* ChatViewController.swift in Sources */,
 				24C45C072887C22D00E77DE3 /* CategoriesFollowingTableViewCell.swift in Sources */,
 				24F348EF287F007D0017C7AA /* ListOfFollowersViewController.swift in Sources */,

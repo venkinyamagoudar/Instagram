@@ -8,11 +8,10 @@
 import UIKit
 
 class FollowingViewController: UIViewController {
-
     
+    var followingViewModel = FollowingViewModel()
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
 
     var followersTableView = UITableView()
     var followingTableView = UITableView()
@@ -22,25 +21,12 @@ class FollowingViewController: UIViewController {
     var mutualTableHeader = UIView()
     var followersTableHeader = UIView()
     var followingTableHeader = UIView()
-    
-    var buttonTrack = false
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Other User Name"
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
-//        allTableView = UIView(frame: CGRect(x: 0,
-//                                            y: 130,
-//                                            width: 414,
-//                                            height: 635))
-//        allTableView.backgroundColor = .blue
-//        view.addSubview(allTableView)
-//
         followersTableView.delegate = self
         followersTableView.dataSource = self
 
@@ -62,6 +48,12 @@ class FollowingViewController: UIViewController {
         followingTableView.register(MutualTableViewCell.nib(), forCellReuseIdentifier: MutualTableViewCell.identifier)
         followersTableView.register(MutualTableViewCell.nib(), forCellReuseIdentifier: MutualTableViewCell.identifier)
         suggestionTableView.register(OthersSuggestedTableViewCell.nib(), forCellReuseIdentifier: OthersSuggestedTableViewCell.identifier)
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
     }
 
 }
@@ -106,24 +98,23 @@ extension FollowingViewController: UITableViewDelegate, UITableViewDataSource {
         switch tableView {
         case suggestionTableView:
             let cell = suggestionTableView.dequeueReusableCell(withIdentifier: OthersSuggestedTableViewCell.identifier, for: indexPath) as! OthersSuggestedTableViewCell
-            //cell.cellDelegate = self
+            cell.othersSuggestedModel.cellDelegate = self
             
             cell.removeButton.tag = indexPath.row
-            print("\(cell.removeButton.tag)")
             cell.removeButton.addTarget(self, action: #selector(deleteCell(sender:)), for: .touchUpInside)
-            print("\(indexPath.row)")
+
             return cell
         case followersTableView:
             let cell = followersTableView.dequeueReusableCell(withIdentifier: MutualTableViewCell.identifier, for: indexPath) as! MutualTableViewCell
-            cell.delegate = self
+            cell.mutualTableViewModel.delegate = self
             return cell
         case followingTableView:
             let cell = followingTableView.dequeueReusableCell(withIdentifier: MutualTableViewCell.identifier, for: indexPath) as! MutualTableViewCell
-            cell.delegate = self
+            cell.mutualTableViewModel.delegate = self
             return cell
         case mutualTableView:
             let cell = mutualTableView.dequeueReusableCell(withIdentifier: MutualTableViewCell.identifier, for: indexPath) as! MutualTableViewCell
-            cell.delegate = self
+            cell.mutualTableViewModel.delegate = self
             return cell
         default:
             return UITableViewCell()
@@ -252,7 +243,7 @@ extension FollowingViewController : UICollectionViewDelegate,UICollectionViewDat
             self.view.addSubview(suggestionTableView)
             
         default:
-            print("none")
+            return
         }
     }
     
@@ -268,29 +259,29 @@ extension FollowingViewController: MutualTableViewCellDelegate{
         ac.addAction(UIAlertAction(title: "Unfollow", style: .default, handler: unfollowTapped(sender: )))
         ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(ac, animated: true)
-        if buttonTrack {
+        if followingViewModel.buttonTrack {
             button.backgroundColor = .tintColor
             button.setTitleColor(UIColor.white, for: .normal)
             button.setTitle("Follow", for: .normal)
             button.titleLabel?.font = UIFont.systemFont(ofSize: 10)
-            buttonTrack = false
+            followingViewModel.buttonTrack = false
             followingTableView.reloadData()
         }
     }
     
     func unfollowTapped(sender: UIAlertAction) {
-        buttonTrack = true
+        followingViewModel.buttonTrack = true
     }
     
     func followButtonMethod(button: UIButton) {
         
-        if !buttonTrack {
+        if !followingViewModel.buttonTrack {
             button.backgroundColor = .lightGray
             button.setTitle("Following", for: .normal)
             button.setTitleColor(UIColor.black, for: .normal)
             button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 10)
             followingTableView.reloadData()
-            buttonTrack = true
+            followingViewModel.buttonTrack = true
         }
     }
     

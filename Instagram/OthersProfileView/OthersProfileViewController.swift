@@ -163,7 +163,7 @@ extension OthersProfileViewController: UICollectionViewDelegate, UICollectionVie
             let profileHeader = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
                 withReuseIdentifier: OtherProfileHeaderCollectionReusableView.identifier,
                 for: indexPath) as! OtherProfileHeaderCollectionReusableView
-            profileHeader.otherProfileDelegate = self
+            profileHeader.otherProfileHeaderViewModel.otherProfileDelegate = self
             return profileHeader
         } else if indexPath.section == 1 {
             let storyHeader = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: OtherProfileStoryCollectionReusableView.identifier, for: indexPath) as! OtherProfileStoryCollectionReusableView
@@ -171,7 +171,7 @@ extension OthersProfileViewController: UICollectionViewDelegate, UICollectionVie
             return storyHeader
         } else {
             let tabHeader = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: OtherProfileTabCollectionReusableView.identifier, for: indexPath) as! OtherProfileTabCollectionReusableView
-            tabHeader.otherProfileTabDelegate = self
+            tabHeader.OtherProfileTabViewModel.otherProfileTabDelegate = self
             return tabHeader
         }
     }

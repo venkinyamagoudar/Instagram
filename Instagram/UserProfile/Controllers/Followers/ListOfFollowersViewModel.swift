@@ -35,7 +35,7 @@ class ListOfFollowersViewModel{
         var jsonData: Data!
         do {
             if let path = Bundle.main.path(forResource: fileName, ofType: "json"){
-                let fileURL = try URL(fileURLWithPath: path)
+                let fileURL = URL(fileURLWithPath: path)
                 jsonData = try Data(contentsOf: fileURL)
             }
         } catch {

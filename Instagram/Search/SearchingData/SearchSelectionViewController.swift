@@ -29,7 +29,6 @@ class SearchSelectionViewController: UIViewController{
     }
     
     func configure(model: [UserSearchDetails]){
-        print(model)
         self.viewModel.userSearchDetails = model
         viewModel.tableView.reloadData()
     }
