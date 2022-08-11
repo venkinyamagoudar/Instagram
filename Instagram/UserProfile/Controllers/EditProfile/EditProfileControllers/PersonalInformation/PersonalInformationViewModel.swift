@@ -12,7 +12,7 @@ protocol personalInformationViewControllerDelegate: Any{
 }
 
 class PersonalInformationViewModel {
-    var personalInformation: PersonalInformation!
+    
     var personalDetails : PersonalInformation!
     
     var personalInformationDelegate: personalInformationViewControllerDelegate?

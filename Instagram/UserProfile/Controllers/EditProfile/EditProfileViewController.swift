@@ -10,13 +10,10 @@ import UIKit
 class EditProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
     @IBOutlet weak var tableView: UITableView!
-    
     var imageView: UIImageView!
     var changeProfilePhotoLabel: UILabel!
     
-    var userDetails = User(username: "", bio: "", name: "", pronouns: "", websites: "")
-    
-    var personalDetails = PersonalInformation(email: "", phone: "", gender: "", birthday: "")
+    var editProfileViewModel = EditProfileViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,14 +43,15 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
             let cell = tableView.dequeueReusableCell(withIdentifier: EditProfileTableViewCell.identifier, for: indexPath) as! EditProfileTableViewCell
             cell.firstLabel.text = "Name"
             cell.secondLabel.isUserInteractionEnabled = true
+            cell.secondLabel.text = editProfileViewModel.userDetails.name
             let tap = UITapGestureRecognizer(target: self, action: #selector(chanegeNameMethod(tapGestureRecognizer:)))
             cell.secondLabel.addGestureRecognizer(tap)
-            cell.secondLabel.text = userDetails.name
+            cell.secondLabel.text = editProfileViewModel.userDetails.name
             return cell
         case 1 :
             let cell = tableView.dequeueReusableCell(withIdentifier: EditProfileTableViewCell.identifier, for: indexPath) as! EditProfileTableViewCell
             cell.firstLabel.text = "Username"
-            cell.secondLabel.text = userDetails.username
+            cell.secondLabel.text = editProfileViewModel.userDetails.username
             cell.secondLabel.isUserInteractionEnabled = true
             let tap = UITapGestureRecognizer(target: self, action: #selector(chanegeUsernameMethod(tapGestureRecognizer:)))
             cell.secondLabel.addGestureRecognizer(tap)
@@ -61,7 +59,7 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: EditProfileTableViewCell.identifier, for: indexPath) as! EditProfileTableViewCell
             cell.firstLabel.text = "Pronouns"
-            cell.secondLabel.text = userDetails.pronouns
+            cell.secondLabel.text = editProfileViewModel.userDetails.pronouns
             cell.secondLabel.isUserInteractionEnabled = true
             let tap = UITapGestureRecognizer(target: self, action: #selector(chanegePronounsMethod(tapGestureRecognizer:)))
             cell.secondLabel.addGestureRecognizer(tap)
@@ -69,11 +67,13 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: EditWebsiteTableViewCell.identifier, for: indexPath) as! EditWebsiteTableViewCell
             cell.firstLabel.text = "Website"
+            cell.textField.text = editProfileViewModel.userDetails.websites
+            cell.editWebsiteTableViewCellDelegate = self
             return cell
         case 4:
             let cell = tableView.dequeueReusableCell(withIdentifier: EditProfileTableViewCell.identifier, for: indexPath) as! EditProfileTableViewCell
             cell.firstLabel.text = "Bio"
-            cell.secondLabel.text = userDetails.bio
+            cell.secondLabel.text = editProfileViewModel.userDetails.bio
             cell.secondLabel.isUserInteractionEnabled = true
             let tap = UITapGestureRecognizer(target: self, action: #selector(chanegeBioMethod(tapGestureRecognizer:)))
             cell.secondLabel.addGestureRecognizer(tap)
@@ -123,7 +123,7 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
         case 7:
             let vc = personalInformationViewController()
             vc.personalInformationViewModel.personalInformationDelegate = self
-            vc.personalInformationViewModel.personalDetails = self.personalDetails
+            vc.personalInformationViewModel.personalDetails = self.editProfileViewModel.personalDetails
             navigationController?.pushViewController(vc, animated: true)
         default:
             return
@@ -214,22 +214,25 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
 
     @objc func chanegeNameMethod(tapGestureRecognizer: UITapGestureRecognizer) {
         let vc = EditProfileNameViewController()
+        vc.editProfileNameViewModel.editProfileNameViewControllerDelegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
 
     @objc func chanegeUsernameMethod(tapGestureRecognizer: UITapGestureRecognizer) {
         let vc = EditProfileUsernameViewController()
+        vc.editProfileUsernameViewModel.editProfileUsernameViewControllerDelegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
 
     @objc func chanegePronounsMethod(tapGestureRecognizer: UITapGestureRecognizer) {
         let vc = EditProfilePronounsViewController()
+        vc.editProfilePronounViewModel.editProfilrPronounsViewControllerDelegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
 
     @objc func chanegeBioMethod(tapGestureRecognizer: UITapGestureRecognizer) {
         let vc = EditProfileBioViewController()
-        vc.editBioDelegate = self
+        vc.editProfileBioViewModel.editBioDelegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -238,10 +241,10 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
 extension EditProfileViewController: personalInformationViewControllerDelegate{
     func assigningText(text: String, indexPath: IndexPath) {
         switch indexPath.row {
-        case 0: personalDetails.email = text
-        case 1: personalDetails.phone = text
-        case 2: personalDetails.gender = text
-        case 3: personalDetails.birthday = text
+        case 0: editProfileViewModel.personalDetails.email = text
+        case 1: editProfileViewModel.personalDetails.phone = text
+        case 2: editProfileViewModel.personalDetails.gender = text
+        case 3: editProfileViewModel.personalDetails.birthday = text
         default: return
         }
     }
@@ -249,7 +252,34 @@ extension EditProfileViewController: personalInformationViewControllerDelegate{
 
 extension EditProfileViewController : EditProfileBioViewControllerDelegate{
     func saveBio(text: String) {
-        self.userDetails.bio = text
+        self.editProfileViewModel.userDetails.bio = text
         self.tableView.reloadData()
+    }
+}
+
+extension EditProfileViewController: EditProfilrPronounsViewControllerDelegate{
+    func savePronoun(text: String) {
+        self.editProfileViewModel.userDetails.pronouns = text
+        self.tableView.reloadData()
+    }
+}
+
+extension EditProfileViewController: EditProfileUsernameViewControllerDelegate{
+    func saveUserName(text: String) {
+        self.editProfileViewModel.userDetails.username = text
+        self.tableView.reloadData()
+    }
+}
+
+extension EditProfileViewController: EditProfileNameViewControllerDelegate{
+    func saveName(text: String) {
+        self.editProfileViewModel.userDetails.name = text
+        self.tableView.reloadData()
+    }
+}
+
+extension EditProfileViewController: EditWebsiteTableViewCellDelegate{
+    func saveWebsite(text: String){
+        self.editProfileViewModel.userDetails.websites = text
     }
 }

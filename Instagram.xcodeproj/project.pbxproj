@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		244992CC28A469310082F6F3 /* EditProfilePronounsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244992CB28A469310082F6F3 /* EditProfilePronounsViewModel.swift */; };
+		244992CE28A469EC0082F6F3 /* EditProfileBioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244992CD28A469EC0082F6F3 /* EditProfileBioViewModel.swift */; };
+		244992D028A46F370082F6F3 /* EditProfileUsernameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244992CF28A46F370082F6F3 /* EditProfileUsernameViewModel.swift */; };
+		244992D228A4727F0082F6F3 /* EditProfileNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244992D128A4727F0082F6F3 /* EditProfileNameViewModel.swift */; };
+		244992D428A47E9A0082F6F3 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244992D328A47E9A0082F6F3 /* EditProfileViewModel.swift */; };
 		24B9B51B286343E8000DA190 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B9B51A286343E8000DA190 /* AppDelegate.swift */; };
 		24B9B51D286343E8000DA190 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B9B51C286343E8000DA190 /* SceneDelegate.swift */; };
 		24B9B51F286343E8000DA190 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B9B51E286343E8000DA190 /* ViewController.swift */; };
@@ -150,6 +155,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		244992CB28A469310082F6F3 /* EditProfilePronounsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePronounsViewModel.swift; sourceTree = "<group>"; };
+		244992CD28A469EC0082F6F3 /* EditProfileBioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileBioViewModel.swift; sourceTree = "<group>"; };
+		244992CF28A46F370082F6F3 /* EditProfileUsernameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileUsernameViewModel.swift; sourceTree = "<group>"; };
+		244992D128A4727F0082F6F3 /* EditProfileNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileNameViewModel.swift; sourceTree = "<group>"; };
+		244992D328A47E9A0082F6F3 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		24B9B517286343E8000DA190 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24B9B51A286343E8000DA190 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24B9B51C286343E8000DA190 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -705,6 +715,7 @@
 			isa = PBXGroup;
 			children = (
 				24EDD17F2885E1E500364660 /* EditProfileNameViewController.swift */,
+				244992D128A4727F0082F6F3 /* EditProfileNameViewModel.swift */,
 				24EDD1802885E1E500364660 /* EditProfileNameViewController.xib */,
 			);
 			path = EditName;
@@ -714,6 +725,7 @@
 			isa = PBXGroup;
 			children = (
 				24EDD1832885E1FD00364660 /* EditProfileUsernameViewController.swift */,
+				244992CF28A46F370082F6F3 /* EditProfileUsernameViewModel.swift */,
 				24EDD1842885E1FD00364660 /* EditProfileUsernameViewController.xib */,
 			);
 			path = EditUsername;
@@ -723,6 +735,7 @@
 			isa = PBXGroup;
 			children = (
 				24EDD18B2885E25F00364660 /* EditProfilePronounsViewController.swift */,
+				244992CB28A469310082F6F3 /* EditProfilePronounsViewModel.swift */,
 				24EDD18C2885E25F00364660 /* EditProfilePronounsViewController.xib */,
 			);
 			path = EditPronoun;
@@ -732,6 +745,7 @@
 			isa = PBXGroup;
 			children = (
 				24EDD1872885E22400364660 /* EditProfileBioViewController.swift */,
+				244992CD28A469EC0082F6F3 /* EditProfileBioViewModel.swift */,
 				24EDD1882885E22400364660 /* EditProfileBioViewController.xib */,
 			);
 			path = EditBio;
@@ -836,6 +850,7 @@
 			isa = PBXGroup;
 			children = (
 				24F348E4287E58270017C7AA /* EditProfileViewController.swift */,
+				244992D328A47E9A0082F6F3 /* EditProfileViewModel.swift */,
 				24F348E5287E58270017C7AA /* EditProfileViewController.xib */,
 				24EDD1752885C6B300364660 /* EditProfilecells */,
 				24EDD17E2885DE4C00364660 /* EditProfileControllers */,
@@ -1013,6 +1028,7 @@
 				24EDD17C2885DACB00364660 /* EditProfileOtherTableViewCell.swift in Sources */,
 				24C8B8D528A1CCF900D1D726 /* SearchSelectionViewModel.swift in Sources */,
 				24EDD1BA2887895D00364660 /* HeaderTableViewCell.swift in Sources */,
+				244992CC28A469310082F6F3 /* EditProfilePronounsViewModel.swift in Sources */,
 				24E2ACED28750ADE000834FD /* CartTableViewCell.swift in Sources */,
 				24E2ACA9286CEE13000834FD /* CameraViewController.swift in Sources */,
 				24C932D72881CF11002A45EF /* FollowingViewController.swift in Sources */,
@@ -1033,10 +1049,12 @@
 				24E2ACA2286CDB1A000834FD /* MessageTableViewCell.swift in Sources */,
 				24E2ACC1286E2B37000834FD /* ProfileViewController.swift in Sources */,
 				24E2ACAD286CF6DE000834FD /* PhotoViewController.swift in Sources */,
+				244992CE28A469EC0082F6F3 /* EditProfileBioViewModel.swift in Sources */,
 				24C8B8D728A2934300D1D726 /* ReelViewModel.swift in Sources */,
 				24EDD1912885E29000364660 /* AvatarViewController.swift in Sources */,
 				24B9B51F286343E8000DA190 /* ViewController.swift in Sources */,
 				24B9B580286A4C04000DA190 /* HomePagePostTableViewCell.swift in Sources */,
+				244992D428A47E9A0082F6F3 /* EditProfileViewModel.swift in Sources */,
 				24E2ACB5286E2AF9000834FD /* SearchViewController.swift in Sources */,
 				24C45C5D288EFF7B00E77DE3 /* UserInformation.swift in Sources */,
 				24C8B8D928A29F9700D1D726 /* ReelCollectionViewModel.swift in Sources */,
@@ -1044,9 +1062,11 @@
 				24C8B8E328A2D5D100D1D726 /* GalleryViewModel.swift in Sources */,
 				24E2ACC5286E4355000834FD /* SearchCollectionViewCell.swift in Sources */,
 				24E2ACD1286F835B000834FD /* ReelsCollectionViewCell.swift in Sources */,
+				244992D228A4727F0082F6F3 /* EditProfileNameViewModel.swift in Sources */,
 				24EDD1732885C06400364660 /* EditProfileTableViewCell.swift in Sources */,
 				24EDD1A72886E8FA00364660 /* PersonalInformationTableViewCell.swift in Sources */,
 				24E2AD0028762413000834FD /* ShoppongActivityViewController.swift in Sources */,
+				244992D028A46F370082F6F3 /* EditProfileUsernameViewModel.swift in Sources */,
 				24EDD1892885E22400364660 /* EditProfileBioViewController.swift in Sources */,
 				24DFA5BE2899E63700EB1587 /* Reels.swift in Sources */,
 				24C8B8DF28A2B58A00D1D726 /* StoryTableViewModel.swift in Sources */,
