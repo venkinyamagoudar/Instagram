@@ -11,62 +11,18 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var userInformationProfile : UserInformation!
-    var followingCountProfile : FollowingCount!
-    var followersCountProfile: FollowersCount!
-    var postCountProfile: PostCount!
-    var profileImage: UIImage!
-    
-    var userPosts: UserPosts!
-    var postDetails = [PostDetails]()
+    var profileViewModel = ProfileViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let jsonData = extractDatafromJsonFile(fileName: "UserPosts")
+        let parsedData = profileViewModel.extractDatafromJsonFile(fileName: "UserPosts", dataType: UserPosts.self)
+
+        profileViewModel.userPosts = parsedData
+        profileViewModel.postDetails = profileViewModel.userPosts.postDetails
         
-        let decoder = JSONDecoder()
-        var parsedData : UserPosts!
-        do {
-            parsedData = try? decoder.decode(UserPosts.self, from: jsonData!)
-        } catch {
-            print("error wjile parsing \(error)")
-        }
-        userPosts = parsedData
-        postDetails = userPosts.postDetails
-    }
-    
-    func extractDatafromJsonFile(fileName:String) -> Data? {
-        do{
-            if let path = Bundle.main.path(forResource: fileName, ofType: "json"){
-                let fileURL = URL(fileURLWithPath: path)
-                let jsonData = try Data(contentsOf: fileURL)
-                return jsonData
-            }
-        } catch {
-            print("error while parsing\(error)")
-        }
-        return nil
-    }
-    
-    func extractImageFromURL(imageUrl: URL) -> UIImage?{
-        do {
-            if let imageData = try? Data(contentsOf: imageUrl){
-                if let image = UIImage(data: imageData){
-                    return image
-                }
-            }
-        } catch{
-            print("erroe while ectraing image \(error)")
-        }
-        return nil
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         collectionView.dataSource = self
         collectionView.delegate = self
-        
         
         //registering a cell
         collectionView.register(ProfileCollectionViewCell.self, forCellWithReuseIdentifier: ProfileCollectionViewCell.identifier)
@@ -79,6 +35,10 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         let reelButton = UIBarButtonItem(image: UIImage(systemName: "plus.app"), style: .done, target: self, action: #selector(reelButtonTapped))
         let optionButton = UIBarButtonItem(image: UIImage(systemName: "line.horizontal.3"), style: .done, target: self, action: #selector(optionsButtonTapped))
         navigationItem.rightBarButtonItems = [optionButton, reelButton]
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     
     }
     
@@ -91,7 +51,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         if section == 0 {
             return 0
         }
-        return postDetails.count
+        return profileViewModel.postDetails.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -116,12 +76,13 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
             let profileHeader = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
                 withReuseIdentifier: ProfileInfoHeaderCollectionReusableView.identifier,
                 for: indexPath) as! ProfileInfoHeaderCollectionReusableView
-            profileHeader.delegateProfile = self
-            
+            profileHeader.profileInfoHeaderViewModel.delegateProfile = self
+            profileHeader.userName.text = profileViewModel.userPosts.userName
+            profileHeader.numberOfPosts.setTitle(String(profileViewModel.userPosts.numberOfPosts), for: .normal)
             return profileHeader
         } else {
             let tabHeader = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ProfileTabsCollectionReusableView.identifier, for: indexPath) as! ProfileTabsCollectionReusableView
-            tabHeader.delegateTab = self
+            tabHeader.profileTabsViewModel.delegateTab = self
             return tabHeader
         }
     }
@@ -223,9 +184,9 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
 extension ProfileViewController: ProfileInfoHeaderCollectionReusableViewDelegate {
     
     func userInformationFunction(_ userInformation: UserInformation, headerProfileImage: UIImage, _ followersCount: FollowersCount, _ followingCount: FollowingCount, _ postCount: PostCount) {
-        self.userInformationProfile = userInformation
-        self.postCountProfile = postCount
-        self.profileImage = headerProfileImage
+        profileViewModel.userInformationProfile = userInformation
+        profileViewModel.postCountProfile = postCount
+        profileViewModel.profileImage = headerProfileImage
     }
     
     func ProfileHeaderDidTapPostButton(_ header: ProfileInfoHeaderCollectionReusableView) {

@@ -11,13 +11,14 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var galleryViewModel = GalleryViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.collectionViewLayout = self.createLayout()
-        
+        collectionView.collectionViewLayout = self.galleryViewModel.createLayout()
     }
     
     //Collection view cell
@@ -35,35 +36,4 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         return cell
     }
-    
-    // custom layout
-    func createLayout() -> UICollectionViewCompositionalLayout {
-        //item
-        let item = NSCollectionLayoutItem(layoutSize:
-                                            NSCollectionLayoutSize(
-                                                widthDimension: .fractionalWidth(1),
-                                                heightDimension: .fractionalHeight(1)
-                                            )
-        )
-        item.contentInsets = NSDirectionalEdgeInsets(top: 2,
-                                                     leading: 2,
-                                                     bottom: 2,
-                                                     trailing: 2
-        )
-
-        //group
-        let group = NSCollectionLayoutGroup.horizontal(
-            layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                               heightDimension: .fractionalWidth(2/5)
-                                              ),
-            subitem: item,
-            count: 3)
-        
-        // section
-        let section = NSCollectionLayoutSection(group: group)
-        
-        //return
-        return UICollectionViewCompositionalLayout(section: section)
-    }
-    
 }

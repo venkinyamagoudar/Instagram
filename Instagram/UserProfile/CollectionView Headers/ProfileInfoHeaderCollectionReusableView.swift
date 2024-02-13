@@ -6,25 +6,11 @@
 //
 
 import UIKit
-protocol ProfileInfoHeaderCollectionReusableViewDelegate : AnyObject {
-    func ProfileHeaderDidTapPostButton(_ header: ProfileInfoHeaderCollectionReusableView)
-    func ProfileHeaderDidTapFollowersButton(_ header: ProfileInfoHeaderCollectionReusableView)
-    func ProfileHeaderDidTapFollowingButton(_ header: ProfileInfoHeaderCollectionReusableView)
-    func ProfileHeaderDidTapEditProfileButton(_ header: ProfileInfoHeaderCollectionReusableView)
-    func ProfileHeaderDidTapDiscoverPeopleButton(_ header: ProfileInfoHeaderCollectionReusableView)
-    func userInformationFunction(_ userInformation: UserInformation, headerProfileImage: UIImage, _ followersCount: FollowersCount,_ followingCount: FollowingCount,_ postCount: PostCount)
-}
+
 
 final class ProfileInfoHeaderCollectionReusableView: UICollectionReusableView {
 
     static var identifier = "ProfileInfoHeaderCollectionReusableView"
-    
-    public weak var delegateProfile : ProfileInfoHeaderCollectionReusableViewDelegate?
-    
-    var userInformation : UserInformation!
-    var followingCount : FollowingCount!
-    var followersCount: FollowersCount!
-    var postCount: PostCount!
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
@@ -35,7 +21,7 @@ final class ProfileInfoHeaderCollectionReusableView: UICollectionReusableView {
     static func nib() -> UINib {
         return UINib(nibName: "ProfileInfoHeaderCollectionReusableView", bundle: nil)
     }
-    
+    var profileInfoHeaderViewModel = ProfileInfoHeaderCollectionReusableViewModel()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,23 +34,23 @@ final class ProfileInfoHeaderCollectionReusableView: UICollectionReusableView {
     
     
     @IBAction func numberOfPosts(_ sender: Any) {
-       delegateProfile?.ProfileHeaderDidTapPostButton(self)
+        profileInfoHeaderViewModel.delegateProfile?.ProfileHeaderDidTapPostButton(self)
     }
     
     @IBAction func numberofFollowing(_ sender: Any) {
-        delegateProfile?.ProfileHeaderDidTapFollowingButton(self)
+        profileInfoHeaderViewModel.delegateProfile?.ProfileHeaderDidTapFollowingButton(self)
     }
     
     @IBAction func numberOfFollowers(_ sender: Any) {
-        delegateProfile?.ProfileHeaderDidTapFollowersButton(self)
+        profileInfoHeaderViewModel.delegateProfile?.ProfileHeaderDidTapFollowersButton(self)
     }
     
     @IBAction func editProfileBUtton(_ sender: Any) {
-        delegateProfile?.ProfileHeaderDidTapEditProfileButton(self)
+        profileInfoHeaderViewModel.delegateProfile?.ProfileHeaderDidTapEditProfileButton(self)
     }
     
     @IBAction func discoverPeopleButton(_ sender: Any) {
-        delegateProfile?.ProfileHeaderDidTapDiscoverPeopleButton(self)
+        profileInfoHeaderViewModel.delegateProfile?.ProfileHeaderDidTapDiscoverPeopleButton(self)
     }
     
 }

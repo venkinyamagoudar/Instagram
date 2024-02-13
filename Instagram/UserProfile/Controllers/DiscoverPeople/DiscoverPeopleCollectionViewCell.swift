@@ -8,7 +8,6 @@
 import UIKit
 
 class DiscoverPeopleCollectionViewCell: UICollectionViewCell {
-
     
     static var identifier = "DiscoverPeopleCollectionReusableView"
     
@@ -16,19 +15,21 @@ class DiscoverPeopleCollectionViewCell: UICollectionViewCell {
         return UINib(nibName: "DiscoverPeopleCollectionReusableView", bundle: nil)
     }
     
-    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var listOfPeopleFollowing: UILabel!
     
+    var discoverPeopleCollectionCellViewModel = DiscoverPeopleCollectionCellViewModel()
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         
-        profileImageView.layer.borderWidth = 1
-        profileImageView.layer.borderColor = UIColor.white.cgColor
-        profileImageView.layer.masksToBounds = true
-        profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
+        discoverPeopleCollectionCellViewModel.setImageView(profileImageView)
+        
+        
+//        profileImageView.layer.borderWidth = 1
+//        profileImageView.layer.borderColor = UIColor.white.cgColor
+//        profileImageView.layer.masksToBounds = true
+//        profileImageView.layer.cornerRadius = profileImageView.frame.width / 2
         
     }
     

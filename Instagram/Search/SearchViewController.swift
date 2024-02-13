@@ -9,10 +9,7 @@ import UIKit
 
 class SearchViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource  {
     
-    var userSearch: UserSearch!
-    var userSearchDetails = [UserSearchDetails]()
-    
-    let searchController = UISearchController(searchResultsController: SearchSelectionViewController())
+    var searchModel = SearchViewModel()
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -23,8 +20,6 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        
-        
         collectionView.register(SearchCollectionViewCell.nib(), forCellWithReuseIdentifier: SearchCollectionViewCell.identifier)
         
         //layout
@@ -32,36 +27,15 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         
         //MARK: Search Controller
+        let searchController = UISearchController(searchResultsController: searchModel.searchSelectionViewController)
         searchController.searchResultsUpdater = self
         navigationItem.searchController = searchController
         
         //MARK: JSON READING
-        let jsonData = extractDataFromJsonFile(filename: "UserSearch")
-        let decoder = JSONDecoder()
-        
-        var searchData: UserSearch!
-        do{
-            searchData = try decoder.decode(UserSearch.self, from: jsonData!)
-        }catch{
-            print(error)
-        }
-        self.userSearch = searchData
-        userSearchDetails = userSearch.data
-    }
-    
-    //MARK: data extraction
-    
-    func extractDataFromJsonFile(filename: String) -> Data?{
-        do{
-            if let path = try Bundle.main.path(forResource: filename, ofType: "json"){
-                let pathURL = try URL(fileURLWithPath: path)
-                let jsonData = try Data(contentsOf: pathURL)
-                return jsonData
-            }
-        } catch {
-            print("error  \(error)")
-        }
-        return nil
+        let searchData = searchModel.extractDataFromJsonFile(filename: "UserSearch",dataType: UserSearch.self)
+
+        self.searchModel.userSearch = searchData
+        searchModel.userSearchDetails = searchModel.userSearch.data
     }
     
     //Collection view delegate
@@ -150,19 +124,19 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
 }
 
-extension SearchViewController: UISearchResultsUpdating{
+extension SearchViewController: UISearchResultsUpdating {
+    
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text else {
             return
         }
         
         var matchedUsers = [UserSearchDetails]()
-        for user in userSearchDetails{
+        for user in self.searchModel.userSearchDetails{
             if user.full_name.contains(text) || user.username.contains(text) {
                 matchedUsers.append(user)
             }
         }
-        let vc = SearchSelectionViewController()
-        vc.configure(model: matchedUsers)
+        self.searchModel.searchSelectionViewController.configure(model: matchedUsers)
     }
 }

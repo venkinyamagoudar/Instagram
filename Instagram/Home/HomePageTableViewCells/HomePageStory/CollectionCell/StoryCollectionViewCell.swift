@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol StoryTappableDelegate : AnyObject {
-    func didTapStoryCell(with model: [UserStoryFollowingDetails], indexpath: IndexPath)
-}
-
 class StoryCollectionViewCell: UICollectionViewCell {
 
     static var identifier = "StoryCollectionViewCell"
@@ -19,30 +15,20 @@ class StoryCollectionViewCell: UICollectionViewCell {
         return UINib(nibName: "StoryCollectionViewCell", bundle: nil)
     }
     @IBOutlet var userProfile: UILabel!
-    
     @IBOutlet var userImage: UIImageView!
     
-    var followingUserDetails = [UserStoryFollowingDetails]()
-    
-    var storyImage = UIImage(named: "message")
-    var indexpath : IndexPath!
-    
-    //let nc = UINavigationController()
-    public weak var storyImageTapDelegate: StoryTappableDelegate?
-    
+    var storyCollectionViewModel = StoryCollectionViewModel()
     
     func configure(model: [UserStoryFollowingDetails]){
-        self.followingUserDetails = model
+        storyCollectionViewModel.configure(model: model)
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         userImage.isUserInteractionEnabled = true
-        let tapRecogniser = UITapGestureRecognizer(target: self, action: #selector(storyPressed(tapGestureRecognizer: )))
+        let tapRecogniser = UITapGestureRecognizer(target: self, action:  #selector(storyPressed(tapGestureRecognizer: )))
         userImage.addGestureRecognizer(tapRecogniser)
-        
-        
         userImage?.layer.cornerRadius = (userImage?.frame.size.height ?? 0.0) / 2
         userImage?.clipsToBounds = true
         userImage?.layer.borderWidth = 3.0
@@ -50,12 +36,8 @@ class StoryCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func selecetedIndexpath(indexpath: IndexPath){
-        self.indexpath = indexpath
-    }
-    
     @objc func storyPressed(tapGestureRecognizer: UITapGestureRecognizer) {
-        self.storyImageTapDelegate?.didTapStoryCell(with: followingUserDetails, indexpath: self.indexpath)
+        self.storyCollectionViewModel.storyImageTapDelegate?.didTapStoryCell(with: storyCollectionViewModel.followingUserDetails, indexpath: storyCollectionViewModel.indexpath)
         userImage.layer.borderColor = UIColor.gray.cgColor
     }
 }

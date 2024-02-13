@@ -20,7 +20,28 @@ class OtherProfileStoryCollectionReusableView: UICollectionReusableView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.backgroundColor = .green
+        storyCollectionView.delegate = self
+        storyCollectionView.dataSource = self
+        
+        storyCollectionView.register(OtherStoryCollectionViewCell.nib(), forCellWithReuseIdentifier: OtherStoryCollectionViewCell.identifier)
+        
     }
     
+}
+
+
+extension OtherProfileStoryCollectionReusableView: UICollectionViewDelegate, UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: OtherStoryCollectionViewCell.identifier, for: indexPath) as! OtherStoryCollectionViewCell
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Go to Story collection")
+    }
 }

@@ -10,14 +10,18 @@ import UIKit
 class EditProfileBioViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     
+    var editProfileBioViewModel = EditProfileBioViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        textField.delegate = self
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(saveNameMethod))
     }
     
     @objc func saveNameMethod() {
-        print("save details")
+        
+        editProfileBioViewModel.editBioDelegate?.saveBio(text: textField.text!)
         _ = navigationController?.popViewController(animated: true)
     }
     
@@ -25,4 +29,15 @@ class EditProfileBioViewController: UIViewController {
         textField.text = ""
     }
 
+}
+
+extension EditProfileBioViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        editProfileBioViewModel.editBioDelegate?.saveBio(text: textField.text!)
+        return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        editProfileBioViewModel.editBioDelegate?.saveBio(text: textField.text!)
+    }
 }

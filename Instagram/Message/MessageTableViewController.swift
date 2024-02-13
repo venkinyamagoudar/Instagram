@@ -14,7 +14,6 @@ class MessageTableViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.register(MessageTableViewCell.nib(), forCellReuseIdentifier: MessageTableViewCell.identifier)
-        
     }
 
     // table view
@@ -25,7 +24,7 @@ class MessageTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath) as! MessageTableViewCell
-        cell.cameraDelegate = self
+        cell.messageTableCellViewModel.cameraDelegate = self
         return cell
     }
     

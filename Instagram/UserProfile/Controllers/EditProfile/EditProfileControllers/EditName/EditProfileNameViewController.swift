@@ -11,14 +11,18 @@ class EditProfileNameViewController: UIViewController {
 
     @IBOutlet weak var textField: UITextField!
     
+    var editProfileNameViewModel = EditProfileNameViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        textField.delegate = self
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(saveNameMethod))
     }
     
     @objc func saveNameMethod() {
-        print("save details")
+        editProfileNameViewModel.editProfileNameViewControllerDelegate?.saveName(text: textField.text!)
         _ = navigationController?.popViewController(animated: true)
     }
     
@@ -27,3 +31,13 @@ class EditProfileNameViewController: UIViewController {
     }
 }
 
+extension EditProfileNameViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        editProfileNameViewModel.editProfileNameViewControllerDelegate?.saveName(text: textField.text!)
+        return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        editProfileNameViewModel.editProfileNameViewControllerDelegate?.saveName(text: textField.text!)
+    }
+}

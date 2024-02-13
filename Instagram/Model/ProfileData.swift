@@ -20,13 +20,11 @@ struct UserCounts {
     let numberOfPosts: Int
 }
 struct User {
-    let username: String
-    let bio: String
-    let name: (first:String, last: String)
-    let birthDate: Date
-    let gender: Gender
-    let counts: UserCounts
-    let joinedDate: Date
+    var username: String
+    var bio: String
+    var name: String
+    var pronouns: String
+    var websites: String
 }
 
 struct PostLike {

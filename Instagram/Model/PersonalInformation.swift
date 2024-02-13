@@ -9,7 +9,8 @@ import Foundation
 
 struct PersonalInformation {
     var email: String
-    var phone: Int
-    var gender: Gender
-    var birthday: Date
+    var phone: String
+    var gender: String
+    var birthday: String
+
 }

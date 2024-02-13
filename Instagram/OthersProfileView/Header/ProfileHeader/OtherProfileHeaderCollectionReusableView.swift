@@ -7,18 +7,9 @@
 
 import UIKit
 
-protocol OtherProfileHeaderCollectionReusableViewDelegate: AnyObject {
-    func didTapNumberOfPostsButton()
-    func didTapNumberOfFollwers()
-    func didTapNumberOfFollowing()
-    func didTapFollowingButton()
-    func didTapMessageButton()
-    func didTapSuggestionButton()
-}
+
 
 class OtherProfileHeaderCollectionReusableView: UICollectionReusableView {
-    
-    public weak var otherProfileDelegate: OtherProfileHeaderCollectionReusableViewDelegate?
 
     static var identifier = "OtherProfileHeaderCollectionReusableView"
     
@@ -31,10 +22,9 @@ class OtherProfileHeaderCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var numberOfPostsButton: UIButton!
     @IBOutlet weak var numberOfFollowersButton: UIButton!
     @IBOutlet weak var numberOfFollowingButton: UIButton!
-    
     @IBOutlet weak var otheUserName: UILabel!
     
-    
+    var otherProfileHeaderViewModel = OtherProfileHeaderCollectionReusableViewModel()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -50,32 +40,32 @@ class OtherProfileHeaderCollectionReusableView: UICollectionReusableView {
     //Action Connections
     
     @IBAction func didTapNumberOfPosts(_ sender: Any) {
-        otherProfileDelegate?.didTapNumberOfPostsButton()
+        otherProfileHeaderViewModel.otherProfileDelegate?.didTapNumberOfPostsButton()
         print("Posts")
     }
     
     @IBAction func didTapNumberOfFollwers(_ sender: Any) {
-        otherProfileDelegate?.didTapNumberOfFollwers()
+        otherProfileHeaderViewModel.otherProfileDelegate?.didTapNumberOfFollwers()
         print("followers")
     }
     
     @IBAction func didTapNumberOfFollowing(_ sender: Any) {
-        otherProfileDelegate?.didTapNumberOfFollowing()
-        print("NO. followin")
+        otherProfileHeaderViewModel.otherProfileDelegate?.didTapNumberOfFollowing()
+        print("NO. following")
     }
     
     @IBAction func didTapFollowingButton(_ sender: Any) {
         print("Following")
-        otherProfileDelegate?.didTapFollowingButton()
+        otherProfileHeaderViewModel.otherProfileDelegate?.didTapFollowingButton()
     }
     
     @IBAction func didTapMessageButton(_ sender: Any) {
-        otherProfileDelegate?.didTapMessageButton()
+        otherProfileHeaderViewModel.otherProfileDelegate?.didTapMessageButton()
         print("message")
     }
     
     @IBAction func didTapSuggestionButton(_ sender: Any) {
-        otherProfileDelegate?.didTapSuggestionButton()
+        otherProfileHeaderViewModel.otherProfileDelegate?.didTapSuggestionButton()
         print("suggest")
     }
 }

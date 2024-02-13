@@ -7,9 +7,7 @@
 
 import UIKit
 
-protocol StoryTableViewCellDelegate: AnyObject {
-    func didTapStoryCellTable(with model: [UserStoryFollowingDetails], indexpath: IndexPath)
-}
+
 
 class StoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, StoryTappableDelegate {
   
@@ -19,20 +17,9 @@ class StoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
         return UINib(nibName: "StoryTableViewCell", bundle: nil)
     }
     
-    //story data
-    public var userStoryData: UserFollowingStories!
-    var userStoryDetails = [UserStoryList]()
-    var followingUserDetails = [UserStoryFollowingDetails]()
+    var storyTableViewModel =  StoryTableViewModel()
     
     @IBOutlet var collectionView: UICollectionView!
-    
-    public weak var storyDelegate: StoryTableViewCellDelegate?
-    
-    func configure(model: UserFollowingStories){
-        self.userStoryData = model
-        self.userStoryDetails = model.userStoryList
-        self.followingUserDetails = model.storyList
-    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,42 +29,34 @@ class StoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
         collectionView.dataSource = self
         
     }
+    
+//    func configure(model: UserFollowingStories){
+//        storyTableViewModel.configure(model: model)
+//    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return followingUserDetails.count
+        return storyTableViewModel.followingUserDetails.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCollectionViewCell", for: indexPath) as! StoryCollectionViewCell
-        cell.configure(model: followingUserDetails)
-        cell.userImage.image = getImageData(imageURL: followingUserDetails[indexPath.row].followingUserProfile)
-        cell.userProfile.text = followingUserDetails[indexPath.row].followingUserUsername
-        cell.selecetedIndexpath(indexpath: indexPath)
-        cell.storyImageTapDelegate = self
+        cell.configure(model: storyTableViewModel.followingUserDetails)
+        cell.userImage.image = storyTableViewModel.getImageData(imageURL: storyTableViewModel.followingUserDetails[indexPath.row].followingUserProfile)
+        cell.userProfile.text = storyTableViewModel.followingUserDetails[indexPath.row].followingUserUsername
+        cell.storyCollectionViewModel.selecetedIndexpath(indexpath: indexPath)
+        cell.storyCollectionViewModel.storyImageTapDelegate = self
         return cell
     }
     
     // imageview tapp
     func didTapStoryCell(with model: [UserStoryFollowingDetails], indexpath: IndexPath) {
-        print("image tapped")
-        storyDelegate?.didTapStoryCellTable(with: model, indexpath: indexpath)
+        storyTableViewModel.storyDelegate?.didTapStoryCellTable(with: model, indexpath: indexpath)
     }
     
-    func getImageData(imageURL: URL) -> UIImage?{
-        do {
-            if let imageData = try? Data(contentsOf: imageURL){
-                if let image = UIImage(data: imageData){
-                    return image
-                }
-            }
-        }catch{
-            print("error in image \(error)")
-        }
-        return nil
-    }
+    
 }

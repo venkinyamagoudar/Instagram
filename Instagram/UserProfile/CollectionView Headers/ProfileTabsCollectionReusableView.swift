@@ -7,16 +7,13 @@
 
 import UIKit
 
-protocol ProfileTabsCollectionReusableViewDelegate : AnyObject {
-    func didTapPostButton(_ header: ProfileTabsCollectionReusableView)
-    func didTapTaggedButton(_ header: ProfileTabsCollectionReusableView)
-}
+
 
 class ProfileTabsCollectionReusableView: UICollectionReusableView {
 
     static var identifier = "ProfileTabsCollectionReusableView"
     
-    public weak var delegateTab : ProfileTabsCollectionReusableViewDelegate?
+    var profileTabsViewModel = ProfileTabsCollectionReusableViewModel()
     
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var taggedButton: UIButton!
@@ -31,14 +28,14 @@ class ProfileTabsCollectionReusableView: UICollectionReusableView {
     }
     
     @IBAction func postsButtonTapped(_ sender: Any) {
-        delegateTab?.didTapPostButton(self)
+        profileTabsViewModel.delegateTab?.didTapPostButton(self)
         postButton.tintColor = .black
         taggedButton.tintColor = .gray
     }
     
     
     @IBAction func taggedButtonTapped(_ sender: Any) {
-        delegateTab?.didTapTaggedButton(self)
+        profileTabsViewModel.delegateTab?.didTapTaggedButton(self)
         postButton.tintColor = .gray
         taggedButton.tintColor = .black
     }

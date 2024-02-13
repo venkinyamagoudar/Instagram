@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EditWebsiteTableViewCell: UITableViewCell {
+class EditWebsiteTableViewCell: UITableViewCell{
     
     static let identifier = "EditWebsiteTableViewCell"
     
@@ -15,12 +15,14 @@ class EditWebsiteTableViewCell: UITableViewCell {
         return UINib(nibName: "EditWebsiteTableViewCell", bundle: nil)
     }
     @IBOutlet weak var firstLabel: UILabel!
-    @IBAction func textField(_ sender: Any) {
-    }
+    @IBOutlet weak var textField: UITextField!
+    
+    var editWebsiteTableCellViewModel = EditWebsiteTableCellViewModel()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        textField.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -31,9 +33,14 @@ class EditWebsiteTableViewCell: UITableViewCell {
 
 }
 
-extension EditWebsiteTableViewCell : UITextFieldDelegate {
+extension EditWebsiteTableViewCell: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        editWebsiteTableCellViewModel.editWebsiteTableViewCellDelegate?.saveWebsite(text: textField.text!)
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        editWebsiteTableCellViewModel.editWebsiteTableViewCellDelegate?.saveWebsite(text: textField.text!)
     }
 }

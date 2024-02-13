@@ -9,19 +9,15 @@ import UIKit
 import AVFoundation
 
 class ReelsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
-
-    var reelsData: Reels!
-    var reelCreators = [ReelCreator]()
-
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var player: AVPlayer?
-    var avPlayerLayer: AVPlayerLayer?
-    
     @IBOutlet weak var displayView: UIView!
+    
+    private let reelViewModel = ReelViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         collectionView.backgroundColor = .blue
         
         collectionView.register(ReelsCollectionViewCell.nib(), forCellWithReuseIdentifier: ReelsCollectionViewCell.identifier)
@@ -30,20 +26,10 @@ class ReelsViewController: UIViewController, UICollectionViewDelegate, UICollect
         collectionView.dataSource = self
         
         //MARK: reel data
-        let vc = ViewController()
-        guard let jsonData = vc.readLocalJsonFile(fileName: "Reels") else {return}
-        let decoder = JSONDecoder()
-        var parsedReelsData: Reels!
-        do {
-            parsedReelsData = try? decoder.decode(Reels.self, from: jsonData)
-        }
-        catch {
-            print(error)
-        }
-        self.reelsData = parsedReelsData
-        self.reelCreators = parsedReelsData.reelCreators
-        
-            
+        let vc = HomeViewModel()
+        guard let parsedReelsData = vc.readLocalJsonFile(fileName: "Reels", dataType: Reels.self) else {return}
+        self.reelViewModel.reelsData = parsedReelsData
+        self.reelViewModel.reelCreators = parsedReelsData.reelCreators
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -52,29 +38,24 @@ class ReelsViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     //collectrion view
     
+    /// Description: - collection view
+    /// - Parameters:
+    ///   - collectionView: <#collectionView description#>
+    ///   - section: <#section description#>
+    /// - Returns: <#description#>
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return reelCreators.count
+        return reelViewModel.reelCreators.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReelsCollectionViewCell.identifier, for: indexPath) as! ReelsCollectionViewCell
         
-        let videoURL = reelCreators[indexPath.row].url
-        player = AVPlayer(url: videoURL)
-        player?.isMuted = false
-        avPlayerLayer = AVPlayerLayer(player: player)
-
-        avPlayerLayer?.frame = cell.reelView.frame
-        avPlayerLayer?.videoGravity = .resizeAspectFill
-        avPlayerLayer?.zPosition = -1
-        cell.reelView.layer.addSublayer(avPlayerLayer!)
-
-        cell.avPlayerLayer = avPlayerLayer
-        cell.player = player
-//
-        cell.configure(model: reelCreators[indexPath.row])
-//
-        cell.reelsCellDelegate = self
+        let videoURL = reelViewModel.reelCreators[indexPath.row].url
+        reelViewModel.avPlayerLayer?.frame = cell.reelView.frame
+        (cell.reelCollectionViewModel.player,cell.reelCollectionViewModel.avPlayerLayer) = reelViewModel.createPlayer(videoURL)
+        cell.reelView.layer.addSublayer(reelViewModel.avPlayerLayer!)
+        cell.configure(model: reelViewModel.reelCreators[indexPath.row])
+        cell.reelCollectionViewModel.reelsCellDelegate = self
         return cell
     }
     
@@ -83,17 +64,17 @@ class ReelsViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        (cell as? ReelsCollectionViewCell)?.player!.play()
+        (cell as? ReelsCollectionViewCell)?.reelCollectionViewModel.player!.play()
         
-            NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.player?.currentItem, queue: .main) { [weak self] _ in
-                self?.player?.seek(to: CMTime.zero)
-                self?.player?.play()
+        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.reelViewModel.player?.currentItem, queue: .main) { [weak self] _ in
+            self?.reelViewModel.player?.seek(to: CMTime.zero)
+            self?.reelViewModel.player?.play()
             }
         
     }
     
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        (cell as? ReelsCollectionViewCell)?.player!.pause()
+        (cell as? ReelsCollectionViewCell)?.reelCollectionViewModel.player!.pause()
     }
     
 }

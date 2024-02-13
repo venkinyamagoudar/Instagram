@@ -7,21 +7,14 @@
 
 import UIKit
 
-protocol OtherProfileTabCollectionReusableViewDelegate: AnyObject {
-    func didTapPostButton()
-    func didTapVideoButton()
-    func didTapTaggedButton()
-}
-
 class OtherProfileTabCollectionReusableView: UICollectionReusableView {
 
-    public weak var otherProfileTabDelegate: OtherProfileTabCollectionReusableViewDelegate?
-    
     static var identifier = "OtherProfileTabCollectionReusableView"
     
     static func nib() -> UINib {
         return UINib(nibName: "OtherProfileTabCollectionReusableView", bundle: nil)
     }
+    var OtherProfileTabViewModel = OtherProfileTabCollectionReusableViewModel()
     
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var videoListButton: UIButton!
@@ -37,20 +30,20 @@ class OtherProfileTabCollectionReusableView: UICollectionReusableView {
         postButton.tintColor = .black
         videoListButton.tintColor = .lightGray
         taggedListButton.tintColor = .lightGray
-        otherProfileTabDelegate?.didTapPostButton()
+        OtherProfileTabViewModel.otherProfileTabDelegate?.didTapPostButton()
     }
     
     @IBAction func didTapVideosListButton(_ sender: Any) {
         postButton.tintColor = .lightGray
         videoListButton.tintColor = .black
         taggedListButton.tintColor = .lightGray
-        otherProfileTabDelegate?.didTapVideoButton()
+        OtherProfileTabViewModel.otherProfileTabDelegate?.didTapVideoButton()
     }
     
     @IBAction func didTapTaggedListButton(_ sender: Any) {
         postButton.tintColor = .lightGray
         videoListButton.tintColor = .lightGray
         taggedListButton.tintColor = .black
-        otherProfileTabDelegate?.didTapTaggedButton()
+        OtherProfileTabViewModel.otherProfileTabDelegate?.didTapTaggedButton()
     }
 }
